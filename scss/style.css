@@ -8,5 +8,38 @@ ul {
 
 #main-content {
   height: 100vh;
-  width: 100vw;
+}
+
+body {
+  margin: 0;
+}
+
+h4 {
+  padding-left: 15px;
+}
+
+footer {
+  box-sizing: border-box;
+  color: white;
+  background-color: #323544;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer li {
+  margin: auto auto auto -25px;
+}
+
+.footer-bottom {
+  padding: 10px 15px;
+  background-color: #212330;
+}
+
+.footer-logo {
+  padding: 30px 15px 0;
+  filter: brightness(10);
 }/*# sourceMappingURL=style.css.map */
