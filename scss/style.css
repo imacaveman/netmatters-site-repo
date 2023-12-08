@@ -1,0 +1,12 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#main-content {
+  height: 100vh;
+  width: 100vw;
+}/*# sourceMappingURL=style.css.map */
