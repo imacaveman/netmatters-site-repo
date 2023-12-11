@@ -8,7 +8,10 @@ body {
 }
 
 h2 {
+    font-size: 32px;
+    font-weight: 400;
     margin: 0;
+    color: #333645;
 }
 
 h4 {
@@ -18,11 +21,7 @@ h4 {
     font-weight: normal;
 }
 
-.newsletter {
-    padding: 50px 15px;
-    box-sizing: border-box;
-    background-color: #ddd;
-}
+
 
 footer {
     box-sizing: border-box;
@@ -39,6 +38,120 @@ footer {
     li {
         margin: auto auto auto -25px;
     }
+}
+
+input {
+    box-sizing: border-box;
+}
+
+button {
+    font-family: inherit;
+}
+
+#newsletter {
+    &-name, &-email {
+        @include srch();
+        border: solid #e5e5e5 1px;
+        margin-top: 5px;
+        &:focus {
+            border-color: #5bc0de;
+            outline: 0;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(91,192,222,.6);
+        }
+    }
+}
+
+header {
+    padding: 20px;
+}
+
+.search-bar {
+    @include srch();
+    border: solid rgba(0,0,0,.1) 2px;
+    background-color: #E5E5E5;
+}
+
+.newsletter-add {
+    display: flex;
+    text-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.name, .email {
+    padding-bottom: 15px;
+    label {
+        font-weight: 500;
+    }
+}
+
+.form-input {
+    margin-top: 15px;
+}
+
+.newsletter {
+    padding: 50px 15px;
+    color: #333645;
+    box-sizing: border-box;
+    background-color: #ddd;
+}
+
+.newsletter-text {
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: .4px;
+    a {
+        color: #333645;
+        &:hover {
+            color: #121419;
+        }
+    }
+}
+
+.market-check {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.newsltr-name::after, .newsltr-email::after {
+    color: #d24d57;
+    content: " * "
+}
+
+.market-check + label {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.market-check + label::before {
+    content: "";
+    float: left;
+    width: 26px;
+    height: 26px;
+    border: solid #333645 3px;
+    border-radius: 3px;
+    margin-right: 20px;
+    background-repeat: norepeat;
+    background-position: center;
+    background-size: 50%;
+}
+
+.market-check:checked + label::before {
+    content: url(../img/checkmark-24.ico);
+    background-color: #333645;
+}
+
+.newsletter-input {
+    margin-top: 15px;
+}
+
+label[for="marketing"] {
+    float: left;
 }
 
 .footer-bottom {
@@ -93,5 +206,21 @@ footer {
     @include logo-btn;
     &:hover {
         background-color: #D93175;
+    }
+}
+
+.btn {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+    background-color: #333645;
+    border: solid #333645 1px;
+    border-radius: 3px;
+    padding: 10px 15px;
+    cursor: pointer;
+    &:hover {
+        background-color: #22242E;
     }
 }

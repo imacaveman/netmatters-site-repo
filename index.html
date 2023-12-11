@@ -12,28 +12,39 @@
 </head>
 <body>
     <header>
-        
+        <div class="main-header">
+            <div class="main-container">
+                <img src="img/nm-logo.png" alt="Netmatters Logo">
+            </div>
+        </div>
+        <div class="header-search">
+            <input class="search-bar" placeholder="Search..." id="search-bar-input" name="keyword" type="text">
+        </div>
     </header>
     <div id="main-content">
         
     </div>
     <div class="newsletter">
-        <h2>Email Newsletter Sign-up</h2>
+        <h2>Email Newsletter Sign-Up</h2>
         <div class="form-input">
             <div class="name">
-                <label for="newsletter-name">Your Name</label>
+                <label for="newsletter-name" class="newsltr-name">Your Name</label>
                 <input id="newsletter-name" name="name" type="text">
             </div>
             <div class="email">
-                <label for="newsletter-email">Your Email</label>
+                <label for="newsletter-email" class="newsltr-email">Your Email</label>
                 <input id="newsletter-email" name="email" type="text">
             </div>
         </div>
         <div class="newsletter-add">
-            <span class="newsletter-checkbox"></span>
+            <span class="newsletter-checkbox">
+                <input class ="market-check" id="marketing" type="checkbox">
+                <label for="marketing"></label>
+            </span>
             <span class="newsletter-text">Please tick this box if you wish to receive marketing information from us. Please see our <a href="index.html" target="_blank">Privacy Policy</a> for more information on how we keep your data safe.
             </span>
         </div>
+        <button name="submit" class="btn">Subscribe</button>
     </div>
     <footer>
         <div class="main-container">
