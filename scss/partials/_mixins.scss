@@ -2,3 +2,9 @@
     padding-left: $pl;
     @content;
 }
+
+@mixin logo-btn() {
+    background-color: #212330;
+    margin-right: 10px;
+    @content;
+}

@@ -14,14 +14,28 @@ body {
   margin: 0;
 }
 
+h2 {
+  margin: 0;
+}
+
 h4 {
   padding-left: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.newsletter {
+  padding: 50px 15px;
+  box-sizing: border-box;
+  background-color: #ddd;
 }
 
 footer {
   box-sizing: border-box;
   color: white;
   background-color: #323544;
+  font-size: 14px;
 }
 footer a {
   color: white;
@@ -35,11 +49,60 @@ footer li {
 }
 
 .footer-bottom {
-  padding: 10px 15px;
+  padding-left: 15px;
   background-color: #212330;
+  font-size: 13px;
+}
+
+.copyright p {
+  margin: 0;
+}
+
+.crt {
+  padding-top: 10px;
 }
 
 .footer-logo {
   padding: 30px 15px 0;
   filter: brightness(10);
+}
+
+.socials-logos {
+  display: flex;
+}
+
+.socials a {
+  padding: 16px 22px 16px;
+}
+
+.facebook-btn {
+  background-color: #212330;
+  margin-right: 10px;
+}
+.facebook-btn:hover {
+  background-color: #3B5998;
+}
+
+.linkedin-btn {
+  background-color: #212330;
+  margin-right: 10px;
+}
+.linkedin-btn:hover {
+  background-color: #0077B5;
+}
+
+.twitter-btn {
+  background-color: #212330;
+  margin-right: 10px;
+}
+.twitter-btn:hover {
+  background-color: #00ACED;
+}
+
+.insta-btn {
+  background-color: #212330;
+  margin-right: 10px;
+}
+.insta-btn:hover {
+  background-color: #D93175;
 }/*# sourceMappingURL=style.css.map */
