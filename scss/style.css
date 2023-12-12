@@ -76,17 +76,19 @@ button {
 .main-header {
   display: flex;
   align-items: center;
+  margin-bottom: 5px;
 }
 
 .phone-container {
   margin-left: auto;
+  padding-left: 20px;
 }
 
 .fa-phone {
   color: #333645;
 }
 .fa-phone:hover {
-  background-color: #22242E;
+  color: #22242E;
 }
 
 .burger-container {
@@ -156,11 +158,49 @@ button {
   background-blend-mode: multiply;
 }
 
-.home-text {
+.title {
   position: absolute;
   color: #fff;
   font-weight: bold;
   font-size: 2.5rem;
+  line-height: 3rem;
+  text-align: center;
+  top: 33%;
+  margin-bottom: 15px;
+}
+
+.title > p {
+  font-size: 1.3rem;
+  margin-top: 20px;
+  line-height: 1.8rem;
+}
+
+.btn {
+  box-sizing: border-box;
+  cursor: pointer;
+  color: #fff;
+  background-color: #926fb1;
+  border: solid #7E57A0 1px;
+  border-radius: 3px;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  padding: 15px 25px;
+  margin-top: 10px;
+}
+.btn:hover {
+  background-color: #7E57A0;
+}
+
+.accent-text {
+  font-weight: 600;
+}
+
+.mid-container {
+  padding: 50px 15px;
+}
+.mid-container > h2 {
+  font-size: 3rem;
+  font-weight: bold;
 }
 
 .newsletter-add {
