@@ -1,6 +1,6 @@
 
 #main-content {
-    height: 100vh;
+   // height: 100vh;
 }
 
 body {
@@ -133,6 +133,21 @@ button {
     @include srch();
     border: solid rgba(0,0,0,.1) 2px;
     background-color: #E5E5E5;
+}
+
+.home-img-container {
+    display: flex;
+    height: 550px;
+    overflow-x: hidden;
+    background: url("../img/home.jpg") center / cover no-repeat #818181;
+    background-blend-mode: multiply;
+}
+
+.home-text {
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2.5rem;
 }
 
 .newsletter-add {
