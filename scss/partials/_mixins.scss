@@ -18,3 +18,10 @@
     padding: 0 15px;
     @content;
 }
+
+@mixin btn-hvr() {
+    &:hover {
+        background-color: #22242E;
+    }
+    @content;
+}

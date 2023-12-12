@@ -14,6 +14,10 @@ body {
   margin: 0;
 }
 
+header {
+  padding: 20px;
+}
+
 h2 {
   font-size: 32px;
   font-weight: 400;
@@ -69,8 +73,72 @@ button {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
 }
 
-header {
-  padding: 20px;
+#search-bar-input {
+  padding-right: 40px;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+}
+
+.phone-container {
+  margin-left: auto;
+}
+
+.fa-phone {
+  color: #333645;
+}
+.fa-phone:hover {
+  background-color: #22242E;
+}
+
+.burger-container {
+  display: flex;
+  height: 55px;
+  width: 60px;
+  border-radius: 3px;
+  margin-left: 20px;
+  background-color: #333645;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.burger-container:hover {
+  background-color: #22242E;
+}
+
+.burger-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.burger-mid {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  margin: 3px 0;
+}
+
+.netmatters-logo {
+  max-width: 100%;
+}
+
+.header-search {
+  position: relative;
+}
+
+.header-search::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  margin: auto;
+  background: url("../img/search.png") no-repeat center;
+  background-size: 23px auto;
+  height: 30px;
+  width: 30px;
 }
 
 .search-bar {
@@ -225,7 +293,7 @@ label[for=marketing] {
   background-color: #D93175;
 }
 
-.btn {
+.sub-btn {
   font-size: 1.1rem;
   text-transform: uppercase;
   font-weight: 400;
@@ -237,6 +305,6 @@ label[for=marketing] {
   padding: 10px 15px;
   cursor: pointer;
 }
-.btn:hover {
+.sub-btn:hover {
   background-color: #22242E;
 }/*# sourceMappingURL=style.css.map */
