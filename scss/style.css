@@ -179,7 +179,7 @@ button {
   box-sizing: border-box;
   cursor: pointer;
   color: #fff;
-  background-color: #926fb1;
+  background-color: #926FB1;
   border: solid #7E57A0 1px;
   border-radius: 3px;
   font-size: 1.25rem;
@@ -196,11 +196,307 @@ button {
 }
 
 .mid-container {
-  padding: 50px 15px;
+  padding: 50px 15px 0;
+  margin-bottom: 15px;
 }
 .mid-container > h2 {
   font-size: 3rem;
   font-weight: bold;
+}
+
+.service-block {
+  margin: 0 15px;
+}
+
+.software-ref {
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  text-align: center;
+}
+.software-ref:hover {
+  background-color: #67809F;
+}
+.software-ref:hover .block-title, .software-ref:hover .desc {
+  color: #fff;
+}
+.software-ref:hover .icon, .software-ref:hover .read-more {
+  background-color: #fff;
+  color: #67809F;
+}
+
+.support-ref {
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  text-align: center;
+}
+.support-ref:hover {
+  background-color: #4183D7;
+}
+.support-ref:hover .block-title, .support-ref:hover .desc {
+  color: #fff;
+}
+.support-ref:hover .icon, .support-ref:hover .read-more {
+  background-color: #fff;
+  color: #4183D7;
+}
+
+.marketing-ref {
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  text-align: center;
+}
+.marketing-ref:hover {
+  background-color: #2ECC71;
+}
+.marketing-ref:hover .block-title, .marketing-ref:hover .desc {
+  color: #fff;
+}
+.marketing-ref:hover .icon, .marketing-ref:hover .read-more {
+  background-color: #fff;
+  color: #2ECC71;
+}
+
+.telecoms-ref {
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  text-align: center;
+}
+.telecoms-ref:hover {
+  background-color: #D64541;
+}
+.telecoms-ref:hover .block-title, .telecoms-ref:hover .desc {
+  color: #fff;
+}
+.telecoms-ref:hover .icon, .telecoms-ref:hover .read-more {
+  background-color: #fff;
+  color: #D64541;
+}
+
+.webdesign-ref {
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  text-align: center;
+}
+.webdesign-ref:hover {
+  background-color: #926FB1;
+}
+.webdesign-ref:hover .block-title, .webdesign-ref:hover .desc {
+  color: #fff;
+}
+.webdesign-ref:hover .icon, .webdesign-ref:hover .read-more {
+  background-color: #fff;
+  color: #926FB1;
+}
+
+.security-ref {
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  text-align: center;
+}
+.security-ref:hover {
+  background-color: #F62459;
+}
+.security-ref:hover .block-title, .security-ref:hover .desc {
+  color: #fff;
+}
+.security-ref:hover .icon, .security-ref:hover .read-more {
+  background-color: #fff;
+  color: #F62459;
+}
+
+.training-ref {
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  text-align: center;
+}
+.training-ref:hover {
+  background-color: #CE4125;
+}
+.training-ref:hover .block-title, .training-ref:hover .desc {
+  color: #fff;
+}
+.training-ref:hover .icon, .training-ref:hover .read-more {
+  background-color: #fff;
+  color: #CE4125;
+}
+
+.block {
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+  border: solid #ccc 1px;
+  border-radius: 15px;
+  padding: 30px;
+  top: 0;
+  transition: 0.5s ease;
+}
+.block:hover {
+  top: -10px;
+  transition: 0.5s ease;
+}
+.block-title {
+  position: relative;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #333645;
+}
+
+.desc {
+  position: relative;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #333645;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.rm-soft {
+  font-size: 1.1rem;
+  height: auto;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 3px;
+  background-color: #67809F;
+}
+
+.rm-supp {
+  font-size: 1.1rem;
+  height: auto;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 3px;
+  background-color: #4183D7;
+}
+
+.rm-mrkt {
+  font-size: 1.1rem;
+  height: auto;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 3px;
+  background-color: #2ECC71;
+}
+
+.rm-tele {
+  font-size: 1.1rem;
+  height: auto;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 3px;
+  background-color: #D64541;
+}
+
+.rm-dsgn {
+  font-size: 1.1rem;
+  height: auto;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 3px;
+  background-color: #926FB1;
+}
+
+.rm-secure {
+  font-size: 1.1rem;
+  height: auto;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 3px;
+  background-color: #F62459;
+}
+
+.rm-train {
+  font-size: 1.1rem;
+  height: auto;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 3px;
+  background-color: #CE4125;
+}
+
+.soft-icn {
+  display: block;
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background-color: #67809F;
+}
+
+.supp-icn {
+  display: block;
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background-color: #4183D7;
+}
+
+.mrkt-icn {
+  display: block;
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background-color: #2ECC71;
+}
+
+.tele-icn {
+  display: block;
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background-color: #D64541;
+}
+
+.dsgn-icn {
+  display: block;
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background-color: #926FB1;
+}
+
+.secure-icn {
+  display: block;
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background-color: #F62459;
+}
+
+.train-icn {
+  display: block;
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background-color: #CE4125;
 }
 
 .newsletter-add {

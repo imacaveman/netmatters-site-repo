@@ -15,7 +15,7 @@ h2 {
     font-size: 32px;
     font-weight: 400;
     margin: 0;
-    color: #333645;
+    color: $color-base;
 }
 
 h4 {
@@ -81,7 +81,7 @@ button {
 }
 
 .fa-phone {
-    color: #333645;
+    color: $color-base;
     &:hover {
         color: #22242E;
     }
@@ -93,7 +93,7 @@ button {
     width: 60px;
     border-radius: 3px;
     margin-left: 20px;
-    background-color: #333645;
+    background-color: $color-base;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -108,7 +108,7 @@ button {
 .burger-mid {
     width: 30px;
     height: 4px;
-    background-color: #fff;
+    background-color: $color-white;
     margin: 3px 0;
 }
 
@@ -149,7 +149,7 @@ button {
 
 .title {
     position: absolute;
-    color: #fff;
+    color: $color-white;
     font-weight: bold;
     font-size: 2.5rem;
     line-height: 3rem;
@@ -167,8 +167,8 @@ button {
 .btn {
     box-sizing: border-box;
     cursor: pointer;
-    color: #fff;
-    background-color: #926fb1;
+    color: $color-white;
+    background-color: $color-design;
     border: solid #7E57A0 1px;
     border-radius: 3px;
     font-size: 1.25rem;
@@ -185,11 +185,218 @@ button {
 }
 
 .mid-container {
-    padding: 50px 15px;
+    padding: 50px 15px 0;
+    margin-bottom: 15px;
     & > h2 {
         font-size: 3rem;
         font-weight: bold;
     }
+}
+
+// "OUR SERVICES" BLOCK ------------------------------------------------------------
+
+.service-block {
+    margin: 0 15px;
+}
+
+.software-ref {
+    @include services-cards();
+    &:hover {
+        background-color: $color-software;
+        .block-title, .desc {
+            color: $color-white;
+        }
+        .icon, .read-more {
+            background-color: $color-white;
+            color: $color-software;
+        }
+    }
+}
+
+.support-ref {
+    @include services-cards();
+    &:hover {
+        background-color: $color-itsupp;
+        .block-title, .desc {
+            color: $color-white;
+        }
+        .icon, .read-more {
+            background-color: $color-white;
+            color: $color-itsupp;
+        }
+    }
+}
+
+.marketing-ref {
+    @include services-cards();
+    &:hover {
+        background-color: $color-marketing;
+        .block-title, .desc {
+            color: $color-white;
+        }
+        .icon, .read-more {
+            background-color: $color-white;
+            color: $color-marketing;
+        }
+    }
+}
+
+.telecoms-ref {
+    @include services-cards();
+    &:hover {
+        background-color: $color-telecoms;
+        .block-title, .desc {
+            color: $color-white;
+        }
+        .icon, .read-more {
+            background-color: $color-white;
+            color: $color-telecoms;
+        }
+    }
+}
+
+.webdesign-ref {
+    @include services-cards();
+    &:hover {
+        background-color: $color-design;
+        .block-title, .desc {
+            color: $color-white;
+        }
+        .icon, .read-more {
+            background-color: $color-white;
+            color: $color-design;
+        }
+    }
+}
+
+.security-ref {
+    @include services-cards();
+    &:hover {
+        background-color: $color-security;
+        .block-title, .desc {
+            color: $color-white;
+        }
+        .icon, .read-more {
+            background-color: $color-white;
+            color: $color-security;
+        }
+    }
+}
+
+.training-ref {
+    @include services-cards();
+    &:hover {
+        background-color: $color-training;
+        .block-title, .desc {
+            color: $color-white;
+        }
+        .icon, .read-more {
+            background-color: $color-white;
+            color: $color-training;
+        }
+    }
+}
+
+.block {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+    border: solid #ccc 1px;
+    border-radius: 15px;
+    padding: 30px;
+    top: 0;
+    transition: .5s ease;
+    &:hover {
+        top: -10px;
+        transition: .5s ease;
+    }
+    &-title {
+        position: relative;
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: $color-base;
+    }
+}
+
+.desc {
+    position: relative;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: $color-base;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.rm-soft {
+    @include read-more();
+    background-color: $color-software;
+}
+
+.rm-supp {
+    @include read-more();
+    background-color: $color-itsupp;
+}
+
+.rm-mrkt {
+    @include read-more();
+    background-color: $color-marketing;
+}
+
+.rm-tele {
+    @include read-more();
+    background-color: $color-telecoms;
+}
+
+.rm-dsgn {
+    @include read-more();
+    background-color: $color-design;
+}
+
+.rm-secure {
+    @include read-more();
+    background-color: $color-security;
+}
+
+.rm-train {
+    @include read-more();
+    background-color: $color-training;
+}
+
+.soft-icn {
+    @include services-icons();
+    background-color: $color-software;
+}
+
+.supp-icn {
+    @include services-icons();
+    background-color: $color-itsupp;
+}
+
+.mrkt-icn {
+    @include services-icons();
+    background-color: $color-marketing;
+}
+
+.tele-icn {
+    @include services-icons();
+    background-color: $color-telecoms;
+}
+
+.dsgn-icn {
+    @include services-icons();
+    background-color: $color-design;
+}
+
+.secure-icn {
+    @include services-icons();
+    background-color: $color-security;
+}
+
+.train-icn {
+    @include services-icons();
+    background-color: $color-training;
 }
 
 .newsletter-add {
@@ -211,7 +418,7 @@ button {
 
 .newsletter {
     padding: 50px 15px;
-    color: #333645;
+    color: $color-base;
     box-sizing: border-box;
     background-color: #ddd;
 }
@@ -221,7 +428,7 @@ button {
     line-height: 32px;
     letter-spacing: .4px;
     a {
-        color: #333645;
+        color: $color-base;
         &:hover {
             color: #121419;
         }
@@ -254,7 +461,7 @@ button {
     float: left;
     width: 26px;
     height: 26px;
-    border: solid #333645 3px;
+    border: solid $color-base 3px;
     border-radius: 3px;
     margin-right: 20px;
     background-repeat: norepeat;
@@ -264,7 +471,7 @@ button {
 
 .market-check:checked + label::before {
     content: url(../img/checkmark-24.ico);
-    background-color: #333645;
+    background-color: $color-base;
 }
 
 .newsletter-input {
@@ -335,9 +542,9 @@ label[for="marketing"] {
     text-transform: uppercase;
     font-weight: 400;
     text-align: center;
-    color: #fff;
-    background-color: #333645;
-    border: solid #333645 1px;
+    color: $color-white;
+    background-color: $color-base;
+    border: solid $color-base 1px;
     border-radius: 3px;
     padding: 10px 15px;
     cursor: pointer;

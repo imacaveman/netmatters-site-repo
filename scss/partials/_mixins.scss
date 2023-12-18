@@ -25,3 +25,31 @@
     }
     @content;
 }
+
+@mixin services-cards() {
+    box-shadow: 0 3px 35px rgba(0,0,0,.1);
+    text-decoration: none;
+    text-align: center;
+    @content;
+}
+
+@mixin read-more() {
+    font-size: 1.1rem;
+    height: auto;
+    line-height: 40px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: $color-white;
+    padding: 10px 15px;
+    border-radius: 3px;
+    @content;
+}
+
+@mixin services-icons() {
+    display: block;
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    @content;
+}
