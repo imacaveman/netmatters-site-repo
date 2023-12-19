@@ -416,12 +416,12 @@ button {
 // END OF OUR SERVICES BLOCK -------------------------------------------------------
 
 .welcome-container {
-    padding: 20px 15px 40px;
+    padding: 20px 15px;
     background-color: $color-base;
 }
 
-.welcome, .client-quotes {
-    margin-bottom: 40px;
+.welcome, .clients-container {
+    margin-bottom: 30px;
     & > * {
         color: $color-white;
         letter-spacing: .4px;
@@ -434,6 +434,47 @@ button {
     & > p {
         line-height: 1.8rem;
         margin-bottom: 20px;
+    }
+}
+
+.star-container {
+    margin-bottom: 30px;
+}
+
+.fa-star {
+    color: orange;
+    font-size: 50px;
+}
+
+.quote-container {
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.author {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: $color-gray;
+}
+
+.author-container {
+    margin-bottom: 25px;
+}
+
+.review-buttons {
+    padding-top: 15px;
+}
+
+.blue {
+    margin-bottom: 15px;
+}
+
+.news-container {
+    padding: 50px 15px 0;
+    & > h2 {
+        font-weight: 600;
     }
 }
 
@@ -502,7 +543,6 @@ button {
     border: solid $color-base 3px;
     border-radius: 3px;
     margin-right: 20px;
-    background-repeat: norepeat;
     background-position: center;
     background-size: 50%;
 }
@@ -597,6 +637,16 @@ label[for="marketing"] {
     @include btn-color($color-design, $color-design-dark, $color-design-dark);
 }
 
+.blue {
+    @include btn-color($color-itsupp, $color-itsupp-dark, $color-itsupp);
+    display: block;
+}
+
+.green {
+    @include btn-color($color-marketing-accent, $color-marketing-dark, $color-marketing-accent);
+    display: block;
+}
+
 .big-btn {
-    @include bigger-btn();
+    @include bigger-btn(6px);
 }

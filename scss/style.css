@@ -542,25 +542,66 @@ button {
 }
 
 .welcome-container {
-  padding: 20px 15px 40px;
+  padding: 20px 15px;
   background-color: #333645;
 }
 
-.welcome, .client-quotes {
-  margin-bottom: 40px;
+.welcome, .clients-container {
+  margin-bottom: 30px;
 }
-.welcome > *, .client-quotes > * {
+.welcome > *, .clients-container > * {
   color: #fff;
   letter-spacing: 0.4px;
 }
-.welcome > h2, .client-quotes > h2 {
+.welcome > h2, .clients-container > h2 {
   font-size: 2.2rem;
   font-weight: bold;
   margin-bottom: 30px;
 }
-.welcome > p, .client-quotes > p {
+.welcome > p, .clients-container > p {
   line-height: 1.8rem;
   margin-bottom: 20px;
+}
+
+.star-container {
+  margin-bottom: 30px;
+}
+
+.fa-star {
+  color: orange;
+  font-size: 50px;
+}
+
+.quote-container {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+.author {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #a3a8ac;
+}
+
+.author-container {
+  margin-bottom: 25px;
+}
+
+.review-buttons {
+  padding-top: 15px;
+}
+
+.blue {
+  margin-bottom: 15px;
+}
+
+.news-container {
+  padding: 50px 15px 0;
+}
+.news-container > h2 {
+  font-weight: 600;
 }
 
 .newsletter-add {
@@ -627,7 +668,6 @@ button {
   border: solid #333645 3px;
   border-radius: 3px;
   margin-right: 20px;
-  background-repeat: norepeat;
   background-position: center;
   background-size: 50%;
 }
@@ -736,11 +776,29 @@ label[for=marketing] {
   background-color: #7E57A0;
 }
 
+.blue {
+  background-color: #4183D7;
+  border: solid #4183D7 1px;
+  display: block;
+}
+.blue:hover {
+  background-color: #166AF4;
+}
+
+.green {
+  background-color: #08b47c;
+  border: solid #08b47c 1px;
+  display: block;
+}
+.green:hover {
+  background-color: #009B69;
+}
+
 .big-btn {
   box-sizing: border-box;
   cursor: pointer;
   color: #fff;
-  border-radius: 3px;
+  border-radius: 6px;
   font-size: 1.25rem;
   text-transform: uppercase;
   padding: 15px 25px;

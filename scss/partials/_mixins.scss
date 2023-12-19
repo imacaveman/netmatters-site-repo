@@ -19,11 +19,11 @@
     @content;
 }
 
-@mixin bigger-btn() {
+@mixin bigger-btn($brdrr: 3px) {
     box-sizing: border-box;
     cursor: pointer;
     color: $color-white;
-    border-radius: 3px;
+    border-radius: $brdrr;
     font-size: 1.25rem;
     text-transform: uppercase;
     padding: 15px 25px;
