@@ -21,6 +21,12 @@ h2 {
   color: #333645;
 }
 
+h3 {
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
 h4 {
   padding-left: 15px;
   font-size: 16px;
@@ -28,18 +34,19 @@ h4 {
   font-weight: normal;
 }
 
-footer {
-  box-sizing: border-box;
-  color: white;
-  background-color: #323544;
-  font-size: 14px;
-}
-footer a {
-  color: white;
+a {
+  color: #fff;
   text-decoration: none;
 }
-footer a:hover {
+a:hover {
   text-decoration: underline;
+}
+
+footer {
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #323544;
+  font-size: 14px;
 }
 footer li {
   margin: auto auto auto -25px;
@@ -175,22 +182,6 @@ button {
   line-height: 1.8rem;
 }
 
-.btn {
-  box-sizing: border-box;
-  cursor: pointer;
-  color: #fff;
-  background-color: #926FB1;
-  border: solid #7E57A0 1px;
-  border-radius: 3px;
-  font-size: 1.25rem;
-  text-transform: uppercase;
-  padding: 15px 25px;
-  margin-top: 10px;
-}
-.btn:hover {
-  background-color: #7E57A0;
-}
-
 .accent-text {
   font-weight: 600;
 }
@@ -206,6 +197,10 @@ button {
 
 .service-block {
   margin: 0 15px;
+}
+
+.view-our-work a {
+  color: #333645;
 }
 
 .software-ref {
@@ -438,65 +433,134 @@ button {
 
 .soft-icn {
   display: block;
+  color: #fff;
   width: 65px;
   height: 65px;
   margin: 0 auto 20px;
   border-radius: 50%;
   background-color: #67809F;
 }
+.soft-icn > .fa-solid {
+  margin-top: 17px;
+}
 
 .supp-icn {
   display: block;
+  color: #fff;
   width: 65px;
   height: 65px;
   margin: 0 auto 20px;
   border-radius: 50%;
   background-color: #4183D7;
 }
+.supp-icn > .fa-solid {
+  margin-top: 17px;
+}
 
 .mrkt-icn {
   display: block;
+  color: #fff;
   width: 65px;
   height: 65px;
   margin: 0 auto 20px;
   border-radius: 50%;
   background-color: #2ECC71;
 }
+.mrkt-icn > .fa-solid {
+  margin-top: 17px;
+}
 
 .tele-icn {
   display: block;
+  color: #fff;
   width: 65px;
   height: 65px;
   margin: 0 auto 20px;
   border-radius: 50%;
   background-color: #D64541;
 }
+.tele-icn > .fa-solid {
+  margin-top: 17px;
+}
 
 .dsgn-icn {
   display: block;
+  color: #fff;
   width: 65px;
   height: 65px;
   margin: 0 auto 20px;
   border-radius: 50%;
   background-color: #926FB1;
 }
+.dsgn-icn > .fa-solid {
+  margin-top: 17px;
+}
 
 .secure-icn {
   display: block;
+  color: #fff;
   width: 65px;
   height: 65px;
   margin: 0 auto 20px;
   border-radius: 50%;
   background-color: #F62459;
 }
+.secure-icn > .fa-solid {
+  margin-top: 17px;
+}
 
 .train-icn {
   display: block;
+  color: #fff;
   width: 65px;
   height: 65px;
   margin: 0 auto 20px;
   border-radius: 50%;
   background-color: #CE4125;
+}
+.train-icn > .fa-solid {
+  margin-top: 17px;
+}
+
+.partners-banner {
+  margin-bottom: 30px;
+}
+
+.partners-img-container {
+  max-height: 70px;
+  width: 95%;
+  margin-left: 15px;
+  overflow: hidden;
+}
+.partners-img-container > img {
+  margin-right: 50px;
+  filter: grayscale(100);
+}
+
+.partners-img-container:hover img {
+  filter: none !important;
+}
+
+.welcome-container {
+  padding: 20px 15px 40px;
+  background-color: #333645;
+}
+
+.welcome, .client-quotes {
+  margin-bottom: 40px;
+}
+.welcome > *, .client-quotes > * {
+  color: #fff;
+  letter-spacing: 0.4px;
+}
+.welcome > h2, .client-quotes > h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.welcome > p, .client-quotes > p {
+  line-height: 1.8rem;
+  margin-bottom: 20px;
 }
 
 .newsletter-add {
@@ -654,4 +718,31 @@ label[for=marketing] {
 }
 .sub-btn:hover {
   background-color: #22242E;
+}
+
+.dark {
+  background-color: #272936;
+  border: solid #272936 1px;
+}
+.dark:hover {
+  background-color: #121318;
+}
+
+.light {
+  background-color: #926FB1;
+  border: solid #7E57A0 1px;
+}
+.light:hover {
+  background-color: #7E57A0;
+}
+
+.big-btn {
+  box-sizing: border-box;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  padding: 15px 25px;
+  margin-top: 10px;
 }/*# sourceMappingURL=style.css.map */
