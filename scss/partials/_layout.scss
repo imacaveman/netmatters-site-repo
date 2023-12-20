@@ -64,7 +64,7 @@ button {
         border: solid #e5e5e5 1px;
         margin-top: 5px;
         &:focus {
-            border-color: #5bc0de;
+            border-color: $color-lightblue;
             outline: 0;
             box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(91,192,222,.6);
         }
@@ -73,6 +73,15 @@ button {
 
 #search-bar-input {
     padding-right: 40px;
+    
+}
+
+#search-med-submit {
+    padding: 3px 20px 0;
+    border-radius: 0 3px 3px 0;
+    border: solid $color-gray 1px;
+    background-color: $color-gray;
+    color: $color-white;
 }
 
 .cookieconsent-btn {
@@ -118,7 +127,11 @@ button {
 
 .phone-container {
     margin-left: auto;
+    margin-right: 20px;
     padding-left: 20px;
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
 }
 
 .fa-phone {
@@ -133,12 +146,14 @@ button {
     height: 55px;
     width: 60px;
     border-radius: 3px;
-    margin-left: 20px;
     background-color: $color-base;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     @include btn-hvr();
+    @media screen and (min-width: 768px) {
+        margin-left: 20px;
+    }
 }
 
 .burger-box {
@@ -159,6 +174,9 @@ button {
 
 .header-search {
     position: relative;
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
 }
 
 .header-search::after {
@@ -178,6 +196,32 @@ button {
     @include srch();
     border: solid rgba(0,0,0,.1) 2px;
     background-color: #E5E5E5;
+}
+
+.header-search-med {
+    display: flex;
+    margin-left: auto;
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+
+.search-bar-med {
+    display: inline;
+    font-family: inherit;
+    width: 174px;
+    height: 55px;
+    font-size: 14px;
+    padding: 0 15px;
+    margin-left: auto;
+    border: solid $color-lightgray 1px;
+    border-radius: 0 0 0 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    &:focus {
+        border-color: $color-lightblue;
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(91,192,222,.6);
+    }
 }
 
 .home-img-container {
@@ -210,6 +254,7 @@ button {
 }
 
 .mid-container {
+    align-items: left;
     padding: 50px 15px 0;
     margin-bottom: 15px;
     & > h2 {
@@ -221,6 +266,9 @@ button {
 // "OUR SERVICES" BLOCK ------------------------------------------------------------
 
 .service-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0 15px;
 }
 
@@ -333,6 +381,7 @@ button {
     display: block;
     position: relative;
     width: 100%;
+    max-width: 730px;
     margin-top: 30px;
     border: solid #ccc 1px;
     border-radius: 15px;

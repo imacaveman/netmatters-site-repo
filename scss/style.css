@@ -81,6 +81,14 @@ button {
   padding-right: 40px;
 }
 
+#search-med-submit {
+  padding: 3px 20px 0;
+  border-radius: 0 3px 3px 0;
+  border: solid #a3a8ac 1px;
+  background-color: #a3a8ac;
+  color: #fff;
+}
+
 .cookieconsent-btn {
   position: fixed;
   font-size: 0.8rem;
@@ -123,7 +131,13 @@ button {
 
 .phone-container {
   margin-left: auto;
+  margin-right: 20px;
   padding-left: 20px;
+}
+@media screen and (min-width: 768px) {
+  .phone-container {
+    display: none;
+  }
 }
 
 .fa-phone {
@@ -138,7 +152,6 @@ button {
   height: 55px;
   width: 60px;
   border-radius: 3px;
-  margin-left: 20px;
   background-color: #333645;
   align-items: center;
   justify-content: center;
@@ -146,6 +159,11 @@ button {
 }
 .burger-container:hover {
   background-color: #22242E;
+}
+@media screen and (min-width: 768px) {
+  .burger-container {
+    margin-left: 20px;
+  }
 }
 
 .burger-box {
@@ -166,6 +184,11 @@ button {
 
 .header-search {
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .header-search {
+    display: none;
+  }
 }
 
 .header-search::after {
@@ -190,6 +213,34 @@ button {
   padding: 0 15px;
   border: solid rgba(0, 0, 0, 0.1) 2px;
   background-color: #E5E5E5;
+}
+
+.header-search-med {
+  display: flex;
+  margin-left: auto;
+}
+@media screen and (max-width: 767px) {
+  .header-search-med {
+    display: none;
+  }
+}
+
+.search-bar-med {
+  display: inline;
+  font-family: inherit;
+  width: 174px;
+  height: 55px;
+  font-size: 14px;
+  padding: 0 15px;
+  margin-left: auto;
+  border: solid #ccc 1px;
+  border-radius: 0 0 0 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.search-bar-med:focus {
+  border-color: #5bc0de;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
 }
 
 .home-img-container {
@@ -222,6 +273,7 @@ button {
 }
 
 .mid-container {
+  align-items: left;
   padding: 50px 15px 0;
   margin-bottom: 15px;
 }
@@ -231,6 +283,9 @@ button {
 }
 
 .service-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 15px;
 }
 
@@ -376,6 +431,7 @@ button {
   display: block;
   position: relative;
   width: 100%;
+  max-width: 730px;
   margin-top: 30px;
   border: solid #ccc 1px;
   border-radius: 15px;
