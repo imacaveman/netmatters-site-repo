@@ -51,6 +51,9 @@
     box-shadow: 0 3px 35px rgba(0,0,0,.1);
     text-decoration: none;
     text-align: center;
+    &:hover {
+        text-decoration: none;
+    }
     @content;
 }
 
@@ -75,6 +78,43 @@
     border-radius: 50%;
     & > .fa-solid {
         margin-top: 17px;
+    }
+    @content;
+}
+
+@mixin tooltip($ttclr: $color-itsupp) {
+    position: absolute;
+    font-size: 0.8rem;
+    font-weight: 600;
+    top: 10px;
+    right: 0;
+    background-color: $ttclr;
+    text-transform: uppercase;
+    padding: 0 10px;
+    line-height: 1.5rem;
+    z-index: 1;
+    @content;
+}
+
+@mixin news-color($txtclr: $color-itsupp) {
+    font-size: 1rem;
+    border: solid #ccc 1px;
+    margin: -10px 0 30px 0;
+    padding: 30px 30px;
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 3px 35px rgba(0,0,0,.1);
+    p {
+        font-size: .8rem;
+        line-height: 1.4rem;
+        color: $color-darkgray;
+        margin-bottom: 25px;
+    }
+    a {
+        font-weight: bold;
+        color: $txtclr;
+        &:hover {
+            text-decoration: none;
+        }
     }
     @content;
 }

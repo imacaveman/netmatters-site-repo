@@ -4,6 +4,7 @@
 // }
 
 body {
+    letter-spacing: 0.4px;
     margin: 0;
 }
 
@@ -72,6 +73,41 @@ button {
 
 #search-bar-input {
     padding-right: 40px;
+}
+
+.cookieconsent-btn {
+    position: fixed;
+    font-size: 0.8rem;
+    cursor: pointer;
+    color: $color-white;
+    font-weight: 600;
+    background: $color-midgray;
+    border: solid $color-midgray;
+    border-width: 1px 1px 0 0;
+    border-radius: 0 10px 0 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    padding-top: 2px;
+}
+
+.chat-bubble {
+    position: fixed;
+    cursor: pointer;
+    color: $color-white;
+    bottom: 20px;
+    right: 10px;
+    z-index: 2;
+    height: 60px;
+    width: 60px;
+    background-color: $color-base;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,.2),
+                0 6px 20px 0 rgba(0,0,0,.19);
+    & > i {
+        margin-top: 15px;
+        margin-left: 14px;
+    }
 }
 
 .main-header {
@@ -188,7 +224,7 @@ button {
     margin: 0 15px;
 }
 
-.view-our-work {
+.view-our-work, .view-all-news {
     a {
         color: $color-base;
     }
@@ -394,29 +430,42 @@ button {
     background-color: $color-training;
 }
 
-.partners-banner {
-    margin-bottom: 30px;
+.partners-banner, .clients-banner {
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-.partners-img-container {
-    max-height: 70px;
-    width: 95%;
+.partners-img-container, .clients-img-container {
+    display: flex;
+    max-height: 80px;
     margin-left: 15px;
-    overflow: hidden;
-    & > img {
-        margin-right: 50px;
-        filter: grayscale(100);
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.client-box {
+    display: flex;
+    vertical-align: middle;
+    position: relative;
+}
+
+.description-hide {
+    display: none;
+}
+
+.grayscale {
+    max-height: 70px;
+    margin-right: 50px;
+    filter: grayscale(100);
+    &:hover {
+        filter: none;
     }
 }
-
-.partners-img-container:hover img {
-    filter: none !important;
-  }
 
 // END OF OUR SERVICES BLOCK -------------------------------------------------------
 
 .welcome-container {
-    padding: 20px 15px;
+    padding: 30px 15px;
     background-color: $color-base;
 }
 
@@ -424,7 +473,6 @@ button {
     margin-bottom: 30px;
     & > * {
         color: $color-white;
-        letter-spacing: .4px;
     }
     & > h2 {
         font-size: 2.2rem;
@@ -474,8 +522,63 @@ button {
 .news-container {
     padding: 50px 15px 0;
     & > h2 {
+        font-size: 2.5rem;
         font-weight: 600;
+        margin-bottom: 40px;
     }
+}
+
+.tooltip-btn-a {
+    @include tooltip();
+}
+
+.tooltip-btn-b {
+    @include tooltip($color-telecoms);
+}
+
+.news-text-a {
+    @include news-color();
+}
+
+.news-text-b {
+    @include news-color($color-telecoms);
+}
+
+.read-time {
+    font-size: .8rem;
+    color: $color-gray;
+    text-transform: uppercase;
+}
+
+.news-block {
+    position: relative;
+    cursor: pointer;
+    top: 0;
+    transition: .5s ease;
+    &:hover {
+        top: -10px;
+        transition: .5s ease;
+    }
+}
+
+.op {
+    display: flex;
+    color: $color-midgray;
+    font-size: 0.9rem;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: solid #ccc 1px;
+    &-info {
+        margin: auto 0;
+        padding-left: 20px;
+        & > strong {
+            color: $color-base;
+        }
+    }
+}
+
+.news-img {
+    width: 100%;
 }
 
 .newsletter-add {
@@ -505,7 +608,6 @@ button {
 .newsletter-text {
     font-weight: 600;
     line-height: 32px;
-    letter-spacing: .4px;
     a {
         color: $color-base;
         &:hover {
@@ -561,6 +663,7 @@ label[for="marketing"] {
 }
 
 .footer-bottom {
+    margin-top: 30px;
     padding-left: 15px;
     background-color: #212330;
     font-size: 13px;
