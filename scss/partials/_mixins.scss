@@ -19,6 +19,20 @@
     @content;
 }
 
+@mixin small-btn($brdrr: 3px) {
+    box-sizing: border-box;
+    cursor: pointer;
+    color: $color-white;
+    border-radius: $brdrr;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    font-weight: 400;
+    text-align: center;
+    height: 56px;
+    @content;
+}
+
 @mixin bigger-btn($brdrr: 3px) {
     box-sizing: border-box;
     cursor: pointer;

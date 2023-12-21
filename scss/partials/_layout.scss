@@ -82,6 +82,14 @@ button {
     border: solid $color-gray 1px;
     background-color: $color-gray;
     color: $color-white;
+    cursor: pointer;
+    &:hover {
+        background-color: $color-gray-accent;
+    }
+    @media screen and (min-width: 1024px) {
+        height: 55px;
+        border-radius: 3px;
+    }
 }
 
 .cookieconsent-btn {
@@ -130,6 +138,14 @@ button {
     margin-right: 20px;
     padding-left: 20px;
     @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.contact-button {
+    margin-left: auto;
+    margin-right: 20px;
+    @media screen and (max-width: 1023px) {
         display: none;
     }
 }
@@ -222,6 +238,10 @@ button {
         outline: 0;
         box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(91,192,222,.6);
     }
+    @media screen and (min-width: 1024px) {
+        display: none;
+        width: 0;
+    }
 }
 
 .home-img-container {
@@ -241,6 +261,14 @@ button {
     text-align: center;
     top: 33%;
     margin-bottom: 15px;
+    @media screen and (min-width: 1024px) {
+        font-size: 4rem;
+        line-height: 5rem;
+        margin-left: 15px;
+        text-align: left;
+        top: 20%;
+        width: 800px;
+    }
 }
 
 .title > p {
@@ -278,6 +306,10 @@ button {
     flex-direction: column;
     align-items: center;
     margin: 0 15px;
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .view-our-work, .view-all-news {
@@ -409,18 +441,21 @@ button {
         font-weight: 400;
         color: $color-base;
     }
+    @media screen and (min-width: 1024px) {
+        max-width: 300px;
+    }
 }
 
 .service-block-med {
     width: 100%;
     @media screen and (min-width: 768px) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    width: 100%;
-    justify-content: center;
-    margin: 0 0 50px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        width: 100%;
+        justify-content: center;
+        margin: 0 0 50px;
     }
 }
 
@@ -431,6 +466,10 @@ button {
         float: left;
         margin-left: 10px;
         margin-right: 10px;
+    }
+    @media screen and (min-width: 1024px) {
+        width: 50%;
+        max-width: 470px;
     }
 }
 
@@ -548,12 +587,18 @@ button {
 // END OF OUR SERVICES BLOCK -------------------------------------------------------
 
 .welcome-container {
+    display: flex;
+    flex-direction: column;
     padding: 30px 15px;
     background-color: $color-base;
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+    }
 }
 
 .welcome, .clients-container {
     margin-bottom: 30px;
+    margin: 15px;
     & > * {
         color: $color-white;
     }
@@ -565,6 +610,9 @@ button {
     & > p {
         line-height: 1.8rem;
         margin-bottom: 20px;
+    }
+    @media screen and (min-width: 1024px) {
+        width: 550px;
     }
 }
 
@@ -619,13 +667,17 @@ button {
     margin: 0 15px;
     @media screen and (min-width: 768px) {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
     }
 }
 
 .news1, .news2 {
     @media screen and (min-width: 768px) {
         max-width: 350px;
+        margin: 0 15px;
+    }
+    @media screen and (min-width: 1024px) {
+        max-width: 600px;
     }
 }
 
@@ -696,13 +748,25 @@ button {
 
 .name, .email {
     padding-bottom: 15px;
+    width: 100%;
     label {
         font-weight: 500;
+    }
+    @media screen and (min-width: 1024px) {
+        max-width: 50%;
     }
 }
 
 .form-input {
+    display: flex;
+    flex-direction: column;
     margin-top: 15px;
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        & > * {
+            
+        }
+    }
 }
 
 .newsletter {
@@ -769,6 +833,37 @@ label[for="marketing"] {
     float: left;
 }
 
+.footer-container {
+    margin-left: auto;
+    margin-right: auto;
+    align-content: space-between;
+    max-width: 772px;
+}
+
+.footer-top {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        justify-content: center;
+    }
+}
+
+.footer-mid {
+    & a {
+        font-size: .8rem;
+    }
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        justify-content: center;
+        & > div {
+            width: 375px;
+        }
+    }
+}
+
 .footer-bottom {
     margin-top: 30px;
     padding-left: 15px;
@@ -776,12 +871,14 @@ label[for="marketing"] {
     font-size: 13px;
 }
 
-.copyright p {
-    margin: 0;
-}
-
-.crt {
-    padding-top: 10px;
+.copyright {
+    padding: 10px 0;
+    & > * {
+        margin: 0 5px;
+    }
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }
 }
 
 .footer-logo {
@@ -843,6 +940,10 @@ label[for="marketing"] {
     @include btn-color($color-accent, $color-dark, $color-accent);
 }
 
+.gray {
+    @include btn-color($color-gray, $color-gray-accent, $color-gray);
+}
+
 .light {
     @include btn-color($color-design, $color-design-dark, $color-design-dark);
 }
@@ -856,6 +957,10 @@ label[for="marketing"] {
 .green {
     @include btn-color($color-marketing-accent, $color-marketing-dark, $color-marketing-accent);
     display: inline-block;
+}
+
+.sm-btn {
+    @include small-btn();
 }
 
 .big-btn {
