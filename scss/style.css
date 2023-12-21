@@ -179,7 +179,7 @@ button {
 }
 
 .netmatters-logo {
-  max-width: 100%;
+  max-width: 90%;
 }
 
 .header-search {
@@ -273,13 +273,23 @@ button {
 }
 
 .mid-container {
-  align-items: left;
+  display: flex;
+  align-items: center;
   padding: 50px 15px 0;
-  margin-bottom: 15px;
 }
 .mid-container > h2 {
   font-size: 3rem;
   font-weight: bold;
+  text-align: left;
+}
+.mid-container > a {
+  color: #333645;
+  margin-left: auto;
+}
+@media screen and (max-width: 767px) {
+  .mid-container > a {
+    display: none;
+  }
 }
 
 .service-block {
@@ -291,6 +301,11 @@ button {
 
 .view-our-work a, .view-all-news a {
   color: #333645;
+}
+@media screen and (min-width: 767px) {
+  .view-our-work, .view-all-news {
+    display: none;
+  }
 }
 
 .software-ref {
@@ -448,6 +463,31 @@ button {
   font-size: 1.3rem;
   font-weight: 400;
   color: #333645;
+}
+
+.service-block-med {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .service-block-med {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: center;
+    margin: 0 0 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .block-med {
+    width: 50%;
+    max-width: 340px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 .desc {
@@ -717,17 +757,45 @@ button {
   padding-top: 15px;
 }
 
-.blue {
-  margin-bottom: 15px;
-}
-
 .news-container {
-  padding: 50px 15px 0;
+  display: flex;
+  align-items: center;
+  padding: 50px 15px 20px;
 }
 .news-container > h2 {
   font-size: 2.5rem;
   font-weight: 600;
-  margin-bottom: 40px;
+}
+.news-container > a {
+  color: #333645;
+  margin-left: auto;
+}
+@media screen and (max-width: 767px) {
+  .news-container > a {
+    display: none;
+  }
+}
+
+.news-panel {
+  margin: 0 15px;
+}
+@media screen and (min-width: 768px) {
+  .news-panel {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .news1, .news2 {
+    max-width: 350px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .news3 {
+    display: none;
+  }
 }
 
 .tooltip-btn-a {
@@ -1012,7 +1080,8 @@ label[for=marketing] {
 .blue {
   background-color: #4183D7;
   border: solid #4183D7 1px;
-  display: block;
+  display: inline-block;
+  margin-right: 5px;
 }
 .blue:hover {
   background-color: #166AF4;
@@ -1021,7 +1090,7 @@ label[for=marketing] {
 .green {
   background-color: #08b47c;
   border: solid #08b47c 1px;
-  display: block;
+  display: inline-block;
 }
 .green:hover {
   background-color: #009B69;

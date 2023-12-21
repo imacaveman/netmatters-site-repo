@@ -169,7 +169,7 @@ button {
 }
 
 .netmatters-logo {
-    max-width: 100%;
+    max-width: 90%;
 }
 
 .header-search {
@@ -254,12 +254,20 @@ button {
 }
 
 .mid-container {
-    align-items: left;
+    display: flex;
+    align-items: center;
     padding: 50px 15px 0;
-    margin-bottom: 15px;
     & > h2 {
         font-size: 3rem;
         font-weight: bold;
+        text-align: left;
+    }
+    & > a {
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+        color: $color-base;
+        margin-left: auto;
     }
 }
 
@@ -275,6 +283,9 @@ button {
 .view-our-work, .view-all-news {
     a {
         color: $color-base;
+    }
+    @media screen and (min-width: 767px) {
+        display: none;
     }
 }
 
@@ -397,6 +408,29 @@ button {
         font-size: 1.3rem;
         font-weight: 400;
         color: $color-base;
+    }
+}
+
+.service-block-med {
+    width: 100%;
+    @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: center;
+    margin: 0 0 50px;
+    }
+}
+
+.block-med {
+    @media screen and (min-width: 768px) {
+        width: 50%;
+        max-width: 340px;
+        float: left;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
 
@@ -564,16 +598,40 @@ button {
     padding-top: 15px;
 }
 
-.blue {
-    margin-bottom: 15px;
-}
-
 .news-container {
-    padding: 50px 15px 0;
+    display: flex;
+    align-items: center;
+    padding: 50px 15px 20px;
     & > h2 {
         font-size: 2.5rem;
         font-weight: 600;
-        margin-bottom: 40px;
+    }
+    & > a {
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+        color: $color-base;
+        margin-left: auto;
+    }
+}
+
+.news-panel {
+    margin: 0 15px;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.news1, .news2 {
+    @media screen and (min-width: 768px) {
+        max-width: 350px;
+    }
+}
+
+.news3 {
+    @media screen and (min-width: 768px) {
+        display: none;
     }
 }
 
@@ -791,12 +849,13 @@ label[for="marketing"] {
 
 .blue {
     @include btn-color($color-itsupp, $color-itsupp-dark, $color-itsupp);
-    display: block;
+    display: inline-block;
+    margin-right: 5px;
 }
 
 .green {
     @include btn-color($color-marketing-accent, $color-marketing-dark, $color-marketing-accent);
-    display: block;
+    display: inline-block;
 }
 
 .big-btn {
