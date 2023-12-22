@@ -135,15 +135,21 @@ button {
 
 .phone-container {
     margin-left: auto;
-    margin-right: 20px;
     padding-left: 20px;
     @media screen and (min-width: 768px) {
         display: none;
     }
 }
 
-.contact-button {
+.support-button {
     margin-left: auto;
+    margin-right: 20px;
+    @media screen and (max-width: 1023px) {
+        display: none;
+    }
+}
+
+.contact-button {
     margin-right: 20px;
     @media screen and (max-width: 1023px) {
         display: none;
@@ -160,16 +166,15 @@ button {
 .burger-container {
     display: flex;
     height: 55px;
-    width: 60px;
+    min-width: 60px;
     border-radius: 3px;
     background-color: $color-base;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    margin-left: 20px;
     @include btn-hvr();
-    @media screen and (min-width: 768px) {
-        margin-left: 20px;
-    }
+   
 }
 
 .burger-box {
@@ -216,9 +221,11 @@ button {
 
 .header-search-med {
     display: flex;
-    margin-left: auto;
     @media screen and (max-width: 767px) {
         display: none;
+    }
+    @media screen and (max-width: 1023px) {
+        margin-left: auto;
     }
 }
 
@@ -244,6 +251,38 @@ button {
     }
 }
 
+.main-nav {
+    color: $color-white;
+    background-color: $color-base;
+    @media screen and (max-width: 1023px) {
+        display: none;
+    }
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-block {
+    cursor: pointer;
+    padding: 12px 25px 10px;
+    text-transform: uppercase;
+    text-align: center;
+    @include hvr-white();
+}
+
+.nav-icn {
+    display: block;
+    padding-bottom: 5px;
+}
+
+.nav-small {
+    font-size: 0.65rem;
+    display: block;
+    height: 11px;
+}
+
 .home-img-container {
     display: flex;
     height: 550px;
@@ -264,10 +303,13 @@ button {
     @media screen and (min-width: 1024px) {
         font-size: 4rem;
         line-height: 5rem;
-        margin-left: 15px;
+        margin-left: 40px;
         text-align: left;
-        top: 20%;
+        top: 33%;
         width: 800px;
+    }
+    @media screen and (min-width: 1440px) {
+        width: 1000px;
     }
 }
 
@@ -301,14 +343,17 @@ button {
 
 // "OUR SERVICES" BLOCK ------------------------------------------------------------
 
+.our-services {
+    margin: 30px 15px;
+}
+
 .service-block {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 15px;
     @media screen and (min-width: 1024px) {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
     }
 }
 
@@ -346,6 +391,9 @@ button {
             background-color: $color-white;
             color: $color-itsupp;
         }
+    }
+    @media screen and (min-width: 1024px) {
+        margin: 0 15px;
     }
 }
 
@@ -457,6 +505,9 @@ button {
         justify-content: center;
         margin: 0 0 50px;
     }
+    @media screen and (min-width: 1024px) {
+
+    }
 }
 
 .block-med {
@@ -469,7 +520,7 @@ button {
     }
     @media screen and (min-width: 1024px) {
         width: 50%;
-        max-width: 470px;
+        max-width: 460px;
     }
 }
 
@@ -518,38 +569,35 @@ button {
 }
 
 .soft-icn {
-    @include services-icons();
     background-color: $color-software;
 }
 
 .supp-icn {
-    @include services-icons();
     background-color: $color-itsupp;
 }
 
 .mrkt-icn {
-    @include services-icons();
     background-color: $color-marketing;
 }
 
 .tele-icn {
-    @include services-icons();
     background-color: $color-telecoms;
 }
 
 .dsgn-icn {
-    @include services-icons();
     background-color: $color-design;
 }
 
 .secure-icn {
-    @include services-icons();
     background-color: $color-security;
 }
 
 .train-icn {
-    @include services-icons();
     background-color: $color-training;
+}
+
+.big-icn {
+    @include services-icons();
 }
 
 .partners-banner, .clients-banner {
@@ -746,14 +794,18 @@ button {
     margin-bottom: 20px;
 }
 
+
+
 .name, .email {
     padding-bottom: 15px;
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     label {
         font-weight: 500;
     }
     @media screen and (min-width: 1024px) {
-        max-width: 50%;
+        max-width: 450px;
     }
 }
 
@@ -763,17 +815,21 @@ button {
     margin-top: 15px;
     @media screen and (min-width: 1024px) {
         flex-direction: row;
-        & > * {
-            
-        }
     }
 }
 
 .newsletter {
+    display: flex;
+    flex-direction: column;
     padding: 50px 15px;
     color: $color-base;
     box-sizing: border-box;
     background-color: #ddd;
+    align-items: center;
+}
+
+.newsletter-container {
+    max-width: 940px;
 }
 
 .newsletter-text {
@@ -781,6 +837,7 @@ button {
     line-height: 32px;
     a {
         color: $color-base;
+        text-decoration: underline;
         &:hover {
             color: #121419;
         }
@@ -838,6 +895,9 @@ label[for="marketing"] {
     margin-right: auto;
     align-content: space-between;
     max-width: 772px;
+    @media screen and (min-width: 1024px) {
+        max-width: 940px;
+    }
 }
 
 .footer-top {
@@ -860,6 +920,12 @@ label[for="marketing"] {
         justify-content: center;
         & > div {
             width: 375px;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        flex-wrap: nowrap;
+        & > div {
+            width: 220px;
         }
     }
 }
@@ -933,6 +999,7 @@ label[for="marketing"] {
     border-radius: 3px;
     padding: 10px 15px;
     cursor: pointer;
+    margin-right: auto;
     @include btn-hvr();
 }
 
@@ -961,8 +1028,37 @@ label[for="marketing"] {
 
 .sm-btn {
     @include small-btn();
+    height: 55px;
 }
 
 .big-btn {
     @include bigger-btn(6px);
+}
+
+.soft-clr {
+    color: $color-software;
+}
+
+.supp-clr {
+    color: $color-itsupp;
+}
+
+.market-clr {
+    color: $color-marketing;
+}
+
+.tele-clr {
+    color: $color-telecoms;
+}
+
+.design-clr {
+    color: $color-design;
+}
+
+.security-clr {
+    color: $color-security;
+}
+
+.train-clr {
+    color: $color-training;
 }
