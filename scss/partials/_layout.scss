@@ -94,6 +94,9 @@ button {
         height: 55px;
         border-radius: 3px;
     }
+    @media screen and (min-width: 1260px) {
+        border-radius: 0 3px 3px 0;
+    }
 }
 
 .cookieconsent-btn {
@@ -131,10 +134,19 @@ button {
     }
 }
 
+.primary-container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 .main-header {
     display: flex;
     align-items: center;
     margin-bottom: 5px;
+}
+
+.main-container {
+    margin: auto;
 }
 
 .phone-container {
@@ -252,6 +264,10 @@ button {
     @media screen and (min-width: 1024px) {
         display: none;
         width: 0;
+    }
+    @media screen and (min-width: 1260px) {
+        display: inline;
+        width: 220px;
     }
 }
 
@@ -642,6 +658,8 @@ button {
     display: flex;
     flex-direction: column;
     padding: 30px 15px;
+    margin-left: -20px;
+    margin-right: -20px;
     background-color: $color-base;
     @media screen and (min-width: 1024px) {
         flex-direction: row;
@@ -830,6 +848,8 @@ button {
     box-sizing: border-box;
     background-color: #ddd;
     align-items: center;
+    margin-left: -20px;
+    margin-right: -20px;
 }
 
 .newsletter-container {
@@ -939,6 +959,8 @@ label[for="marketing"] {
     padding-left: 15px;
     background-color: #212330;
     font-size: 13px;
+    margin-left: -20px;
+    margin-right: -20px;
 }
 
 .copyright {
