@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -12,7 +16,8 @@ body {
 }
 
 header {
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 h2 {
@@ -29,7 +34,7 @@ h3 {
 }
 
 h4 {
-  padding-left: 15px;
+  padding-left: 0;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: normal;
@@ -50,7 +55,7 @@ footer {
   font-size: 14px;
 }
 footer li {
-  margin: auto auto auto -25px;
+  margin: auto auto auto -40px;
 }
 
 input {
@@ -150,11 +155,13 @@ button {
 .main-header {
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
-.main-container {
-  margin: auto;
+@media screen and (min-width: 768px) {
+  .main-container {
+    margin-left: auto;
+  }
 }
 
 .phone-container {
@@ -221,7 +228,7 @@ button {
 }
 
 .netmatters-logo {
-  max-width: 90%;
+  max-width: 100%;
 }
 
 .header-search {
@@ -259,6 +266,7 @@ button {
 
 .header-search-med {
   display: flex;
+  padding-left: 45px;
 }
 @media screen and (max-width: 767px) {
   .header-search-med {
@@ -304,6 +312,7 @@ button {
 .main-nav {
   color: #fff;
   background-color: #333645;
+  padding: 7px 7px 5px;
 }
 @media screen and (max-width: 1023px) {
   .main-nav {
@@ -321,9 +330,17 @@ button {
   padding: 12px 25px 10px;
   text-transform: uppercase;
   text-align: center;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .nav-block:hover i {
   color: #fff;
+}
+@media screen and (min-width: 1260px) {
+  .nav-block {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 .nav-icn {
@@ -399,10 +416,6 @@ button {
   .mid-container > a {
     display: none;
   }
-}
-
-.our-services {
-  margin: 30px 15px;
 }
 
 .service-block {
@@ -611,9 +624,8 @@ button {
   .block-med {
     width: 50%;
     max-width: 340px;
-    float: left;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -804,7 +816,6 @@ button {
 
 .welcome, .clients-container {
   margin-bottom: 30px;
-  margin: 15px;
 }
 .welcome > *, .clients-container > * {
   color: #fff;
@@ -874,7 +885,7 @@ button {
 }
 
 .news-panel {
-  margin: 0 15px;
+  margin: 0;
 }
 @media screen and (min-width: 768px) {
   .news-panel {
@@ -1011,7 +1022,7 @@ button {
 .newsletter-add {
   display: flex;
   text-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .name, .email {
@@ -1185,10 +1196,19 @@ label[for=marketing] {
 
 .socials-logos {
   display: flex;
+  flex-direction: column;
+}
+
+.upper-socials {
+  display: flex;
+}
+
+.lower-socials {
+  display: flex;
 }
 
 .socials a {
-  padding: 16px 22px 16px;
+  padding: 16px 32px 16px;
 }
 
 .facebook-btn {
@@ -1290,7 +1310,7 @@ label[for=marketing] {
   border-radius: 3px;
   font-size: 1.1rem;
   text-transform: uppercase;
-  padding: 15px 25px;
+  padding: 15px 15px;
   font-weight: 400;
   text-align: center;
   height: 56px;
