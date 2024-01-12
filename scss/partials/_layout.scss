@@ -375,9 +375,18 @@ button {
     font-weight: 600;
 }
 
+// "OUR SERVICES" BLOCK ------------------------------------------------------------
+
+.our-services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .mid-container {
     display: flex;
     align-items: center;
+    width: 100%;
     padding: 50px 15px 0;
     & > h2 {
         font-size: 2.5rem;
@@ -393,15 +402,19 @@ button {
     }
 }
 
-// "OUR SERVICES" BLOCK ------------------------------------------------------------
-
 .service-block {
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media screen and (min-width: 1024px) {
+    width: 700px;
+    @media screen and (min-width: 992px) {
         flex-direction: row;
-        justify-content: center;
+        align-items: flex-start;
+        width: 940px;
+    }
+    @media screen and (min-width: 1260px) {
+        justify-content: space-between;
+        width: 100%;
     }
 }
 
@@ -542,6 +555,16 @@ button {
     }
 }
 
+.block-top {
+    @media screen and (min-width: 992px) {
+        width: 280px;
+    }
+    @media screen and (min-width: 1024px) {
+        width: 320px;
+    }
+    
+}
+
 .service-block-med {
     width: 100%;
     @media screen and (min-width: 768px) {
@@ -550,22 +573,27 @@ button {
         flex-wrap: wrap;
         box-sizing: border-box;
         width: 100%;
-        justify-content: space-between;
+        justify-content: space-around;
         margin: 0 0 75px;
     }
-    @media screen and (min-width: 1024px) {
-
+    @media screen and (min-width: 1260px) {
+        justify-content: space-between;
     }
 }
 
 .block-med {
     @media screen and (min-width: 768px) {
-        width: 50%;
-        max-width: 340px;
+        width: 340px;
+    }
+    @media screen and (min-width: 992px) {
+        width: 440px;
     }
     @media screen and (min-width: 1024px) {
         width: 50%;
         max-width: 460px;
+    }
+    @media screen and (min-width: 1260px) {
+        width: 260px;
     }
 }
 
@@ -686,14 +714,14 @@ button {
     margin-left: -20px;
     margin-right: -20px;
     background-color: $color-base;
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 992px) {
         flex-direction: row;
+        justify-content: center;
     }
 }
 
 .welcome, .clients-container {
     margin-bottom: 30px;
-    
     & > * {
         color: $color-white;
     }
@@ -704,11 +732,16 @@ button {
     }
     & > p {
         line-height: 1.8rem;
+        margin-right: 15px;
         margin-bottom: 20px;
     }
-    @media screen and (min-width: 1024px) {
-        width: 550px;
+    @media screen and (min-width: 992px) {
+        width: 455px;
     }
+}
+
+.clients-container {
+    margin-right: 10px;
 }
 
 .star-container {
@@ -721,7 +754,7 @@ button {
 }
 
 .quote-container {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
     font-style: italic;
     margin-bottom: 25px;
@@ -771,7 +804,7 @@ button {
         max-width: 350px;
         margin: 0 15px;
     }
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 992px) {
         max-width: 600px;
     }
 }
@@ -927,7 +960,7 @@ button {
 }
 
 .market-check:checked + label::before {
-    content: url(../img/checkmark-24.ico);
+    content: url(../img/checkmark-24.png);
     background-color: $color-base;
 }
 
@@ -940,12 +973,20 @@ label[for="marketing"] {
 }
 
 .footer-container {
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
     align-content: space-between;
     max-width: 772px;
     @media screen and (min-width: 992px) {
         max-width: 940px;
+    }
+    @media screen and (min-width: 1260px) {
+        flex-direction: row;
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: 30px;
     }
 }
 
@@ -955,6 +996,10 @@ label[for="marketing"] {
         flex-direction: column;
         box-sizing: border-box;
         justify-content: center;
+    }
+    @media screen and (min-width: 1260px) {
+        margin-right: 60px;
+        justify-content: flex-start;
     }
 }
 
@@ -976,6 +1021,9 @@ label[for="marketing"] {
         & > div {
             width: 210px;
         }
+    }
+    @media screen and (min-width: 1260px) {
+        
     }
 }
 
