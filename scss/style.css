@@ -91,7 +91,7 @@ button {
 }
 
 #search-med-submit {
-  padding: 3px 20px 0;
+  padding: 3px 18px 0;
   border-radius: 0 3px 3px 0;
   border: solid #a3a8ac 1px;
   background-color: #a3a8ac;
@@ -155,7 +155,12 @@ button {
 .main-header {
   display: flex;
   align-items: center;
-  margin-bottom: 3px;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 560px) {
+  .main-header {
+    margin-bottom: 5px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -228,7 +233,8 @@ button {
 }
 
 .netmatters-logo {
-  max-width: 100%;
+  width: 100%;
+  max-width: 370px;
 }
 
 .header-search {
@@ -1193,10 +1199,23 @@ label[for=marketing] {
   padding: 30px 15px 0;
   filter: brightness(10);
 }
+.footer-logo-img {
+  width: 250px;
+}
+@media screen and (min-width: 480px) {
+  .footer-logo-img {
+    width: 320px;
+  }
+}
 
 .socials-logos {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 481px) {
+  .socials-logos {
+    flex-direction: row;
+  }
 }
 
 .upper-socials {
@@ -1208,12 +1227,19 @@ label[for=marketing] {
 }
 
 .socials a {
-  padding: 16px 32px 16px;
+  padding: 16px 22px 16px;
+}
+@media screen and (max-width: 480px) {
+  .socials a {
+    padding: 16px 45px 16px;
+  }
 }
 
 .facebook-btn {
   background-color: #212330;
-  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
 }
 .facebook-btn:hover {
   background-color: #3B5998;
@@ -1221,7 +1247,9 @@ label[for=marketing] {
 
 .linkedin-btn {
   background-color: #212330;
-  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
 }
 .linkedin-btn:hover {
   background-color: #0077B5;
@@ -1229,15 +1257,24 @@ label[for=marketing] {
 
 .twitter-btn {
   background-color: #212330;
-  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
 }
 .twitter-btn:hover {
   background-color: #00ACED;
 }
+@media screen and (max-width: 480px) {
+  .twitter-btn {
+    width: 108px;
+  }
+}
 
 .insta-btn {
   background-color: #212330;
-  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
 }
 .insta-btn:hover {
   background-color: #D93175;

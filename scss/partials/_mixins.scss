@@ -5,7 +5,9 @@
 
 @mixin logo-btn() {
     background-color: #212330;
-    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
     @content;
 }
 
