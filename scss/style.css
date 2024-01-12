@@ -19,6 +19,11 @@ header {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+@media screen and (min-width: 992px) {
+  header {
+    padding-bottom: 15px;
+  }
+}
 
 h2 {
   font-size: 32px;
@@ -52,6 +57,9 @@ footer {
   box-sizing: border-box;
   color: #fff;
   background-color: #323544;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
   font-size: 14px;
 }
 footer li {
@@ -101,7 +109,7 @@ button {
 #search-med-submit:hover {
   background-color: #7E808A;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   #search-med-submit {
     height: 55px;
     border-radius: 3px;
@@ -163,7 +171,7 @@ button {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .main-container {
     margin-left: auto;
   }
@@ -179,11 +187,15 @@ button {
   }
 }
 
+.header-btn-icon {
+  margin-right: 8px;
+}
+
 .support-button {
   margin-left: auto;
-  margin-right: 20px;
+  margin-right: 15px;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 991px) {
   .support-button {
     display: none;
   }
@@ -192,7 +204,7 @@ button {
 .contact-button {
   margin-right: 20px;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 991px) {
   .contact-button {
     display: none;
   }
@@ -273,15 +285,17 @@ button {
 .header-search-med {
   display: flex;
   padding-left: 45px;
+  margin-left: auto;
 }
 @media screen and (max-width: 767px) {
   .header-search-med {
     display: none;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (min-width: 992px) {
   .header-search-med {
-    margin-left: auto;
+    margin-left: 0;
+    padding: 0;
   }
 }
 
@@ -302,7 +316,7 @@ button {
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .search-bar-med {
     display: none;
     width: 0;
@@ -320,7 +334,7 @@ button {
   background-color: #333645;
   padding: 7px 7px 5px;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 991px) {
   .main-nav {
     display: none;
   }
@@ -378,13 +392,19 @@ button {
   top: 33%;
   margin-bottom: 15px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .title {
+    text-align: left;
     font-size: 4rem;
     line-height: 5rem;
-    margin-left: 40px;
-    text-align: left;
     top: 33%;
+    margin-right: 40px;
+    margin-left: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .title {
+    margin-left: 40px;
     width: 800px;
   }
 }
@@ -410,7 +430,7 @@ button {
   padding: 50px 15px 0;
 }
 .mid-container > h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
   text-align: left;
 }
@@ -622,16 +642,14 @@ button {
     flex-wrap: wrap;
     box-sizing: border-box;
     width: 100%;
-    justify-content: center;
-    margin: 0 0 50px;
+    justify-content: space-between;
+    margin: 0 0 75px;
   }
 }
 @media screen and (min-width: 768px) {
   .block-med {
     width: 50%;
     max-width: 340px;
-    margin-left: 15px;
-    margin-right: 15px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1136,7 +1154,7 @@ label[for=marketing] {
   align-content: space-between;
   max-width: 772px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .footer-container {
     max-width: 940px;
   }
@@ -1159,18 +1177,18 @@ label[for=marketing] {
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
-    justify-content: center;
   }
   .footer-mid > div {
-    width: 375px;
+    width: 360px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .footer-mid {
     flex-wrap: nowrap;
+    justify-content: space-around;
   }
   .footer-mid > div {
-    width: 220px;
+    width: 210px;
   }
 }
 
@@ -1180,7 +1198,6 @@ label[for=marketing] {
   background-color: #212330;
   font-size: 13px;
   margin-left: -20px;
-  margin-right: -20px;
 }
 
 .copyright {
@@ -1196,7 +1213,7 @@ label[for=marketing] {
 }
 
 .footer-logo {
-  padding: 30px 15px 0;
+  padding: 30px 0 0;
   filter: brightness(10);
 }
 .footer-logo-img {
@@ -1347,10 +1364,11 @@ label[for=marketing] {
   border-radius: 3px;
   font-size: 1.1rem;
   text-transform: uppercase;
-  padding: 15px 15px;
+  padding: 15px 18px;
   font-weight: 400;
   text-align: center;
-  height: 56px;
+  display: flex;
+  align-items: center;
   height: 55px;
 }
 
@@ -1358,12 +1376,28 @@ label[for=marketing] {
   box-sizing: border-box;
   cursor: pointer;
   color: #fff;
+  border-radius: 3px;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  padding: 12px 30px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.big-btn-about {
+  box-sizing: border-box;
+  cursor: pointer;
+  color: #fff;
   border-radius: 6px;
   font-size: 1.25rem;
   text-transform: uppercase;
-  padding: 15px 25px;
-  margin-top: 10px;
+  padding: 12px 30px;
+  margin-top: 20px;
   margin-right: 10px;
+}
+
+.btn-arrow {
+  margin-left: 10px;
 }
 
 .soft-clr {

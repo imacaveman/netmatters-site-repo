@@ -11,6 +11,9 @@ body {
 header {
     padding-top: 20px;
     padding-bottom: 20px;
+    @media screen and (min-width: 992px) {
+        padding-bottom: 15px;
+    }
 }
 
 h2 {
@@ -45,6 +48,9 @@ footer {
     box-sizing: border-box;
     color: $color-white;
     background-color: #323544;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
     font-size: 14px;
     li {
         margin: auto auto auto -40px;
@@ -91,7 +97,7 @@ button {
     &:hover {
         background-color: $color-gray-accent;
     }
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 992px) {
         height: 55px;
         border-radius: 3px;
     }
@@ -150,7 +156,7 @@ button {
 }
 
 .main-container {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 992px) {
         margin-left: auto;
     }
 }
@@ -163,17 +169,21 @@ button {
     }
 }
 
+.header-btn-icon {
+    margin-right: 8px;
+}
+
 .support-button {
     margin-left: auto;
-    margin-right: 20px;
-    @media screen and (max-width: 1023px) {
+    margin-right: 15px;
+    @media screen and (max-width: 991px) {
         display: none;
     }
 }
 
 .contact-button {
     margin-right: 20px;
-    @media screen and (max-width: 1023px) {
+    @media screen and (max-width: 991px) {
         display: none;
     }
 }
@@ -246,11 +256,13 @@ button {
 .header-search-med {
     display: flex;
     padding-left: 45px;
+    margin-left: auto;
     @media screen and (max-width: 767px) {
         display: none;
     }
-    @media screen and (max-width: 1023px) {
-        margin-left: auto;
+    @media screen and (min-width: 992px) {
+        margin-left: 0;
+        padding: 0;
     }
 }
 
@@ -270,7 +282,7 @@ button {
         outline: 0;
         box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(91,192,222,.6);
     }
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 992px) {
         display: none;
         width: 0;
     }
@@ -284,7 +296,7 @@ button {
     color: $color-white;
     background-color: $color-base;
     padding: 7px 7px 5px;
-    @media screen and (max-width: 1023px) {
+    @media screen and (max-width: 991px) {
         display: none;
     }
 }
@@ -336,12 +348,16 @@ button {
     text-align: center;
     top: 33%;
     margin-bottom: 15px;
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 992px) {
+        text-align: left;
         font-size: 4rem;
         line-height: 5rem;
-        margin-left: 40px;
-        text-align: left;
         top: 33%;
+        margin-right: 40px;
+        margin-left: 20px;
+    }
+    @media screen and (min-width: 1024px) {
+        margin-left: 40px;
         width: 800px;
     }
     @media screen and (min-width: 1440px) {
@@ -364,7 +380,7 @@ button {
     align-items: center;
     padding: 50px 15px 0;
     & > h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: bold;
         text-align: left;
     }
@@ -534,8 +550,8 @@ button {
         flex-wrap: wrap;
         box-sizing: border-box;
         width: 100%;
-        justify-content: center;
-        margin: 0 0 50px;
+        justify-content: space-between;
+        margin: 0 0 75px;
     }
     @media screen and (min-width: 1024px) {
 
@@ -546,8 +562,6 @@ button {
     @media screen and (min-width: 768px) {
         width: 50%;
         max-width: 340px;
-        margin-left: 15px;
-        margin-right: 15px;
     }
     @media screen and (min-width: 1024px) {
         width: 50%;
@@ -930,7 +944,7 @@ label[for="marketing"] {
     margin-right: auto;
     align-content: space-between;
     max-width: 772px;
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 992px) {
         max-width: 940px;
     }
 }
@@ -952,15 +966,15 @@ label[for="marketing"] {
         display: flex;
         flex-wrap: wrap;
         box-sizing: border-box;
-        justify-content: center;
         & > div {
-            width: 375px;
+            width: 360px;
         }
     }
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 992px) {
         flex-wrap: nowrap;
+        justify-content: space-around;
         & > div {
-            width: 220px;
+            width: 210px;
         }
     }
 }
@@ -971,7 +985,6 @@ label[for="marketing"] {
     background-color: #212330;
     font-size: 13px;
     margin-left: -20px;
-    margin-right: -20px;
 }
 
 .copyright {
@@ -985,7 +998,7 @@ label[for="marketing"] {
 }
 
 .footer-logo {
-    padding: 30px 15px 0;
+    padding: 30px 0 0;
     filter: brightness(10);
     &-img {
         width: 250px;
@@ -1089,11 +1102,21 @@ label[for="marketing"] {
 
 .sm-btn {
     @include small-btn();
+    display: flex;
+    align-items: center;
     height: 55px;
 }
 
 .big-btn {
+    @include bigger-btn(3px);
+}
+
+.big-btn-about {
     @include bigger-btn(6px);
+}
+
+.btn-arrow {
+    margin-left: 10px;
 }
 
 .soft-clr {
