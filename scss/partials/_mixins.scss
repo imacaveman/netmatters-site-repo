@@ -5,7 +5,9 @@
 
 @mixin logo-btn() {
     background-color: #212330;
-    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
     @content;
 }
 
@@ -26,10 +28,9 @@
     border-radius: $brdrr;
     font-size: 1.1rem;
     text-transform: uppercase;
-    padding: 15px 25px;
+    padding: 15px 18px;
     font-weight: 400;
     text-align: center;
-    height: 56px;
     @content;
 }
 
@@ -40,8 +41,8 @@
     border-radius: $brdrr;
     font-size: 1.25rem;
     text-transform: uppercase;
-    padding: 15px 25px;
-    margin-top: 10px;
+    padding: 12px 30px;
+    margin-top: 20px;
     margin-right: 10px;
     @content;
 }

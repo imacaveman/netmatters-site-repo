@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -12,7 +16,13 @@ body {
 }
 
 header {
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 992px) {
+  header {
+    padding-bottom: 15px;
+  }
 }
 
 h2 {
@@ -29,7 +39,7 @@ h3 {
 }
 
 h4 {
-  padding-left: 15px;
+  padding-left: 0;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: normal;
@@ -47,10 +57,13 @@ footer {
   box-sizing: border-box;
   color: #fff;
   background-color: #323544;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
   font-size: 14px;
 }
 footer li {
-  margin: auto auto auto -25px;
+  margin: auto auto auto -40px;
 }
 
 input {
@@ -86,7 +99,7 @@ button {
 }
 
 #search-med-submit {
-  padding: 3px 20px 0;
+  padding: 3px 18px 0;
   border-radius: 0 3px 3px 0;
   border: solid #a3a8ac 1px;
   background-color: #a3a8ac;
@@ -96,10 +109,15 @@ button {
 #search-med-submit:hover {
   background-color: #7E808A;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   #search-med-submit {
     height: 55px;
     border-radius: 3px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  #search-med-submit {
+    border-radius: 0 3px 3px 0;
   }
 }
 
@@ -137,10 +155,37 @@ button {
   margin-left: 14px;
 }
 
+.primary-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .main-header {
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 560px) {
+  .main-header {
+    margin-bottom: 5px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .main-header {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .main-container {
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .main-container {
+    margin-left: 0;
+  }
 }
 
 .phone-container {
@@ -153,11 +198,15 @@ button {
   }
 }
 
+.header-btn-icon {
+  margin-right: 8px;
+}
+
 .support-button {
   margin-left: auto;
-  margin-right: 20px;
+  margin-right: 15px;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 991px) {
   .support-button {
     display: none;
   }
@@ -166,7 +215,7 @@ button {
 .contact-button {
   margin-right: 20px;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 991px) {
   .contact-button {
     display: none;
   }
@@ -189,9 +238,15 @@ button {
   justify-content: center;
   cursor: pointer;
   margin-left: 20px;
+  margin-right: auto;
 }
 .burger-container:hover {
   background-color: #22242E;
+}
+@media screen and (min-width: 1260px) {
+  .burger-container {
+    margin-right: 0;
+  }
 }
 
 .burger-box {
@@ -207,7 +262,8 @@ button {
 }
 
 .netmatters-logo {
-  max-width: 90%;
+  width: 100%;
+  max-width: 370px;
 }
 
 .header-search {
@@ -245,15 +301,18 @@ button {
 
 .header-search-med {
   display: flex;
+  padding-left: 45px;
+  margin-left: auto;
 }
 @media screen and (max-width: 767px) {
   .header-search-med {
     display: none;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (min-width: 992px) {
   .header-search-med {
-    margin-left: auto;
+    margin-left: 0;
+    padding: 0;
   }
 }
 
@@ -274,10 +333,16 @@ button {
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .search-bar-med {
     display: none;
     width: 0;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .search-bar-med {
+    display: inline;
+    width: 230px;
   }
 }
 
@@ -285,7 +350,7 @@ button {
   color: #fff;
   background-color: #333645;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 991px) {
   .main-nav {
     display: none;
   }
@@ -294,16 +359,23 @@ button {
 .nav-container {
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 .nav-block {
   cursor: pointer;
-  padding: 12px 25px 10px;
   text-transform: uppercase;
   text-align: center;
+  padding: 16px 30px;
 }
 .nav-block:hover i {
   color: #fff;
+}
+@media screen and (min-width: 1260px) {
+  .nav-block {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
 }
 
 .nav-icn {
@@ -335,18 +407,25 @@ button {
   top: 33%;
   margin-bottom: 15px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .title {
+    text-align: left;
     font-size: 4rem;
     line-height: 5rem;
-    margin-left: 40px;
-    text-align: left;
     top: 33%;
+    margin-right: 40px;
+    margin-left: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .title {
+    margin-left: 40px;
     width: 800px;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1260px) {
   .title {
+    top: 40%;
     width: 1000px;
   }
 }
@@ -361,13 +440,20 @@ button {
   font-weight: 600;
 }
 
+.our-services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .mid-container {
   display: flex;
   align-items: center;
+  width: 100%;
   padding: 50px 15px 0;
 }
 .mid-container > h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
   text-align: left;
 }
@@ -381,19 +467,23 @@ button {
   }
 }
 
-.our-services {
-  margin: 30px 15px;
-}
-
 .service-block {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 700px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .service-block {
     flex-direction: row;
+    align-items: flex-start;
+    width: 940px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .service-block {
     justify-content: center;
+    width: 100%;
   }
 }
 
@@ -573,6 +663,22 @@ button {
   }
 }
 
+@media screen and (min-width: 992px) {
+  .block-top {
+    width: 280px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .block-top {
+    width: 320px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .block-top {
+    width: 400px;
+  }
+}
+
 .service-block-med {
   width: 100%;
 }
@@ -583,23 +689,30 @@ button {
     flex-wrap: wrap;
     box-sizing: border-box;
     width: 100%;
-    justify-content: center;
-    margin: 0 0 50px;
+    justify-content: space-around;
+    margin: 0 0 75px;
   }
 }
+
 @media screen and (min-width: 768px) {
   .block-med {
-    width: 50%;
-    max-width: 340px;
-    float: left;
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 340px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .block-med {
+    width: 440px;
   }
 }
 @media screen and (min-width: 1024px) {
   .block-med {
     width: 50%;
     max-width: 460px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .block-med {
+    width: 260px;
   }
 }
 
@@ -772,17 +885,24 @@ button {
   display: flex;
   flex-direction: column;
   padding: 30px 15px;
+  margin-left: -20px;
+  margin-right: -20px;
   background-color: #333645;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .welcome-container {
     flex-direction: row;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .welcome-container {
+    justify-content: center;
   }
 }
 
 .welcome, .clients-container {
   margin-bottom: 30px;
-  margin: 15px;
 }
 .welcome > *, .clients-container > * {
   color: #fff;
@@ -794,12 +914,22 @@ button {
 }
 .welcome > p, .clients-container > p {
   line-height: 1.8rem;
+  margin-right: 15px;
   margin-bottom: 20px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .welcome, .clients-container {
-    width: 550px;
+    width: 455px;
   }
+}
+@media screen and (min-width: 1260px) {
+  .welcome, .clients-container {
+    width: 590px;
+  }
+}
+
+.clients-container {
+  margin-right: 10px;
 }
 
 .star-container {
@@ -812,7 +942,7 @@ button {
 }
 
 .quote-container {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
   font-style: italic;
   margin-bottom: 25px;
@@ -852,7 +982,7 @@ button {
 }
 
 .news-panel {
-  margin: 0 15px;
+  margin: 0;
 }
 @media screen and (min-width: 768px) {
   .news-panel {
@@ -864,10 +994,10 @@ button {
 @media screen and (min-width: 768px) {
   .news1, .news2 {
     max-width: 350px;
-    margin: 0 15px;
+    margin: 0 10px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .news1, .news2 {
     max-width: 600px;
   }
@@ -877,6 +1007,16 @@ button {
   .news3 {
     display: none;
   }
+}
+@media screen and (min-width: 1260px) {
+  .news3 {
+    display: inline-block;
+    margin: 0 10px;
+  }
+}
+
+.circle-logo {
+  border-radius: 50%;
 }
 
 .tooltip-btn-a {
@@ -989,7 +1129,12 @@ button {
 .newsletter-add {
   display: flex;
   text-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 992px) {
+  .newsletter-add {
+    margin: 0 10px 25px;
+  }
 }
 
 .name, .email {
@@ -1004,6 +1149,13 @@ button {
 @media screen and (min-width: 1024px) {
   .name, .email {
     max-width: 450px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .name, .email {
+    max-width: 1000px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
@@ -1026,10 +1178,19 @@ button {
   box-sizing: border-box;
   background-color: #ddd;
   align-items: center;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
 .newsletter-container {
   max-width: 940px;
+}
+@media screen and (min-width: 1260px) {
+  .newsletter-container {
+    max-width: 1200px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 .newsletter-text {
@@ -1077,7 +1238,7 @@ button {
 }
 
 .market-check:checked + label::before {
-  content: url(../img/checkmark-24.ico);
+  content: url(../img/checkmark-24.png);
   background-color: #333645;
 }
 
@@ -1090,14 +1251,24 @@ label[for=marketing] {
 }
 
 .footer-container {
+  display: flex;
+  flex-direction: column;
   margin-left: auto;
   margin-right: auto;
   align-content: space-between;
   max-width: 772px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .footer-container {
     max-width: 940px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .footer-container {
+    flex-direction: row;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 30px;
   }
 }
 
@@ -1109,6 +1280,12 @@ label[for=marketing] {
     justify-content: center;
   }
 }
+@media screen and (min-width: 1260px) {
+  .footer-top {
+    margin-right: 60px;
+    justify-content: flex-start;
+  }
+}
 
 .footer-mid a {
   font-size: 0.8rem;
@@ -1118,26 +1295,26 @@ label[for=marketing] {
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
-    justify-content: center;
   }
   .footer-mid > div {
-    width: 375px;
+    width: 360px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .footer-mid {
     flex-wrap: nowrap;
+    justify-content: space-around;
   }
   .footer-mid > div {
-    width: 220px;
+    width: 210px;
   }
 }
-
 .footer-bottom {
   margin-top: 30px;
   padding-left: 15px;
   background-color: #212330;
   font-size: 13px;
+  margin-left: -20px;
 }
 
 .copyright {
@@ -1153,21 +1330,50 @@ label[for=marketing] {
 }
 
 .footer-logo {
-  padding: 30px 15px 0;
+  padding: 30px 0 0;
   filter: brightness(10);
+}
+.footer-logo-img {
+  width: 250px;
+}
+@media screen and (min-width: 480px) {
+  .footer-logo-img {
+    width: 320px;
+  }
 }
 
 .socials-logos {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 481px) {
+  .socials-logos {
+    flex-direction: row;
+  }
+}
+
+.upper-socials {
+  display: flex;
+}
+
+.lower-socials {
   display: flex;
 }
 
 .socials a {
   padding: 16px 22px 16px;
 }
+@media screen and (max-width: 480px) {
+  .socials a {
+    padding: 16px 45px 16px;
+  }
+}
 
 .facebook-btn {
   background-color: #212330;
-  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
 }
 .facebook-btn:hover {
   background-color: #3B5998;
@@ -1175,7 +1381,9 @@ label[for=marketing] {
 
 .linkedin-btn {
   background-color: #212330;
-  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
 }
 .linkedin-btn:hover {
   background-color: #0077B5;
@@ -1183,15 +1391,24 @@ label[for=marketing] {
 
 .twitter-btn {
   background-color: #212330;
-  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
 }
 .twitter-btn:hover {
   background-color: #00ACED;
 }
+@media screen and (max-width: 480px) {
+  .twitter-btn {
+    width: 108px;
+  }
+}
 
 .insta-btn {
   background-color: #212330;
-  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
 }
 .insta-btn:hover {
   background-color: #D93175;
@@ -1264,10 +1481,11 @@ label[for=marketing] {
   border-radius: 3px;
   font-size: 1.1rem;
   text-transform: uppercase;
-  padding: 15px 25px;
+  padding: 15px 18px;
   font-weight: 400;
   text-align: center;
-  height: 56px;
+  display: flex;
+  align-items: center;
   height: 55px;
 }
 
@@ -1275,12 +1493,28 @@ label[for=marketing] {
   box-sizing: border-box;
   cursor: pointer;
   color: #fff;
+  border-radius: 3px;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  padding: 12px 30px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.big-btn-about {
+  box-sizing: border-box;
+  cursor: pointer;
+  color: #fff;
   border-radius: 6px;
   font-size: 1.25rem;
   text-transform: uppercase;
-  padding: 15px 25px;
-  margin-top: 10px;
+  padding: 12px 30px;
+  margin-top: 20px;
   margin-right: 10px;
+}
+
+.btn-arrow {
+  margin-left: 10px;
 }
 
 .soft-clr {
