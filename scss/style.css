@@ -170,10 +170,21 @@ button {
     margin-bottom: 5px;
   }
 }
+@media screen and (min-width: 1260px) {
+  .main-header {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
 
 @media screen and (min-width: 992px) {
   .main-container {
     margin-left: auto;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .main-container {
+    margin-left: 0;
   }
 }
 
@@ -227,9 +238,15 @@ button {
   justify-content: center;
   cursor: pointer;
   margin-left: 20px;
+  margin-right: auto;
 }
 .burger-container:hover {
   background-color: #22242E;
+}
+@media screen and (min-width: 1260px) {
+  .burger-container {
+    margin-right: 0;
+  }
 }
 
 .burger-box {
@@ -325,14 +342,13 @@ button {
 @media screen and (min-width: 1260px) {
   .search-bar-med {
     display: inline;
-    width: 220px;
+    width: 230px;
   }
 }
 
 .main-nav {
   color: #fff;
   background-color: #333645;
-  padding: 7px 7px 5px;
 }
 @media screen and (max-width: 991px) {
   .main-nav {
@@ -343,23 +359,22 @@ button {
 .nav-container {
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 .nav-block {
   cursor: pointer;
-  padding: 12px 25px 10px;
   text-transform: uppercase;
   text-align: center;
-  margin-left: 5px;
-  margin-right: 5px;
+  padding: 16px 30px;
 }
 .nav-block:hover i {
   color: #fff;
 }
 @media screen and (min-width: 1260px) {
   .nav-block {
-    margin-left: 20px;
-    margin-right: 20px;
+    padding-left: 45px;
+    padding-right: 45px;
   }
 }
 
@@ -408,8 +423,9 @@ button {
     width: 800px;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1260px) {
   .title {
+    top: 40%;
     width: 1000px;
   }
 }
@@ -466,7 +482,7 @@ button {
 }
 @media screen and (min-width: 1260px) {
   .service-block {
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
   }
 }
@@ -657,6 +673,11 @@ button {
     width: 320px;
   }
 }
+@media screen and (min-width: 1260px) {
+  .block-top {
+    width: 400px;
+  }
+}
 
 .service-block-med {
   width: 100%;
@@ -670,11 +691,6 @@ button {
     width: 100%;
     justify-content: space-around;
     margin: 0 0 75px;
-  }
-}
-@media screen and (min-width: 1260px) {
-  .service-block-med {
-    justify-content: space-between;
   }
 }
 
@@ -879,6 +895,11 @@ button {
     justify-content: center;
   }
 }
+@media screen and (min-width: 1260px) {
+  .welcome-container {
+    justify-content: center;
+  }
+}
 
 .welcome, .clients-container {
   margin-bottom: 30px;
@@ -899,6 +920,11 @@ button {
 @media screen and (min-width: 992px) {
   .welcome, .clients-container {
     width: 455px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .welcome, .clients-container {
+    width: 590px;
   }
 }
 
@@ -968,7 +994,7 @@ button {
 @media screen and (min-width: 768px) {
   .news1, .news2 {
     max-width: 350px;
-    margin: 0 15px;
+    margin: 0 10px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -981,6 +1007,16 @@ button {
   .news3 {
     display: none;
   }
+}
+@media screen and (min-width: 1260px) {
+  .news3 {
+    display: inline-block;
+    margin: 0 10px;
+  }
+}
+
+.circle-logo {
+  border-radius: 50%;
 }
 
 .tooltip-btn-a {
@@ -1095,6 +1131,11 @@ button {
   text-wrap: wrap;
   margin-bottom: 25px;
 }
+@media screen and (min-width: 992px) {
+  .newsletter-add {
+    margin: 0 10px 25px;
+  }
+}
 
 .name, .email {
   padding-bottom: 15px;
@@ -1108,6 +1149,13 @@ button {
 @media screen and (min-width: 1024px) {
   .name, .email {
     max-width: 450px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .name, .email {
+    max-width: 1000px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
@@ -1136,6 +1184,13 @@ button {
 
 .newsletter-container {
   max-width: 940px;
+}
+@media screen and (min-width: 1260px) {
+  .newsletter-container {
+    max-width: 1200px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 .newsletter-text {

@@ -153,11 +153,18 @@ button {
     @media screen and (min-width: 560px) {
         margin-bottom: 5px;
     }
+    @media screen and (min-width: 1260px) {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 }
 
 .main-container {
     @media screen and (min-width: 992px) {
         margin-left: auto;
+    }
+    @media screen and (min-width: 1260px) {
+        margin-left: 0;
     }
 }
 
@@ -205,8 +212,11 @@ button {
     justify-content: center;
     cursor: pointer;
     margin-left: 20px;
+    margin-right: auto;
     @include btn-hvr();
-   
+    @media screen and (min-width: 1260px) {
+        margin-right: 0;
+    }
 }
 
 .burger-box {
@@ -288,14 +298,13 @@ button {
     }
     @media screen and (min-width: 1260px) {
         display: inline;
-        width: 220px;
+        width: 230px;
     }
 }
 
 .main-nav {
     color: $color-white;
     background-color: $color-base;
-    padding: 7px 7px 5px;
     @media screen and (max-width: 991px) {
         display: none;
     }
@@ -304,19 +313,18 @@ button {
 .nav-container {
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 .nav-block {
     cursor: pointer;
-    padding: 12px 25px 10px;
     text-transform: uppercase;
     text-align: center;
-    margin-left: 5px;
-    margin-right: 5px;
+    padding: 16px 30px;
     @include hvr-white();
     @media screen and (min-width: 1260px) {
-        margin-left: 20px;
-        margin-right: 20px;
+        padding-left: 45px;
+        padding-right: 45px;
     }
 }
 
@@ -360,7 +368,8 @@ button {
         margin-left: 40px;
         width: 800px;
     }
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1260px) {
+        top: 40%;
         width: 1000px;
     }
 }
@@ -413,7 +422,7 @@ button {
         width: 940px;
     }
     @media screen and (min-width: 1260px) {
-        justify-content: space-between;
+        justify-content: center;
         width: 100%;
     }
 }
@@ -553,6 +562,7 @@ button {
     @media screen and (min-width: 1024px) {
         max-width: 300px;
     }
+    
 }
 
 .block-top {
@@ -562,7 +572,9 @@ button {
     @media screen and (min-width: 1024px) {
         width: 320px;
     }
-    
+    @media screen and (min-width: 1260px) {
+        width: 400px;
+    }
 }
 
 .service-block-med {
@@ -576,9 +588,7 @@ button {
         justify-content: space-around;
         margin: 0 0 75px;
     }
-    @media screen and (min-width: 1260px) {
-        justify-content: space-between;
-    }
+    
 }
 
 .block-med {
@@ -718,6 +728,9 @@ button {
         flex-direction: row;
         justify-content: center;
     }
+    @media screen and (min-width: 1260px) {
+        justify-content: center;
+    }
 }
 
 .welcome, .clients-container {
@@ -737,6 +750,9 @@ button {
     }
     @media screen and (min-width: 992px) {
         width: 455px;
+    }
+    @media screen and (min-width: 1260px) {
+        width: 590px;
     }
 }
 
@@ -802,7 +818,7 @@ button {
 .news1, .news2 {
     @media screen and (min-width: 768px) {
         max-width: 350px;
-        margin: 0 15px;
+        margin: 0 10px;
     }
     @media screen and (min-width: 992px) {
         max-width: 600px;
@@ -813,6 +829,14 @@ button {
     @media screen and (min-width: 768px) {
         display: none;
     }
+    @media screen and (min-width: 1260px) {
+        display: inline-block;
+        margin: 0 10px;
+    }
+}
+
+.circle-logo {
+    border-radius: 50%;
 }
 
 .tooltip-btn-a {
@@ -872,9 +896,10 @@ button {
     display: flex;
     text-wrap: wrap;
     margin-bottom: 25px;
+    @media screen and (min-width: 992px) {
+        margin: 0 10px 25px;
+    }
 }
-
-
 
 .name, .email {
     padding-bottom: 15px;
@@ -886,6 +911,11 @@ button {
     }
     @media screen and (min-width: 1024px) {
         max-width: 450px;
+    }
+    @media screen and (min-width: 1260px) {
+        max-width: 1000px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
 
@@ -912,6 +942,11 @@ button {
 
 .newsletter-container {
     max-width: 940px;
+    @media screen and (min-width: 1260px) {
+        max-width: 1200px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
 
 .newsletter-text {
