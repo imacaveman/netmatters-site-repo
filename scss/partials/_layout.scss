@@ -639,9 +639,7 @@ button {
         font-weight: 400;
         color: $color-base;
     }
-    @media screen and (min-width: 1024px) {
-        max-width: 300px;
-    }
+
     
 }
 
@@ -679,14 +677,16 @@ button {
 
 .block-med {
     @media screen and (min-width: 768px) {
+        margin-left: 10px;
+        margin-right: 10px;
         width: 335px;
     }
     @media screen and (min-width: 992px) {
-        width: 440px;
+        width: 430px;
     }
     @media screen and (min-width: 1024px) {
         width: 50%;
-        max-width: 460px;
+        max-width: 450px;
     }
     @media screen and (min-width: 1260px) {
         width: 280px;
