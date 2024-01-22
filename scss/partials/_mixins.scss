@@ -34,14 +34,14 @@
     @content;
 }
 
-@mixin bigger-btn($brdrr: 3px) {
+@mixin bigger-btn($brdrr: 3px, $ptop: 12px 30px) {
     box-sizing: border-box;
     cursor: pointer;
     color: $color-white;
     border-radius: $brdrr;
     font-size: 1.25rem;
     text-transform: uppercase;
-    padding: 12px 30px;
+    padding: $ptop;
     margin-top: 20px;
     margin-right: 10px;
     @content;

@@ -161,10 +161,11 @@ button {
 
 .main-container {
     @media screen and (min-width: 992px) {
+        left: 0;
         margin-left: auto;
     }
     @media screen and (min-width: 1260px) {
-        margin-left: 0;
+        margin-left: auto;
     }
 }
 
@@ -215,7 +216,8 @@ button {
     margin-right: auto;
     @include btn-hvr();
     @media screen and (min-width: 1260px) {
-        margin-right: 0;
+        right: 0;
+        margin-right: auto;
     }
 }
 
@@ -314,17 +316,72 @@ button {
     display: flex;
     justify-content: center;
     text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+// *************** NAV ICONS *************** //
+
+.nav {
+    &-software {
+        &:hover {
+            background-color: $color-software;
+        }
+    }
+    &-support {
+        &:hover {
+            background-color: $color-itsupp;
+        }
+    }
+    &-marketing {
+        &:hover {
+            background-color: $color-marketing;
+        }
+    }
+    &-telecoms {
+        &:hover {
+            background-color: $color-telecoms;
+        }
+    }
+    &-design {
+        &:hover {
+            background-color: $color-design;
+        }
+    }
+    &-security {
+        &:hover {
+            background-color: $color-security;
+        }
+    }
+    &-training {
+        &:hover {
+            background-color: $color-training;
+        }
+    }
+    &-box-icn {
+        padding: 16px 30px;
+        @media screen and (min-width: 1260px) {
+            padding: 16px 45px;
+        }
+    }
+}
+
+// *********** END OF NAV ICONS *********** //
 
 .nav-block {
     cursor: pointer;
     text-transform: uppercase;
     text-align: center;
-    padding: 16px 30px;
     @include hvr-white();
-    @media screen and (min-width: 1260px) {
-        padding-left: 45px;
-        padding-right: 45px;
+    &:hover + .nav-hover-content {
+        display: flex;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 34px 50px 0 50px;
+        border-color: $color-software transparent transparent transparent;
+        transform: rotate(0deg);
     }
 }
 
@@ -338,6 +395,13 @@ button {
     display: block;
     height: 11px;
 }
+
+.nav-hover-content {
+    display: none;
+    position: relative;
+    color: $color-white;
+    background-color: $color-softwaredark;
+  }
 
 .home-img-container {
     display: flex;
@@ -354,13 +418,15 @@ button {
     font-size: 2.5rem;
     line-height: 3rem;
     text-align: center;
-    top: 33%;
-    margin-bottom: 15px;
+    margin: 50px 10px 15px;
+    @media screen and (min-width: 768px) {
+        margin-top: 130px;
+    }
     @media screen and (min-width: 992px) {
         text-align: left;
         font-size: 4rem;
         line-height: 5rem;
-        top: 33%;
+        margin: 60px 40px 20px;
         margin-right: 40px;
         margin-left: 20px;
     }
@@ -369,7 +435,11 @@ button {
         width: 800px;
     }
     @media screen and (min-width: 1260px) {
-        top: 40%;
+        margin-top: 100px;
+        width: 1000px;
+    }
+    @media screen and (min-width: 1440px) {
+        margin-left: 120px;
         width: 1000px;
     }
 }
@@ -419,10 +489,10 @@ button {
     @media screen and (min-width: 992px) {
         flex-direction: row;
         align-items: flex-start;
+        justify-content: center;
         width: 940px;
     }
     @media screen and (min-width: 1260px) {
-        justify-content: center;
         width: 100%;
     }
 }
@@ -559,21 +629,19 @@ button {
         font-weight: 400;
         color: $color-base;
     }
-    @media screen and (min-width: 1024px) {
-        max-width: 300px;
-    }
-    
 }
 
 .block-top {
+    margin-right: 10px;
+    margin-left: 10px;
     @media screen and (min-width: 992px) {
-        width: 280px;
+        width: 290px;
     }
     @media screen and (min-width: 1024px) {
         width: 320px;
     }
     @media screen and (min-width: 1260px) {
-        width: 400px;
+        width: 380px;
     }
 }
 
@@ -588,7 +656,9 @@ button {
         justify-content: space-around;
         margin: 0 0 75px;
     }
-    
+    @media screen and (min-width: 1440px) {
+        width: 1200px;
+    }
 }
 
 .block-med {
@@ -603,7 +673,7 @@ button {
         max-width: 460px;
     }
     @media screen and (min-width: 1260px) {
-        width: 260px;
+        width: 280px;
     }
 }
 
@@ -1191,7 +1261,7 @@ label[for="marketing"] {
 }
 
 .big-btn {
-    @include bigger-btn(3px);
+    @include bigger-btn(3px, 15px 30px);
 }
 
 .big-btn-about {
