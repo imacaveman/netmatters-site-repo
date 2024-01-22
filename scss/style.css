@@ -179,7 +179,6 @@ button {
 
 @media screen and (min-width: 992px) {
   .main-container {
-    left: 0;
     margin-left: auto;
   }
 }
@@ -505,6 +504,7 @@ button {
   align-items: center;
   width: 100%;
   padding: 50px 15px 0;
+  justify-content: center;
 }
 .mid-container > h2 {
   font-size: 2.5rem;
@@ -513,11 +513,26 @@ button {
 }
 .mid-container > a {
   color: #333645;
-  margin-left: auto;
+  margin-left: 190px;
 }
 @media screen and (max-width: 767px) {
   .mid-container > a {
     display: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  .mid-container > a {
+    margin-left: 400px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .mid-container > a {
+    margin-left: 450px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .mid-container > a {
+    margin-left: 680px;
   }
 }
 
@@ -525,7 +540,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 700px;
+  width: 100%;
 }
 @media screen and (min-width: 992px) {
   .service-block {
@@ -537,6 +552,7 @@ button {
 }
 @media screen and (min-width: 1260px) {
   .service-block {
+    justify-content: center;
     width: 100%;
   }
 }
@@ -693,7 +709,7 @@ button {
   display: block;
   position: relative;
   width: 100%;
-  max-width: 730px;
+  max-width: 690px;
   margin-top: 30px;
   border: solid #ccc 1px;
   border-radius: 15px;
@@ -711,6 +727,11 @@ button {
   font-weight: 400;
   color: #333645;
 }
+@media screen and (min-width: 1024px) {
+  .block {
+    max-width: 300px;
+  }
+}
 
 .block-top {
   margin-right: 10px;
@@ -718,12 +739,12 @@ button {
 }
 @media screen and (min-width: 992px) {
   .block-top {
-    width: 290px;
+    width: 280px;
   }
 }
 @media screen and (min-width: 1024px) {
   .block-top {
-    width: 320px;
+    width: 300px;
   }
 }
 @media screen and (min-width: 1260px) {
@@ -733,16 +754,18 @@ button {
 }
 
 .service-block-med {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  align-items: center;
 }
 @media screen and (min-width: 768px) {
   .service-block-med {
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     box-sizing: border-box;
-    width: 100%;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: stretch;
     margin: 0 0 75px;
   }
 }
@@ -754,7 +777,7 @@ button {
 
 @media screen and (min-width: 768px) {
   .block-med {
-    width: 340px;
+    width: 335px;
   }
 }
 @media screen and (min-width: 992px) {

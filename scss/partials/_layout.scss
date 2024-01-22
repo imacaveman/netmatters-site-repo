@@ -161,7 +161,6 @@ button {
 
 .main-container {
     @media screen and (min-width: 992px) {
-        left: 0;
         margin-left: auto;
     }
     @media screen and (min-width: 1260px) {
@@ -467,17 +466,27 @@ button {
     align-items: center;
     width: 100%;
     padding: 50px 15px 0;
+    justify-content: center;
     & > h2 {
         font-size: 2.5rem;
         font-weight: bold;
         text-align: left;
     }
     & > a {
+        color: $color-base;
+        margin-left: 190px;
         @media screen and (max-width: 767px) {
             display: none;
         }
-        color: $color-base;
-        margin-left: auto;
+        @media screen and (min-width: 992px) {
+            margin-left: 400px;
+        }
+        @media screen and (min-width: 1024px) {
+            margin-left: 450px;
+        }
+        @media screen and (min-width: 1260px) {
+            margin-left: 680px;
+        }
     }
 }
 
@@ -485,7 +494,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 700px;
+    width: 100%;
     @media screen and (min-width: 992px) {
         flex-direction: row;
         align-items: flex-start;
@@ -493,6 +502,7 @@ button {
         width: 940px;
     }
     @media screen and (min-width: 1260px) {
+        justify-content: center;
         width: 100%;
     }
 }
@@ -612,7 +622,7 @@ button {
     display: block;
     position: relative;
     width: 100%;
-    max-width: 730px;
+    max-width: 690px;
     margin-top: 30px;
     border: solid #ccc 1px;
     border-radius: 15px;
@@ -629,16 +639,20 @@ button {
         font-weight: 400;
         color: $color-base;
     }
+    @media screen and (min-width: 1024px) {
+        max-width: 300px;
+    }
+    
 }
 
 .block-top {
     margin-right: 10px;
     margin-left: 10px;
     @media screen and (min-width: 992px) {
-        width: 290px;
+        width: 280px;
     }
     @media screen and (min-width: 1024px) {
-        width: 320px;
+        width: 300px;
     }
     @media screen and (min-width: 1260px) {
         width: 380px;
@@ -646,14 +660,16 @@ button {
 }
 
 .service-block-med {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    align-items: center;
     @media screen and (min-width: 768px) {
-        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         box-sizing: border-box;
-        width: 100%;
-        justify-content: space-around;
+        justify-content: center;
+        align-items: stretch;
         margin: 0 0 75px;
     }
     @media screen and (min-width: 1440px) {
@@ -663,7 +679,7 @@ button {
 
 .block-med {
     @media screen and (min-width: 768px) {
-        width: 340px;
+        width: 335px;
     }
     @media screen and (min-width: 992px) {
         width: 440px;
