@@ -316,6 +316,7 @@ button {
     justify-content: center;
     text-align: center;
     align-items: center;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -369,20 +370,33 @@ button {
 // *********** END OF NAV ICONS *********** //
 
 .nav-block {
+    display: flex;
+    flex-direction: column;
     cursor: pointer;
     text-transform: uppercase;
     text-align: center;
+    position: relative;
     @include hvr-white();
-    &:hover + .nav-hover-content {
-        display: flex;
-        width: 0px;
-        height: 0px;
-        border-style: solid;
-        border-width: 34px 50px 0 50px;
-        border-color: $color-software transparent transparent transparent;
-        transform: rotate(0deg);
-    }
 }
+
+.nav-block:hover .nav-hover-content {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    cursor: default;
+    top: 100%;
+    width: 100vw;
+    left: 0;
+    color: $color-white;
+    background-color: $color-softwaredark;
+    padding: 30px 10px 30px 10px;
+    z-index: 1;
+}
+
+.nav-hover-content {
+    display: none;
+    left: 0;
+  }
 
 .nav-icn {
     display: block;
@@ -395,12 +409,7 @@ button {
     height: 11px;
 }
 
-.nav-hover-content {
-    display: none;
-    position: relative;
-    color: $color-white;
-    background-color: $color-softwaredark;
-  }
+
 
 .home-img-container {
     display: flex;
@@ -879,9 +888,10 @@ button {
 .news-container {
     display: flex;
     align-items: center;
-    padding: 50px 15px 20px;
+    justify-content: center;
+    padding: 30px 15px 20px;
     & > h2 {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
         font-weight: 600;
     }
     & > a {
@@ -890,6 +900,12 @@ button {
         }
         color: $color-base;
         margin-left: auto;
+        @media screen and (min-width: 992px) {
+            margin-left: 550px;
+        }
+        @media screen and (min-width: 1260px) {
+            margin-left: 780px;
+        }
     }
 }
 
@@ -907,7 +923,10 @@ button {
         margin: 0 10px;
     }
     @media screen and (min-width: 992px) {
-        max-width: 600px;
+        max-width: 450px;
+    }
+    @media screen and (min-width: 1260px) {
+        max-width: 370px;
     }
 }
 
@@ -918,6 +937,9 @@ button {
     @media screen and (min-width: 1260px) {
         display: inline-block;
         margin: 0 10px;
+    }
+    @media screen and (min-width: 1260px) {
+        max-width: 370px;
     }
 }
 
@@ -1105,9 +1127,10 @@ label[for="marketing"] {
     }
     @media screen and (min-width: 1260px) {
         flex-direction: row;
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: auto;
+        margin-right: auto;
         padding-top: 30px;
+        justify-content: center;
     }
 }
 
