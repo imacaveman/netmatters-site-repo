@@ -350,6 +350,7 @@ button {
 .main-nav {
   color: #fff;
   background-color: #333645;
+  position: relative;
 }
 @media screen and (max-width: 991px) {
   .main-nav {
@@ -403,22 +404,105 @@ button {
   cursor: pointer;
   text-transform: uppercase;
   text-align: center;
-  position: relative;
 }
 .nav-block:hover i {
   color: #fff;
 }
 
-.nav-block:hover .nav-hover-content {
+.software:hover .software-hover {
   display: flex;
   justify-content: center;
   position: absolute;
   cursor: default;
   top: 100%;
-  width: 100vw;
+  width: 100%;
   left: 0;
   color: #fff;
   background-color: #526781;
+  padding: 30px 10px 30px 10px;
+  z-index: 1;
+}
+
+.itsupport:hover .itsupp-hover {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  cursor: default;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  color: #fff;
+  background-color: #286ABD;
+  padding: 30px 10px 30px 10px;
+  z-index: 1;
+}
+
+.marketing:hover .marketing-hover {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  cursor: default;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  color: #fff;
+  background-color: #009B69;
+  padding: 30px 10px 30px 10px;
+  z-index: 1;
+}
+
+.telecoms:hover .telecoms-hover {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  cursor: default;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  color: #fff;
+  background-color: #BC2C28;
+  padding: 30px 10px 30px 10px;
+  z-index: 1;
+}
+
+.webdesign:hover .webdesign-hover {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  cursor: default;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  color: #fff;
+  background-color: #7E57A0;
+  padding: 30px 10px 30px 10px;
+  z-index: 1;
+}
+
+.security:hover .security-hover {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  cursor: default;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  color: #fff;
+  background-color: #DE093F;
+  padding: 30px 10px 30px 10px;
+  z-index: 1;
+}
+
+.development:hover .development-hover {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  cursor: default;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  color: #fff;
+  background-color: #A3331D;
   padding: 30px 10px 30px 10px;
   z-index: 1;
 }

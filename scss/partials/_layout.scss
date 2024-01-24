@@ -306,6 +306,7 @@ button {
 .main-nav {
     color: $color-white;
     background-color: $color-base;
+    position: relative;
     @media screen and (max-width: 991px) {
         display: none;
     }
@@ -375,22 +376,35 @@ button {
     cursor: pointer;
     text-transform: uppercase;
     text-align: center;
-    position: relative;
     @include hvr-white();
 }
 
-.nav-block:hover .nav-hover-content {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    cursor: default;
-    top: 100%;
-    width: 100vw;
-    left: 0;
-    color: $color-white;
-    background-color: $color-softwaredark;
-    padding: 30px 10px 30px 10px;
-    z-index: 1;
+.software:hover .software-hover {
+    @include hvr-nav($color-softwaredark);
+}
+
+.itsupport:hover .itsupp-hover {
+    @include hvr-nav($color-itsuppdark);
+}
+
+.marketing:hover .marketing-hover {
+    @include hvr-nav($color-marketing-dark);
+}
+
+.telecoms:hover .telecoms-hover {
+    @include hvr-nav($color-telecomsdark);
+}
+
+.webdesign:hover .webdesign-hover {
+    @include hvr-nav($color-design-dark);
+}
+
+.security:hover .security-hover {
+    @include hvr-nav($color-securitydark);
+}
+
+.development:hover .development-hover {
+    @include hvr-nav($color-trainingdark);
 }
 
 .nav-hover-content {
@@ -408,8 +422,6 @@ button {
     display: block;
     height: 11px;
 }
-
-
 
 .home-img-container {
     display: flex;

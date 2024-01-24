@@ -141,3 +141,18 @@
     }
     @content;
 }
+
+@mixin hvr-nav($bg-clr) {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    cursor: default;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    color: $color-white;
+    background-color: $bg-clr;
+    padding: 30px 10px 30px 10px;
+    z-index: 1;
+    @content;
+}
