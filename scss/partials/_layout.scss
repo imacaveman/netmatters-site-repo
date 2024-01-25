@@ -325,15 +325,28 @@ button {
 // *************** NAV ICONS *************** //
 
 .nav-box-icn {
-    padding: 16px 30px;
+    width: 133px;
+    padding: 15px 0 16px;
     @media screen and (min-width: 1260px) {
-        padding: 16px 45px;
+        width: 167px;
     }
 }
 
 .software {
+    display: flex;
+    flex-direction: column;
     &:hover {
-    background-color: $color-software;
+        background-color: $color-software;
+    }
+}
+
+.software-tri {
+    @include triangle($color-software, 12px);
+    @media screen and (min-width: 1024px) {
+        @include triangle($color-software, 18px);
+    }
+    @media screen and (min-width: 1260px) {
+        @include triangle($color-software, 7px);
     }
 }
 
@@ -343,15 +356,46 @@ button {
     }
 }
 
+.itsupport-tri {
+    @include triangle($color-itsupp, 145px);
+    @media screen and (min-width: 1024px) {
+        @include triangle($color-itsupp, 151px);
+    }
+    @media screen and (min-width: 1260px) {
+        @include triangle($color-itsupp, 174px);
+    }
+}
+
 .marketing {
     &:hover {
         background-color: $color-marketing;
     }
 }
 
+.marketing-tri {
+    @include triangle($color-marketing, 278px);
+    @media screen and (min-width: 1024px) {
+        @include triangle($color-marketing, 284px);
+    }
+    @media screen and (min-width: 1260px) {
+        @include triangle($color-marketing, 341px);
+    }
+}
+
+
 .telecoms {
     &:hover {
         background-color: $color-telecoms;
+    }
+}
+
+.telecoms-tri {
+    @include triangle($color-telecoms, 411px);
+    @media screen and (min-width: 1024px) {
+        @include triangle($color-telecoms, 418px);
+    }
+    @media screen and (min-width: 1260px) {
+        @include triangle($color-telecoms, 508px);
     }
 }
 
@@ -361,9 +405,29 @@ button {
     }
 }
 
+.webdesign-tri {
+    @include triangle($color-design, 544px);
+    @media screen and (min-width: 1024px) {
+        @include triangle($color-design, 550px);
+    }
+    @media screen and (min-width: 1260px) {
+        @include triangle($color-design, 675px);
+    }
+}
+
 .security {
     &:hover {
         background-color: $color-security;
+    }
+}
+
+.security-tri {
+    @include triangle($color-security, 677px);
+    @media screen and (min-width: 1024px) {
+        @include triangle($color-security, 683px);
+    }
+    @media screen and (min-width: 1260px) {
+        @include triangle($color-security, 842px);
     }
 }
 
@@ -373,10 +437,21 @@ button {
     }
 }
 
+.development-tri {
+    @include triangle($color-training, 810px);
+    @media screen and (min-width: 1024px) {
+        @include triangle($color-training, 816px);
+    }
+    @media screen and (min-width: 1260px) {
+        @include triangle($color-training, 1009px);
+    }
+}
+
 // *********** END OF NAV ICONS *********** //
 
 .nav-block {
     display: flex;
+    cursor: pointer;
     flex-direction: column;
     text-transform: uppercase;
     @include hvr-white();
@@ -419,14 +494,7 @@ button {
     }
 }
 
-.triangle {
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 40px 75px 0 75px;
-    border-color: #FF4532 transparent transparent transparent;
-    transform: rotate(0deg);
- }
+
 
 .nav-hover-content {
     display: none;
