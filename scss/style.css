@@ -368,27 +368,6 @@ button {
   margin-right: auto;
 }
 
-.nav-software:hover {
-  background-color: #67809F;
-}
-.nav-support:hover {
-  background-color: #4183D7;
-}
-.nav-marketing:hover {
-  background-color: #2ECC71;
-}
-.nav-telecoms:hover {
-  background-color: #D64541;
-}
-.nav-design:hover {
-  background-color: #926FB1;
-}
-.nav-security:hover {
-  background-color: #F62459;
-}
-.nav-training:hover {
-  background-color: #CE4125;
-}
 .nav-box-icn {
   padding: 16px 30px;
 }
@@ -398,12 +377,38 @@ button {
   }
 }
 
+.software:hover {
+  background-color: #67809F;
+}
+
+.itsupport:hover {
+  background-color: #4183D7;
+}
+
+.marketing:hover {
+  background-color: #2ECC71;
+}
+
+.telecoms:hover {
+  background-color: #D64541;
+}
+
+.webdesign:hover {
+  background-color: #926FB1;
+}
+
+.security:hover {
+  background-color: #F62459;
+}
+
+.development:hover {
+  background-color: #CE4125;
+}
+
 .nav-block {
   display: flex;
   flex-direction: column;
-  cursor: pointer;
   text-transform: uppercase;
-  text-align: center;
 }
 .nav-block:hover i {
   color: #fff;
@@ -411,105 +416,175 @@ button {
 
 .software:hover .software-hover {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   position: absolute;
+  text-align: left;
+  font-weight: bold;
   cursor: default;
   top: 100%;
   width: 100%;
   left: 0;
   color: #fff;
   background-color: #526781;
-  padding: 30px 10px 30px 10px;
+  padding-top: 40px;
   z-index: 1;
 }
 
 .itsupport:hover .itsupp-hover {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   position: absolute;
+  text-align: left;
+  font-weight: bold;
   cursor: default;
   top: 100%;
   width: 100%;
   left: 0;
   color: #fff;
   background-color: #286ABD;
-  padding: 30px 10px 30px 10px;
+  padding-top: 40px;
   z-index: 1;
 }
 
 .marketing:hover .marketing-hover {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   position: absolute;
+  text-align: left;
+  font-weight: bold;
   cursor: default;
   top: 100%;
   width: 100%;
   left: 0;
   color: #fff;
   background-color: #009B69;
-  padding: 30px 10px 30px 10px;
+  padding-top: 40px;
   z-index: 1;
 }
 
 .telecoms:hover .telecoms-hover {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   position: absolute;
+  text-align: left;
+  font-weight: bold;
   cursor: default;
   top: 100%;
   width: 100%;
   left: 0;
   color: #fff;
   background-color: #BC2C28;
-  padding: 30px 10px 30px 10px;
+  padding-top: 40px;
   z-index: 1;
 }
 
 .webdesign:hover .webdesign-hover {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   position: absolute;
+  text-align: left;
+  font-weight: bold;
   cursor: default;
   top: 100%;
   width: 100%;
   left: 0;
   color: #fff;
   background-color: #7E57A0;
-  padding: 30px 10px 30px 10px;
+  padding-top: 40px;
   z-index: 1;
 }
 
 .security:hover .security-hover {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   position: absolute;
+  text-align: left;
+  font-weight: bold;
   cursor: default;
   top: 100%;
   width: 100%;
   left: 0;
   color: #fff;
   background-color: #DE093F;
-  padding: 30px 10px 30px 10px;
+  padding-top: 40px;
   z-index: 1;
 }
 
 .development:hover .development-hover {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   position: absolute;
+  text-align: left;
+  font-weight: bold;
   cursor: default;
   top: 100%;
   width: 100%;
   left: 0;
   color: #fff;
   background-color: #A3331D;
-  padding: 30px 10px 30px 10px;
+  padding-top: 40px;
   z-index: 1;
+}
+
+.hoverbox {
+  display: flex;
+  margin-left: -40px;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1440px) {
+  .hoverbox {
+    justify-content: flex-start;
+  }
+}
+
+.triangle {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 40px 75px 0 75px;
+  border-color: #FF4532 transparent transparent transparent;
+  transform: rotate(0deg);
 }
 
 .nav-hover-content {
   display: none;
-  left: 0;
+  text-transform: none;
+  padding-left: 10px;
+  padding-right: 40px;
+}
+.nav-hover-content > h2 {
+  color: #fff;
+}
+@media screen and (min-width: 1024px) {
+  .nav-hover-content {
+    padding-left: 20px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .nav-hover-content {
+    padding-left: 30px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .nav-hover-content {
+    padding-left: 100px;
+  }
+}
+
+.hoverlist-item {
+  padding-bottom: 20px;
+}
+.hoverlist-item > a {
+  font-size: 18px;
+  font-weight: 400;
+}
+@media screen and (min-width: 1024px) {
+  .hoverlist-item > a {
+    font-size: 19px;
+  }
+}
+.hoverlist-item > a > i {
+  margin-right: 5px;
 }
 
 .nav-icn {
