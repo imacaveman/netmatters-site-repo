@@ -915,6 +915,7 @@ button {
 
 .partners-img-container, .clients-img-container {
     display: flex;
+    position: relative;
     max-height: 80px;
     margin-left: 15px;
     align-items: center;
