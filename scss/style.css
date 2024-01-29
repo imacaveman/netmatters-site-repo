@@ -986,6 +986,7 @@ button {
 @media screen and (min-width: 768px) {
   .title {
     margin-top: 130px;
+    width: 500px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -996,6 +997,7 @@ button {
     margin: 60px 40px 20px;
     margin-right: 40px;
     margin-left: 20px;
+    width: 700px;
   }
 }
 @media screen and (min-width: 1024px) {
