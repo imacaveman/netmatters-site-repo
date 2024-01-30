@@ -968,25 +968,46 @@ button {
 
 .home-img-container {
   display: flex;
-  height: 550px;
+  height: 650px;
   overflow-x: hidden;
   background: url("../img/home.jpg") center/cover no-repeat #818181;
   background-blend-mode: multiply;
+}
+@media screen and (min-width: 500px) {
+  .home-img-container {
+    height: 550px;
+  }
+}
+
+.banner-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title {
   position: absolute;
   color: #fff;
   font-weight: bold;
+  width: 300px;
   font-size: 2.5rem;
   line-height: 3rem;
   text-align: center;
-  margin: 50px 10px 15px;
+  margin: 50px 0 15px 0;
+}
+@media screen and (min-width: 500px) {
+  .title {
+    width: 440px;
+  }
+}
+@media screen and (min-width: 530px) {
+  .title {
+    width: 500px;
+  }
 }
 @media screen and (min-width: 768px) {
   .title {
-    margin-top: 130px;
-    width: 500px;
+    width: 700px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -997,7 +1018,6 @@ button {
     margin: 60px 40px 20px;
     margin-right: 40px;
     margin-left: 20px;
-    width: 700px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1019,6 +1039,39 @@ button {
   }
 }
 
+.title-lead {
+  margin-top: 80px;
+}
+@media screen and (min-width: 768px) {
+  .title-lead {
+    margin-top: 120px;
+  }
+}
+
+.title-bespoke {
+  margin-top: 160px;
+}
+
+.title-support {
+  margin-top: 160px;
+}
+
+.title-marketing {
+  margin-top: 160px;
+}
+
+.title-telecoms {
+  margin-top: 160px;
+}
+
+.title-design {
+  margin-top: 160px;
+}
+
+.title-security {
+  margin-top: 160px;
+}
+
 .title > p {
   font-size: 1.3rem;
   margin-top: 20px;
@@ -1027,6 +1080,29 @@ button {
 
 .accent-text {
   font-weight: 600;
+}
+
+.slick-dots {
+  bottom: 40px;
+}
+
+.slick-dots li button:before {
+  font-size: 16px;
+  color: #fff;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #fff;
+  opacity: 1;
+}
+
+.slick-dots li button:hover {
+  opacity: 0.3;
+  color: #666;
+}
+
+li.slick-active button:hover {
+  opacity: 1;
 }
 
 .our-services {
