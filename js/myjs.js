@@ -1,9 +1,11 @@
 $(document).ready(function(){
     $('.carousel-container').slick({
+      autoplay: true,
+      autoplaySpeed: 4000,
       dots: true,
       infinite: true,
       prevArrow: false,
       nextArrow: false,
-      speed: 300
+      speed: 1000
     });
   });

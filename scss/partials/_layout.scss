@@ -556,6 +556,9 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media screen and (min-width: 1024px) {
+        align-items: flex-start;
+    }
 }
 
 .title {
@@ -577,20 +580,21 @@ button {
         width: 700px;
     }
     @media screen and (min-width: 992px) {
+        width: 800px;
         text-align: left;
         font-size: 4rem;
         line-height: 5rem;
-        margin: 60px 40px 20px;
-        margin-right: 40px;
-        margin-left: 20px;
+        margin-right: auto;
+        margin-left: auto;
     }
     @media screen and (min-width: 1024px) {
         margin-left: 40px;
-        width: 800px;
     }
     @media screen and (min-width: 1260px) {
         margin-top: 100px;
         width: 1000px;
+        margin-right: 40px;
+        margin-left: 20px;
     }
     @media screen and (min-width: 1440px) {
         margin-left: 120px;
@@ -603,30 +607,33 @@ button {
     @media screen and (min-width: 768px) {
         margin-top: 120px;
     }
+    @media screen and (min-width: 992px) {
+        margin-top: 50px;
+    }
 }
 
 .title-bespoke {
-    margin-top: 160px;
+    @include title-text();
 }
 
 .title-support {
-    margin-top: 160px;
+    @include title-text();
 }
 
 .title-marketing {
-    margin-top: 160px;
+    @include title-text();
 }
 
 .title-telecoms {
-    margin-top: 160px;
+    @include title-text();
 }
 
 .title-design {
-    margin-top: 160px;
+    @include title-text();
 }
 
 .title-security {
-    margin-top: 160px;
+    @include title-text();
 }
 
 .title > p {
@@ -1476,6 +1483,26 @@ label[for="marketing"] {
 
 .gray {
     @include btn-color($color-gray, $color-gray-accent, $color-gray);
+}
+
+.paleblue {
+    @include btn-color($color-software, $color-softwaredark, $color-software);
+}
+
+.paleit {
+    @include btn-color($color-itsupp, $color-itsupp-accent, $color-itsupp);
+}
+
+.palemarketing {
+    @include btn-color($color-marketing, $color-marketing-pale, $color-marketing);
+}
+
+.paletelecoms {
+    @include btn-color($color-telecoms, $color-telecomsdark, $color-telecoms);
+}
+
+.palesecurity {
+    @include btn-color($color-security, $color-securitydark, $color-security);
 }
 
 .light {

@@ -52,6 +52,7 @@
     border: solid $brdrc 1px;
     &:hover {
         background-color: $bgc-h;
+        border: solid $bgc-h 1px;
     }
     @content;
 }
@@ -172,5 +173,13 @@
     background-color: $bg-clr;
     padding-top: 40px;
     z-index: 1;
+    @content;
+}
+
+@mixin title-text() {
+    margin-top: 160px;
+    @media screen and (min-width: 992px) {
+        margin-top: 120px;
+    }
     @content;
 }

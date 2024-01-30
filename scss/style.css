@@ -984,6 +984,11 @@ button {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 1024px) {
+  .banner-block {
+    align-items: flex-start;
+  }
+}
 
 .title {
   position: absolute;
@@ -1012,24 +1017,25 @@ button {
 }
 @media screen and (min-width: 992px) {
   .title {
+    width: 800px;
     text-align: left;
     font-size: 4rem;
     line-height: 5rem;
-    margin: 60px 40px 20px;
-    margin-right: 40px;
-    margin-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 @media screen and (min-width: 1024px) {
   .title {
     margin-left: 40px;
-    width: 800px;
   }
 }
 @media screen and (min-width: 1260px) {
   .title {
     margin-top: 100px;
     width: 1000px;
+    margin-right: 40px;
+    margin-left: 20px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1047,29 +1053,64 @@ button {
     margin-top: 120px;
   }
 }
+@media screen and (min-width: 992px) {
+  .title-lead {
+    margin-top: 50px;
+  }
+}
 
 .title-bespoke {
   margin-top: 160px;
+}
+@media screen and (min-width: 992px) {
+  .title-bespoke {
+    margin-top: 120px;
+  }
 }
 
 .title-support {
   margin-top: 160px;
 }
+@media screen and (min-width: 992px) {
+  .title-support {
+    margin-top: 120px;
+  }
+}
 
 .title-marketing {
   margin-top: 160px;
+}
+@media screen and (min-width: 992px) {
+  .title-marketing {
+    margin-top: 120px;
+  }
 }
 
 .title-telecoms {
   margin-top: 160px;
 }
+@media screen and (min-width: 992px) {
+  .title-telecoms {
+    margin-top: 120px;
+  }
+}
 
 .title-design {
   margin-top: 160px;
 }
+@media screen and (min-width: 992px) {
+  .title-design {
+    margin-top: 120px;
+  }
+}
 
 .title-security {
   margin-top: 160px;
+}
+@media screen and (min-width: 992px) {
+  .title-security {
+    margin-top: 120px;
+  }
 }
 
 .title > p {
@@ -2150,6 +2191,7 @@ label[for=marketing] {
 }
 .dark:hover {
   background-color: #121318;
+  border: solid #121318 1px;
 }
 
 .gray {
@@ -2158,6 +2200,52 @@ label[for=marketing] {
 }
 .gray:hover {
   background-color: #7E808A;
+  border: solid #7E808A 1px;
+}
+
+.paleblue {
+  background-color: #67809F;
+  border: solid #67809F 1px;
+}
+.paleblue:hover {
+  background-color: #526781;
+  border: solid #526781 1px;
+}
+
+.paleit {
+  background-color: #4183D7;
+  border: solid #4183D7 1px;
+}
+.paleit:hover {
+  background-color: #2A6EC6;
+  border: solid #2A6EC6 1px;
+}
+
+.palemarketing {
+  background-color: #2ECC71;
+  border: solid #2ECC71 1px;
+}
+.palemarketing:hover {
+  background-color: #26AB5F;
+  border: solid #26AB5F 1px;
+}
+
+.paletelecoms {
+  background-color: #D64541;
+  border: solid #D64541 1px;
+}
+.paletelecoms:hover {
+  background-color: #BC2C28;
+  border: solid #BC2C28 1px;
+}
+
+.palesecurity {
+  background-color: #F62459;
+  border: solid #F62459 1px;
+}
+.palesecurity:hover {
+  background-color: #DE093F;
+  border: solid #DE093F 1px;
 }
 
 .light {
@@ -2166,6 +2254,7 @@ label[for=marketing] {
 }
 .light:hover {
   background-color: #7E57A0;
+  border: solid #7E57A0 1px;
 }
 
 .blue {
@@ -2176,6 +2265,7 @@ label[for=marketing] {
 }
 .blue:hover {
   background-color: #166AF4;
+  border: solid #166AF4 1px;
 }
 
 .green {
@@ -2185,6 +2275,7 @@ label[for=marketing] {
 }
 .green:hover {
   background-color: #009B69;
+  border: solid #009B69 1px;
 }
 
 .sm-btn {
