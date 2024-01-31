@@ -9,17 +9,20 @@ let scrollThreshold = 50;
 
 $(window).on("scroll", function(){
   console.log("Scroll event fired");
-  let scrollTop = $bodyAll.scrollTop();
+  let scrollTop = $(this).scrollTop();
   console.log("Scroll Top: ", scrollTop);
-  if(scrollTop > lastScrollTop) {
+  // if(scrollTop > lastScrollTop) {
+  if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
     console.log("Scrolling down..")
+    $headerAll.removeClass("sticky-header");
+  } else if(scrollTop <= scrollThreshold) {
     $headerAll.removeClass("sticky-header");
   } else {
     console.log("Scrolling up or at the top of the page");
     $headerAll.addClass("sticky-header");
-  };
+  }
 
-  
+  lastScrollTop = scrollTop;
 });
 
 // ********* END OF STICKY ********* //
