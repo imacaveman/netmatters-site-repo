@@ -10,10 +10,14 @@ body {
 
 header {
     padding-top: 20px;
-    padding-bottom: 20px;
-    @media screen and (min-width: 992px) {
-        padding-bottom: 15px;
-    }
+}
+
+.sticky-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $color-white;
+    z-index: 1;
 }
 
 h2 {
@@ -151,7 +155,7 @@ button {
     align-items: center;
     margin-bottom: 15px;
     @media screen and (min-width: 560px) {
-        margin-bottom: 5px;
+        margin-bottom: 20px;
     }
     @media screen and (min-width: 1260px) {
         margin-left: 15px;
@@ -205,14 +209,11 @@ button {
 .burger-container {
     display: flex;
     height: 55px;
-    min-width: 60px;
+    max-width: 60px;
     border-radius: 3px;
     background-color: $color-base;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     margin-left: 20px;
-    margin-right: auto;
     @include btn-hvr();
     @media screen and (min-width: 1260px) {
         right: 0;
@@ -220,17 +221,38 @@ button {
     }
 }
 
-.burger-box {
-    display: flex;
-    flex-direction: column;
+.hamburger-inner {
+    background-color: $color-white;
+    &::before {
+        background-color: $color-white;
+    }
+    &::after {
+        background-color: $color-white;
+    }
 }
 
-.burger-mid {
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 30px;
-    height: 4px;
-    background-color: $color-white;
-    margin: 3px 0;
+    border-radius: 0;
 }
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background-color: $color-white; 
+}
+
+// .burger-box {
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// .burger-mid {
+//     width: 30px;
+//     height: 4px;
+//     background-color: $color-white;
+//     margin: 3px 0;
+// }
 
 .netmatters-logo {
     width: 100%;
@@ -239,6 +261,7 @@ button {
 
 .header-search {
     position: relative;
+    margin-bottom: 20px;
     @media screen and (min-width: 768px) {
         display: none;
     }
@@ -545,11 +568,38 @@ button {
     display: flex;
     height: 650px;
     overflow-x: hidden;
-    background: url("../img/home.jpg") center / cover no-repeat #818181;
     background-blend-mode: multiply;
     @media screen and (min-width: 500px) {
         height: 550px;
     }
+}
+
+.banner-img1 {
+    background: url("../img/banners/home.jpg") center / cover no-repeat #818181;
+}
+
+.banner-img2 {
+    background: url("../img/banners/home2.jpg") center / cover no-repeat #818181;
+}
+
+.banner-img3 {
+    background: url("../img/banners/home3.png") center / cover no-repeat #818181;
+}
+
+.banner-img4 {
+    background: url("../img/banners/home4.png") center / cover no-repeat #818181;
+}
+
+.banner-img5 {
+    background: url("../img/banners/home5.png") center / cover no-repeat #818181;
+}
+
+.banner-img6 {
+    background: url("../img/banners/home6.jpg") center / cover no-repeat #818181;
+}
+
+.banner-img7 {
+    background: url("../img/banners/home7.png") center / cover no-repeat #818181;
 }
 
 .banner-block {
