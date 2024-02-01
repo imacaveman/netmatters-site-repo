@@ -19,7 +19,7 @@ header {
     padding-top: 20px;
     background-color: $color-white;
     box-shadow: 0 3px 35px rgba(0,0,0,.1);
-    z-index: 1;
+    z-index: 2;
 }
 
 h2 {
@@ -48,6 +48,12 @@ a {
     &:hover {
         text-decoration: underline;
     }
+}
+
+ul {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 footer {
@@ -112,6 +118,77 @@ button {
     }
 }
 
+// ********* SIDE BAR ********* //
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 275px;
+    height: 100%;
+    background-color: $color-base;
+    overflow-y: auto;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.sidebar a:hover {
+    text-decoration: none;
+}
+
+.sidebar-inner { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-block-sidebar {
+    text-align: center;
+}
+
+.submenu-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us-sidebar {
+    padding: 18px 0 18px 0;
+}
+
+.sidebar-main:hover {
+    background-color: $color-sbhover;
+}
+
+.sidebar-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    outline: 1px solid rgba(0,0,0,.25);
+    border: 1px solid hsla(0,0%,100%,.1);
+    margin-top: 20px;
+    border-radius: 4px;
+    font-size: 18px;
+    width: 216px;
+}
+
+.submenu {
+    margin-top: 20px;
+}
+
+.submenu-item {
+    display: flex;
+    flex-direction: column;
+    width: 216px;
+    border-top: 1px solid rgba(0,0,0,.45);
+    & a {
+        padding: 10px 20px;
+        background-color: $color-nadark;
+        border-top: 1px solid hsla(0,0%,100%,.05);
+    }
+}
+
+// ********* END OF SIDE BAR ********* //
+
 .cookieconsent-btn {
     position: fixed;
     font-size: 0.8rem;
@@ -134,7 +211,7 @@ button {
     color: $color-white;
     bottom: 20px;
     right: 10px;
-    z-index: 2;
+    z-index: 3;
     height: 60px;
     width: 60px;
     background-color: $color-base;
@@ -479,6 +556,9 @@ button {
     cursor: pointer;
     flex-direction: column;
     text-transform: uppercase;
+}
+
+.hvr-w {
     @include hvr-white();
 }
 
