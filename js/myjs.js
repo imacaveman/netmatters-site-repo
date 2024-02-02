@@ -1,7 +1,8 @@
 const $burger = $(".hamburger");
 const $hamburgerContainer = $(".burger-container");
 const $headerAll = $(".sticky-container");
-const $bodyAll = $("body");
+const $bodyAll = $(".main-body");
+const $sideBar = $(".sidebar");
 let lastScrollTop = 0;
 let scrollThreshold = 50;
 
@@ -28,8 +29,10 @@ $(window).on("scroll", function(){
 $hamburgerContainer.on("click", function(event){
   $burger.toggleClass("is-active");
   $(this).toggleClass("burger-clicked");
-  // $sidebar.toggleClass("show");
+  $bodyAll.toggleClass("allmove").toggleClass("darken-site");
+  $sideBar.toggleClass("sidebar-show");
 });
+
 
 // ********* END OF HAMBURGER ********* //
 

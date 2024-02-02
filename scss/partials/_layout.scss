@@ -118,28 +118,64 @@ button {
     }
 }
 
+.main-body {
+    position: relative;
+}
+
 // ********* SIDE BAR ********* //
 
 .sidebar {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -275px;
     width: 275px;
     height: 100%;
     background-color: $color-base;
     overflow-y: auto;
     text-transform: uppercase;
     z-index: 2;
+    @media screen and (min-width: 992px) {
+        right: -333px;
+        width: 333px;
+    }
+}
+
+.darken-site {
+    background-color: $color-white;
+    filter: brightness(50%);
+}
+
+.allmove {
+    right: 275px;
+    cursor: pointer;
+    @media screen and (min-width: 992px) {
+    right: 333px;
+    }
+}
+
+.sidebar-show {
+    right: 0;
 }
 
 .sidebar a:hover {
     text-decoration: none;
 }
 
-.sidebar-inner { 
+// .sidebar-inner { 
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
+
+.sidebar-container1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.sidebar-container2 {
+    display: flex;
+    flex-direction: column;
 }
 
 .nav-block-sidebar {
@@ -155,10 +191,6 @@ button {
     padding: 18px 0 18px 0;
 }
 
-.sidebar-main:hover {
-    background-color: $color-sbhover;
-}
-
 .sidebar-main {
     display: flex;
     flex-direction: column;
@@ -169,6 +201,21 @@ button {
     border-radius: 4px;
     font-size: 18px;
     width: 216px;
+    &:hover {
+        background-color: $color-sbhover;
+    }
+}
+
+.sidebar-secondary {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid hsla(0,0%,100%,.1);
+    border-bottom: 1px solid rgba(0,0,0,.25);
+    font-size: 16px;
+    padding: 14px 20px;
+    &:hover {
+        background-color: $color-sbhover;
+    }
 }
 
 .submenu {
@@ -184,6 +231,39 @@ button {
         padding: 10px 20px;
         background-color: $color-nadark;
         border-top: 1px solid hsla(0,0%,100%,.05);
+    }
+}
+
+.submenu-item-secondary {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(0,0,0,.45);
+    font-size: 14px;
+    & a {
+        padding: 15px 20px;
+        background-color: $color-nadark;
+        border-top: 1px solid hsla(0,0%,100%,.05);
+    }
+}
+
+.submenu-item-secondary > a:before {
+    content: "\BB";
+    margin-right: 20px;
+}
+
+.last-sb-item {
+    margin-bottom: 20px;
+}
+
+.show-med {
+    @media screen and (max-width: 991px) {
+        display: none;
+    }
+}
+
+.hidden-med {
+    @media screen and (min-width: 992px) {
+        display: none;
     }
 }
 
@@ -203,6 +283,9 @@ button {
     left: 0;
     z-index: 1;
     padding-top: 2px;
+    &:hover {
+        background: $color-gray-accent;
+    }
 }
 
 .chat-bubble {
@@ -592,7 +675,7 @@ button {
 
 .hoverbox {
     display: flex;
-    margin-left: -40px;
+    padding-bottom: 30px;
     justify-content: space-between;
     @media screen and (min-width: 1440px) {
         justify-content: flex-start;
@@ -1697,4 +1780,37 @@ label[for="marketing"] {
 
 .train-clr {
     color: $color-training;
+}
+
+#cookies-popup {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    padding: 20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.cookies-container {
+    background-color: $color-white;
+    margin: auto;
+    border-radius: 4px;
+}
+
+.cookies-dialogue {
+    min-width: 200px;
+}
+
+.cookies-header {
+    padding: 20px;
+    & > h3 {
+        text-align: left;
+        border-bottom: solid $color-lightgray 1px;
+    }
+}
+
+.cookies-description {
+    padding: 20px;
 }
