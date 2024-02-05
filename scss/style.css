@@ -11,6 +11,29 @@ ul {
   list-style-type: none;
 }
 
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.clickableoverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  z-index: 10;
+}
+
 body {
   letter-spacing: 0.4px;
   margin: 0;
@@ -25,6 +48,7 @@ header {
   top: 0;
   width: 100%;
   padding-top: 20px;
+  transition: 0.5s;
   background-color: #fff;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
   z-index: 2;
@@ -113,12 +137,12 @@ button {
   padding: 3px 18px 0;
   border-radius: 0 3px 3px 0;
   border: solid #a3a8ac 1px;
-  background-color: #a3a8ac;
+  background-color: #999AA2;
   color: #fff;
   cursor: pointer;
 }
 #search-med-submit:hover {
-  background-color: #7E808A;
+  background-color: #84858F;
 }
 @media screen and (min-width: 992px) {
   #search-med-submit {
@@ -145,7 +169,8 @@ button {
   background-color: #333645;
   overflow-y: auto;
   text-transform: uppercase;
-  z-index: 2;
+  transition: 0.5s;
+  z-index: 11;
 }
 @media screen and (min-width: 992px) {
   .sidebar {
@@ -162,6 +187,7 @@ button {
 .allmove {
   right: 275px;
   cursor: pointer;
+  transition: 0.5s;
 }
 @media screen and (min-width: 992px) {
   .allmove {
@@ -1089,6 +1115,7 @@ button {
 }
 .nav-hover-content > h2 {
   color: #fff;
+  margin-bottom: 20px;
 }
 @media screen and (min-width: 1024px) {
   .nav-hover-content {
@@ -1112,6 +1139,7 @@ button {
 .hoverlist-item > a {
   font-size: 18px;
   font-weight: 400;
+  padding-right: 5px;
 }
 @media screen and (min-width: 1024px) {
   .hoverlist-item > a {
@@ -2238,6 +2266,9 @@ label[for=marketing] {
 .footer-mid a {
   font-size: 0.8rem;
 }
+.footer-mid li {
+  padding-left: 40px;
+}
 @media screen and (min-width: 768px) {
   .footer-mid {
     display: flex;
@@ -2397,6 +2428,15 @@ label[for=marketing] {
   border: solid #7E808A 1px;
 }
 
+.lightgray {
+  background-color: #999AA2;
+  border: solid #999AA2 1px;
+}
+.lightgray:hover {
+  background-color: #84858F;
+  border: solid #84858F 1px;
+}
+
 .paleblue {
   background-color: #67809F;
   border: solid #67809F 1px;
@@ -2449,6 +2489,17 @@ label[for=marketing] {
 .light:hover {
   background-color: #7E57A0;
   border: solid #7E57A0 1px;
+}
+
+.lightblue {
+  background-color: #4183D7;
+  border: solid #4183D7 1px;
+  display: inline-block;
+  margin-right: 5px;
+}
+.lightblue:hover {
+  background-color: #2A6EC6;
+  border: solid #2A6EC6 1px;
 }
 
 .blue {
@@ -2543,6 +2594,13 @@ label[for=marketing] {
   color: #CE4125;
 }
 
+.cookies-text {
+  margin-top: 0;
+}
+.cookies-text a {
+  color: #666;
+}
+
 #cookies-popup {
   display: flex;
   flex-direction: column;
@@ -2552,6 +2610,7 @@ label[for=marketing] {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 11;
 }
 
 .cookies-container {
@@ -2563,15 +2622,60 @@ label[for=marketing] {
 .cookies-dialogue {
   min-width: 200px;
 }
+@media screen and (min-width: 768px) {
+  .cookies-dialogue {
+    width: 600px;
+  }
+}
 
 .cookies-header {
-  padding: 20px;
+  padding: 15px 20px;
 }
 .cookies-header > h3 {
+  color: #333645;
   text-align: left;
-  border-bottom: solid #ccc 1px;
+  margin: 0;
+  font-weight: 400;
 }
 
 .cookies-description {
   padding: 20px;
+  border-top: solid #ddd 1px;
+  border-bottom: solid #ddd 1px;
+  color: #666;
+  line-height: 1.875rem;
+}
+
+.cookies-buttons {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+@media screen and (min-width: 768px) {
+  .cookies-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.ck-btn {
+  box-sizing: border-box;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding: 15px 18px;
+  font-weight: 400;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 47px;
+  width: 50%;
+}
+
+.cookies-btn-spacer {
+  margin-bottom: 30px;
+  margin-left: 30px;
 }/*# sourceMappingURL=style.css.map */

@@ -3,6 +3,29 @@
 //     height: 100vh;
 // }
 
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+}
+
+.clickableoverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    z-index: 10;
+}
+
 body {
     letter-spacing: 0.4px;
     margin: 0;
@@ -17,6 +40,7 @@ header {
     top: 0;
     width: 100%;
     padding-top: 20px;
+    transition: 0.5s;
     background-color: $color-white;
     box-shadow: 0 3px 35px rgba(0,0,0,.1);
     z-index: 2;
@@ -103,11 +127,11 @@ button {
     padding: 3px 18px 0;
     border-radius: 0 3px 3px 0;
     border: solid $color-gray 1px;
-    background-color: $color-gray;
+    background-color: $color-graybutton;
     color: $color-white;
     cursor: pointer;
     &:hover {
-        background-color: $color-gray-accent;
+        background-color: $color-graybutton-hover;
     }
     @media screen and (min-width: 992px) {
         height: 55px;
@@ -133,7 +157,8 @@ button {
     background-color: $color-base;
     overflow-y: auto;
     text-transform: uppercase;
-    z-index: 2;
+    transition: 0.5s;
+    z-index: 11;
     @media screen and (min-width: 992px) {
         right: -333px;
         width: 333px;
@@ -148,6 +173,7 @@ button {
 .allmove {
     right: 275px;
     cursor: pointer;
+    transition: 0.5s;
     @media screen and (min-width: 992px) {
     right: 333px;
     }
@@ -691,6 +717,7 @@ button {
     padding-right: 40px;
     & > h2 {
         color: $color-white;
+        margin-bottom: 20px;
     }
     @media screen and (min-width: 1024px) {
         padding-left: 20px;
@@ -708,6 +735,7 @@ button {
     & > a {
         font-size: 18px;
         font-weight: 400;
+        padding-right: 5px;
         @media screen and (min-width: 1024px) {
             font-size: 19px;
         }
@@ -1574,6 +1602,9 @@ label[for="marketing"] {
     & a {
         font-size: .8rem;
     }
+    & li {
+        padding-left: 40px;
+    }
     @media screen and (min-width: 768px) {
         display: flex;
         flex-wrap: wrap;
@@ -1700,6 +1731,10 @@ label[for="marketing"] {
     @include btn-color($color-gray, $color-gray-accent, $color-gray);
 }
 
+.lightgray {
+    @include btn-color($color-graybutton, $color-graybutton-hover, $color-graybutton);
+}
+
 .paleblue {
     @include btn-color($color-software, $color-softwaredark, $color-software);
 }
@@ -1722,6 +1757,12 @@ label[for="marketing"] {
 
 .light {
     @include btn-color($color-design, $color-design-dark, $color-design-dark);
+}
+
+.lightblue {
+    @include btn-color($color-bluebutton, $color-bluebutton-hover, $color-bluebutton);
+    display: inline-block;
+    margin-right: 5px;
 }
 
 .blue {
@@ -1782,6 +1823,15 @@ label[for="marketing"] {
     color: $color-training;
 }
 
+// ********* COOKIES POP UP ********* //
+
+.cookies-text {
+    margin-top: 0;
+    & a {
+        color: $color-darkgray;
+    }
+}
+
 #cookies-popup {
     display: flex;
     flex-direction: column;
@@ -1791,6 +1841,7 @@ label[for="marketing"] {
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 11;
 }
 
 .cookies-container {
@@ -1801,16 +1852,51 @@ label[for="marketing"] {
 
 .cookies-dialogue {
     min-width: 200px;
+    @media screen and (min-width: 768px) {
+        width: 600px;
+    }
 }
 
 .cookies-header {
-    padding: 20px;
+    padding: 15px 20px;
     & > h3 {
+        color: $color-base;
         text-align: left;
-        border-bottom: solid $color-lightgray 1px;
+        margin: 0;
+        font-weight: 400;
     }
 }
 
 .cookies-description {
     padding: 20px;
+    border-top: solid $color-lightergray 1px;
+    border-bottom: solid $color-lightergray 1px;
+    color: $color-darkgray;
+    line-height: 1.875rem;
 }
+
+.cookies-buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.ck-btn {
+    @include small-btn();
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 47px;
+    width: 50%;
+}
+
+.cookies-btn-spacer {
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+// ********* END OF COOKIES ********* //

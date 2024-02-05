@@ -6,6 +6,34 @@ const $sideBar = $(".sidebar");
 let lastScrollTop = 0;
 let scrollThreshold = 50;
 
+// ********* COOKIES POP UP ********* //
+
+$(document).ready(function() {
+  if(!localStorage.getItem("cookiesAccepted")) {
+    $(".overlay").show();
+    $("#cookies-popup").show();
+    $("body").css("overflow", "hidden");
+  } else {
+    $(".overlay").hide();
+    $("#cookies-popup").hide();
+  }
+
+  $("#accept-cookies").on("click", function(){
+    $(".overlay").hide();
+    $("#cookies-popup").hide();
+    $("body").css("overflow", "auto");
+    localStorage.setItem("cookiesAccepted", "true");
+  });
+});
+
+$(".cookieconsent-btn").on("click", function(){
+  $(".overlay").show();
+  $("#cookies-popup").show();
+  $("body").css("overflow", "hidden");
+});
+
+// ********* END OF COOKIES ********* //
+
 // ********* STICKY NAV ********* //
 
 $(window).on("scroll", function(){
@@ -29,8 +57,18 @@ $(window).on("scroll", function(){
 $hamburgerContainer.on("click", function(event){
   $burger.toggleClass("is-active");
   $(this).toggleClass("burger-clicked");
-  $bodyAll.toggleClass("allmove").toggleClass("darken-site");
+  $bodyAll.toggleClass("allmove");
+  $(".clickableoverlay").show();
   $sideBar.toggleClass("sidebar-show");
+  $("body").css("overflow", "hidden");
+});
+
+$(".clickableoverlay").on("click", function(){
+  $(this).hide();
+  $burger.toggleClass("is-active");
+  $bodyAll.toggleClass("allmove");
+  $sideBar.toggleClass("sidebar-show");
+  $("body").css("overflow", "auto");
 });
 
 
@@ -38,8 +76,8 @@ $hamburgerContainer.on("click", function(event){
 
 // ********* CAROUSEL ********* //
 
-$(document).ready(function(){
-  $('.carousel-container').slick({
+
+$('.carousel-container').slick({
     autoplay: true,
     autoplaySpeed: 4000,
     dots: true,
@@ -47,7 +85,7 @@ $(document).ready(function(){
     prevArrow: false,
     nextArrow: false,
     speed: 1000
-  });
 });
+
 
 // ********* END OF CAROUSEL ********* //
