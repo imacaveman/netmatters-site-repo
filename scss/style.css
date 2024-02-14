@@ -101,13 +101,13 @@ button {
 #search-med-submit {
   padding: 3px 18px 0;
   border-radius: 0 3px 3px 0;
-  border: solid #a3a8ac 1px;
-  background-color: #a3a8ac;
+  border: solid #999AA2 1px;
+  background-color: #999AA2;
   color: #fff;
   cursor: pointer;
 }
 #search-med-submit:hover {
-  background-color: #7E808A;
+  background-color: #84858F;
 }
 @media screen and (min-width: 992px) {
   #search-med-submit {
@@ -298,6 +298,9 @@ button {
   padding: 0 15px;
   border: solid rgba(0, 0, 0, 0.1) 2px;
   background-color: #E5E5E5;
+}
+.search-bar:focus {
+  outline: none;
 }
 
 .header-search-med {
@@ -2075,11 +2078,11 @@ label[for=marketing] {
 }
 
 .gray {
-  background-color: #a3a8ac;
-  border: solid #a3a8ac 1px;
+  background-color: #999AA2;
+  border: solid #999AA2 1px;
 }
 .gray:hover {
-  background-color: #7E808A;
+  background-color: #84858F;
 }
 
 .light {
@@ -2098,6 +2101,14 @@ label[for=marketing] {
 }
 .blue:hover {
   background-color: #166AF4;
+}
+
+.blue {
+  background-color: #4183D7;
+  border: solid #4183D7 1px;
+}
+.blue:hover {
+  background-color: #2A6EC6;
 }
 
 .green {

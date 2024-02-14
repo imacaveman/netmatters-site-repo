@@ -90,12 +90,12 @@ button {
 #search-med-submit {
     padding: 3px 18px 0;
     border-radius: 0 3px 3px 0;
-    border: solid $color-gray 1px;
-    background-color: $color-gray;
+    border: solid $color-contact 1px;
+    background-color: $color-contact;
     color: $color-white;
     cursor: pointer;
     &:hover {
-        background-color: $color-gray-accent;
+        background-color: $color-contact-hover;
     }
     @media screen and (min-width: 992px) {
         height: 55px;
@@ -261,7 +261,9 @@ button {
     @include srch();
     border: solid rgba(0,0,0,.1) 2px;
     background-color: #E5E5E5;
-    
+    &:focus {
+        outline: none;
+    }
 }
 
 .header-search-med {
@@ -1405,7 +1407,7 @@ label[for="marketing"] {
 }
 
 .gray {
-    @include btn-color($color-gray, $color-gray-accent, $color-gray);
+    @include btn-color($color-contact, $color-contact-hover, $color-contact);
 }
 
 .light {
@@ -1416,6 +1418,10 @@ label[for="marketing"] {
     @include btn-color($color-itsupp, $color-itsupp-dark, $color-itsupp);
     display: inline-block;
     margin-right: 5px;
+}
+
+.blue {
+    @include btn-color($color-itsupp, $color-support-hover, $color-itsupp);
 }
 
 .green {
