@@ -40,7 +40,7 @@ header {
     top: 0;
     width: 100%;
     padding-top: 20px;
-    transition: 0.5s;
+    transition: top 0.5s ease 0.5s;
     background-color: $color-white;
     box-shadow: 0 3px 35px rgba(0,0,0,.1);
     z-index: 2;
@@ -894,13 +894,16 @@ button {
 }
 
 .slick-dots li button:before {
-    font-size: 16px;
+    font-size: 12px;
     color: $color-white;
+    line-height: 22px;
 }
 
 .slick-dots li.slick-active button:before {
     color: $color-white;
     opacity: 1;
+    border: solid $color-white 2px;
+    border-radius: 50%;
 }
 
 .slick-dots li button:hover {
