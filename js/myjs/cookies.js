@@ -1,4 +1,6 @@
 
+$("#cookies-popup").hide();
+
 if(!localStorage.getItem("cookiesAccepted")) {
   $(".overlay").show();
   $("#cookies-popup").show();

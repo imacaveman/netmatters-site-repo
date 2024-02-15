@@ -45,13 +45,18 @@ header {
 
 .sticky-header {
   position: fixed;
-  top: 0;
+  top: -208.42px;
   width: 100%;
   padding-top: 20px;
-  transition: top 0.5s ease 0.5s;
+  transition: top 0.5s ease 0s;
   background-color: #fff;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
   z-index: 2;
+}
+
+.is-sticky {
+  top: 0;
+  transition: top 0.5s ease 0s;
 }
 
 h2 {
@@ -158,6 +163,8 @@ button {
 
 .main-body {
   position: relative;
+  transition: margin-right 0.3s ease;
+  margin-right: 0;
 }
 
 .sidebar {
@@ -169,7 +176,7 @@ button {
   background-color: #333645;
   overflow-y: auto;
   text-transform: uppercase;
-  transition: 0.5s;
+  transition: right 0.3s ease;
   z-index: 11;
 }
 @media screen and (min-width: 992px) {
@@ -187,7 +194,7 @@ button {
 .allmove {
   right: 275px;
   cursor: pointer;
-  transition: 0.5s;
+  transition: right 0.5s ease;
 }
 @media screen and (min-width: 992px) {
   .allmove {
@@ -197,6 +204,7 @@ button {
 
 .sidebar-show {
   right: 0;
+  transition: right 0.5s ease;
 }
 
 .sidebar a:hover {
@@ -1423,7 +1431,7 @@ li.slick-active button:hover {
 @media screen and (min-width: 992px) {
   .service-block {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: center;
     width: 940px;
   }
@@ -1817,6 +1825,10 @@ li.slick-active button:hover {
   margin-left: 15px;
   align-items: center;
   overflow-x: hidden;
+}
+
+.scroll {
+  animation: scroll 10s linear infinite;
 }
 
 .client-box {
