@@ -828,7 +828,7 @@ button {
     color: $color-white;
     font-weight: bold;
     width: 300px;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     line-height: 3rem;
     text-align: center;
     margin: 50px 0 15px 0;
@@ -899,7 +899,7 @@ button {
 }
 
 .title > p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-top: 20px;
     line-height: 1.8rem;
 }
@@ -1261,7 +1261,12 @@ li.slick-active button:hover {
     max-height: 80px;
     margin-left: 15px;
     align-items: center;
-    overflow-x: hidden;
+    overflow: hidden;
+    animation: slide 5s infinite;
+}
+
+.partners-img-container div {
+    flex: 0 0 auto;
 }
 
 .scroll {
