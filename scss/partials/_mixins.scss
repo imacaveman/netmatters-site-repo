@@ -52,6 +52,7 @@
     border: solid $brdrc 1px;
     &:hover {
         background-color: $bgc-h;
+        border-color: $bgc-h;
     }
     @content;
 }

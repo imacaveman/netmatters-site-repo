@@ -104,6 +104,17 @@ button {
 .global-container {
     margin-left: auto;
     margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    @media screen and (min-width: 768px) {
+        width: 750px;
+    }
+    @media screen and (min-width: 992px) {
+        width: 970px;
+    }
+    @media screen and (min-width: 1260px) {
+        width: 1200px;
+    }
 }
 
 .cookieconsent-btn {
@@ -139,11 +150,6 @@ button {
         margin-top: 15px;
         margin-left: 14px;
     }
-}
-
-.primary-container {
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 .main-header {
@@ -640,8 +646,7 @@ button {
     @media screen and (min-width: 992px) {
         flex-direction: row;
         align-items: stretch;
-        justify-content: center;
-        width: 940px;
+        justify-content: space-between;
     }
     @media screen and (min-width: 1260px) {
         justify-content: center;
@@ -764,7 +769,6 @@ button {
     display: block;
     position: relative;
     width: 100%;
-    max-width: 690px;
     margin-top: 30px;
     border: solid #ccc 1px;
     border-radius: 15px;
@@ -789,13 +793,7 @@ button {
     margin-right: 10px;
     margin-left: 10px;
     @media screen and (min-width: 992px) {
-        width: 280px;
-    }
-    @media screen and (min-width: 1024px) {
-        width: 300px;
-    }
-    @media screen and (min-width: 1260px) {
-        width: 380px;
+        width: 33.33%
     }
 }
 
@@ -808,30 +806,20 @@ button {
         flex-direction: row;
         flex-wrap: wrap;
         box-sizing: border-box;
-        justify-content: center;
+        justify-content: space-between;
         align-items: stretch;
         margin: 0 0 75px;
-    }
-    @media screen and (min-width: 1440px) {
-        width: 1200px;
     }
 }
 
 .block-med {
-    @media screen and (min-width: 768px) {
-        margin-left: 10px;
-        margin-right: 10px;
-        width: 335px;
-    }
     @media screen and (min-width: 992px) {
-        width: 430px;
-    }
-    @media screen and (min-width: 1024px) {
-        width: 50%;
-        max-width: 450px;
+        width: 48%;
+        margin-left: 5px;
+        margin-right: 5px;
     }
     @media screen and (min-width: 1260px) {
-        width: 280px;
+        width: 24%;
     }
 }
 
@@ -946,24 +934,28 @@ button {
 
 // END OF OUR SERVICES BLOCK -------------------------------------------------------
 
+.welcome > div {
+    margin-bottom: 30px;
+}
+
 .welcome-container {
     display: flex;
     flex-direction: column;
-    padding: 30px 15px;
-    margin-left: -20px;
-    margin-right: -20px;
     background-color: $color-base;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 50px;
     @media screen and (min-width: 992px) {
         flex-direction: row;
-        justify-content: center;
-    }
-    @media screen and (min-width: 1260px) {
-        justify-content: center;
     }
 }
 
 .welcome, .clients-container {
-    margin-bottom: 30px;
+    padding-right: 15px;
     & > * {
         color: $color-white;
     }
@@ -974,19 +966,13 @@ button {
     }
     & > p {
         line-height: 1.8rem;
-        margin-right: 15px;
-        margin-bottom: 20px;
     }
     @media screen and (min-width: 992px) {
-        width: 455px;
+        width: 50%;
     }
     @media screen and (min-width: 1260px) {
         width: 590px;
     }
-}
-
-.clients-container {
-    margin-right: 10px;
 }
 
 .star-container {
@@ -1011,20 +997,18 @@ button {
     color: $color-gray;
 }
 
-.author-container {
-    margin-bottom: 25px;
-}
-
 .review-buttons {
     padding-top: 15px;
 }
 
-.news-container {
+.news-title {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    padding: 30px 10px 20px;
+    padding-top: 50px;
+    padding-bottom: 10px;
     & > h2 {
+        float: left;
         font-size: 2.4rem;
         font-weight: 600;
     }
@@ -1032,14 +1016,15 @@ button {
         @media screen and (max-width: 767px) {
             display: none;
         }
+        float: right;
         color: $color-base;
-        margin-left: auto;
-        @media screen and (min-width: 992px) {
-            margin-left: 550px;
-        }
-        @media screen and (min-width: 1260px) {
-            margin-left: 780px;
-        }
+        // margin-left: auto;
+        // @media screen and (min-width: 992px) {
+        //     margin-left: 550px;
+        // }
+        // @media screen and (min-width: 1260px) {
+        //     margin-left: 780px;
+        // }
     }
 }
 
@@ -1047,20 +1032,20 @@ button {
     margin: 0;
     @media screen and (min-width: 768px) {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
     }
 }
 
 .news1, .news2 {
+    margin-left: 10px;
+    margin-right: 10px;
     @media screen and (min-width: 768px) {
-        max-width: 350px;
-        margin: 0 10px;
-    }
-    @media screen and (min-width: 992px) {
-        max-width: 450px;
+        width: 50%;
     }
     @media screen and (min-width: 1260px) {
-        max-width: 370px;
+        margin-left: 0;
+        margin-right: 0;
+        width: 33%;
     }
 }
 
@@ -1070,10 +1055,7 @@ button {
     }
     @media screen and (min-width: 1260px) {
         display: inline-block;
-        margin: 0 10px;
-    }
-    @media screen and (min-width: 1260px) {
-        max-width: 370px;
+        width: 33%;
     }
 }
 
@@ -1151,18 +1133,12 @@ button {
 .name, .email {
     padding-bottom: 15px;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
     label {
         font-weight: 600;
     }
-    @media screen and (min-width: 1024px) {
-        max-width: 450px;
-    }
-    @media screen and (min-width: 1260px) {
-        max-width: 1000px;
-        margin-left: 15px;
-        margin-right: 15px;
+    @media screen and (min-width: 992px) {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
@@ -1170,7 +1146,7 @@ button {
     display: flex;
     flex-direction: column;
     margin-top: 15px;
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 992px) {
         flex-direction: row;
     }
 }
@@ -1178,12 +1154,13 @@ button {
 .newsletter {
     display: flex;
     flex-direction: column;
-    padding: 50px 15px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     color: $color-base;
     box-sizing: border-box;
     background-color: #ddd;
     align-items: center;
-    
+    width: 100%;
 }
 
 .newsletter-container {
@@ -1260,8 +1237,6 @@ label[for="marketing"] {
     margin-left: auto;
     margin-right: auto;
     align-content: space-between;
-    max-width: 772px;
-    padding-left: 15px;
     @media screen and (min-width: 992px) {
         max-width: 940px;
     }
@@ -1313,7 +1288,6 @@ label[for="marketing"] {
 
 .footer-bottom {
     margin-top: 30px;
-    padding-left: 15px;
     background-color: #212330;
     font-size: 13px;
     margin-left: -20px;
@@ -1418,7 +1392,7 @@ label[for="marketing"] {
 }
 
 .light {
-    @include btn-color($color-design, $color-design-dark, $color-design-dark);
+    @include btn-color($color-design, $color-design-dark, $color-design);
 }
 
 .blue {
@@ -1449,6 +1423,7 @@ label[for="marketing"] {
 
 .big-btn-about {
     @include bigger-btn(6px);
+    margin-right: 4px;
 }
 
 .btn-arrow {
