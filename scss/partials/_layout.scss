@@ -159,10 +159,6 @@ button {
     @media screen and (min-width: 560px) {
         margin-bottom: 5px;
     }
-    @media screen and (min-width: 1260px) {
-        margin-left: 15px;
-        margin-right: 15px;
-    }
 }
 
 .main-container {
@@ -351,6 +347,9 @@ button {
 
 .software-tri {
     @include triangle($color-software, 12px);
+    position: relative;
+    top: 100%;
+    left: 0;
     @media screen and (min-width: 1024px) {
         @include triangle($color-software, 18px);
     }
@@ -503,8 +502,6 @@ button {
     }
 }
 
-
-
 .nav-hover-content {
     display: none;
     text-transform: none;
@@ -545,13 +542,14 @@ button {
 }
 
 .nav-small {
-    font-size: 0.65rem;
+    font-size: 0.62rem;
     display: block;
     height: 11px;
 }
 
 .home-img-container {
     display: flex;
+    align-items: center;
     height: 550px;
     overflow-x: hidden;
     background: url("../img/home.jpg") center / cover no-repeat #818181;
@@ -559,35 +557,15 @@ button {
 }
 
 .title {
-    position: absolute;
     color: $color-white;
     font-weight: bold;
     font-size: 2.5rem;
     line-height: 3rem;
     text-align: center;
-    margin: 50px 10px 15px;
-    @media screen and (min-width: 768px) {
-        margin-top: 130px;
-    }
     @media screen and (min-width: 992px) {
         text-align: left;
         font-size: 4rem;
         line-height: 5rem;
-        margin: 60px 40px 20px;
-        margin-right: 40px;
-        margin-left: 20px;
-    }
-    @media screen and (min-width: 1024px) {
-        margin-left: 40px;
-        width: 800px;
-    }
-    @media screen and (min-width: 1260px) {
-        margin-top: 100px;
-        width: 1000px;
-    }
-    @media screen and (min-width: 1440px) {
-        margin-left: 120px;
-        width: 1000px;
     }
 }
 
@@ -1037,15 +1015,15 @@ button {
 }
 
 .news1, .news2 {
-    margin-left: 10px;
-    margin-right: 10px;
     @media screen and (min-width: 768px) {
-        width: 50%;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 49%;
     }
     @media screen and (min-width: 1260px) {
         margin-left: 0;
         margin-right: 0;
-        width: 33%;
+        width: 31%;
     }
 }
 
