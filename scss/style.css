@@ -38,12 +38,6 @@ ul {
 
 header {
   padding-top: 20px;
-  padding-bottom: 20px;
-}
-@media screen and (min-width: 992px) {
-  header {
-    padding-bottom: 15px;
-  }
 }
 
 .sticky-header {
