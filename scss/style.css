@@ -4,15 +4,12 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  letter-spacing: 0.4px;
+  margin: 0;
 }
 
 ul {
   list-style-type: none;
-}
-
-body {
-  letter-spacing: 0.4px;
-  margin: 0;
 }
 
 header {
@@ -401,402 +398,175 @@ button {
 .software:hover {
   background-color: #67809F;
 }
+.software:hover .software-tri {
+  display: block;
+}
 
 .software-tri {
-  top: 0;
+  display: none;
+  position: absolute;
   width: 0px;
   height: 0px;
   border-style: solid;
-  border-width: 40px 66.5px 0 66.5px;
+  border-width: 30px 66.5px 0 66.5px;
   border-color: #67809F transparent transparent transparent;
   transform: rotate(0deg);
-  margin-top: -40px;
-  margin-left: 12px;
-  position: relative;
-  top: 100%;
-  left: 0;
+  bottom: -30px;
+  z-index: 2;
 }
 @media screen and (min-width: 1260px) {
   .software-tri {
-    border-width: 40px 83.5px 0 83.5px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .software-tri {
-    top: 0;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 40px 66.5px 0 66.5px;
-    border-color: #67809F transparent transparent transparent;
-    transform: rotate(0deg);
-    margin-top: -40px;
-    margin-left: 18px;
-  }
-}
-@media screen and (min-width: 1024px) and (min-width: 1260px) {
-  .software-tri {
-    border-width: 40px 83.5px 0 83.5px;
-  }
-}
-@media screen and (min-width: 1260px) {
-  .software-tri {
-    top: 0;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 40px 66.5px 0 66.5px;
-    border-color: #67809F transparent transparent transparent;
-    transform: rotate(0deg);
-    margin-top: -40px;
-    margin-left: 7px;
-  }
-}
-@media screen and (min-width: 1260px) and (min-width: 1260px) {
-  .software-tri {
-    border-width: 40px 83.5px 0 83.5px;
+    border-width: 30px 83.5px 0 83.5px;
   }
 }
 
 .itsupport:hover {
   background-color: #4183D7;
 }
+.itsupport:hover .itsupport-tri {
+  display: block;
+}
 
 .itsupport-tri {
-  top: 0;
+  display: none;
+  position: absolute;
   width: 0px;
   height: 0px;
   border-style: solid;
-  border-width: 40px 66.5px 0 66.5px;
+  border-width: 30px 66.5px 0 66.5px;
   border-color: #4183D7 transparent transparent transparent;
   transform: rotate(0deg);
-  margin-top: -40px;
-  margin-left: 145px;
+  bottom: -30px;
+  z-index: 2;
 }
 @media screen and (min-width: 1260px) {
   .itsupport-tri {
-    border-width: 40px 83.5px 0 83.5px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .itsupport-tri {
-    top: 0;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 40px 66.5px 0 66.5px;
-    border-color: #4183D7 transparent transparent transparent;
-    transform: rotate(0deg);
-    margin-top: -40px;
-    margin-left: 151px;
-  }
-}
-@media screen and (min-width: 1024px) and (min-width: 1260px) {
-  .itsupport-tri {
-    border-width: 40px 83.5px 0 83.5px;
-  }
-}
-@media screen and (min-width: 1260px) {
-  .itsupport-tri {
-    top: 0;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 40px 66.5px 0 66.5px;
-    border-color: #4183D7 transparent transparent transparent;
-    transform: rotate(0deg);
-    margin-top: -40px;
-    margin-left: 174px;
-  }
-}
-@media screen and (min-width: 1260px) and (min-width: 1260px) {
-  .itsupport-tri {
-    border-width: 40px 83.5px 0 83.5px;
+    border-width: 30px 83.5px 0 83.5px;
   }
 }
 
 .marketing:hover {
   background-color: #2ECC71;
 }
+.marketing:hover .marketing-tri {
+  display: block;
+}
 
 .marketing-tri {
-  top: 0;
+  display: none;
+  position: absolute;
   width: 0px;
   height: 0px;
   border-style: solid;
-  border-width: 40px 66.5px 0 66.5px;
+  border-width: 30px 66.5px 0 66.5px;
   border-color: #2ECC71 transparent transparent transparent;
   transform: rotate(0deg);
-  margin-top: -40px;
-  margin-left: 278px;
+  bottom: -30px;
+  z-index: 2;
 }
 @media screen and (min-width: 1260px) {
   .marketing-tri {
-    border-width: 40px 83.5px 0 83.5px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .marketing-tri {
-    top: 0;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 40px 66.5px 0 66.5px;
-    border-color: #2ECC71 transparent transparent transparent;
-    transform: rotate(0deg);
-    margin-top: -40px;
-    margin-left: 284px;
-  }
-}
-@media screen and (min-width: 1024px) and (min-width: 1260px) {
-  .marketing-tri {
-    border-width: 40px 83.5px 0 83.5px;
-  }
-}
-@media screen and (min-width: 1260px) {
-  .marketing-tri {
-    top: 0;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 40px 66.5px 0 66.5px;
-    border-color: #2ECC71 transparent transparent transparent;
-    transform: rotate(0deg);
-    margin-top: -40px;
-    margin-left: 341px;
-  }
-}
-@media screen and (min-width: 1260px) and (min-width: 1260px) {
-  .marketing-tri {
-    border-width: 40px 83.5px 0 83.5px;
+    border-width: 30px 83.5px 0 83.5px;
   }
 }
 
 .telecoms:hover {
   background-color: #D64541;
 }
+.telecoms:hover .telecoms-tri {
+  display: block;
+}
 
 .telecoms-tri {
-  top: 0;
+  display: none;
+  position: absolute;
   width: 0px;
   height: 0px;
   border-style: solid;
-  border-width: 40px 66.5px 0 66.5px;
+  border-width: 30px 66.5px 0 66.5px;
   border-color: #D64541 transparent transparent transparent;
   transform: rotate(0deg);
-  margin-top: -40px;
-  margin-left: 411px;
+  bottom: -30px;
+  z-index: 2;
 }
 @media screen and (min-width: 1260px) {
   .telecoms-tri {
-    border-width: 40px 83.5px 0 83.5px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .telecoms-tri {
-    top: 0;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 40px 66.5px 0 66.5px;
-    border-color: #D64541 transparent transparent transparent;
-    transform: rotate(0deg);
-    margin-top: -40px;
-    margin-left: 418px;
-  }
-}
-@media screen and (min-width: 1024px) and (min-width: 1260px) {
-  .telecoms-tri {
-    border-width: 40px 83.5px 0 83.5px;
-  }
-}
-@media screen and (min-width: 1260px) {
-  .telecoms-tri {
-    top: 0;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 40px 66.5px 0 66.5px;
-    border-color: #D64541 transparent transparent transparent;
-    transform: rotate(0deg);
-    margin-top: -40px;
-    margin-left: 508px;
-  }
-}
-@media screen and (min-width: 1260px) and (min-width: 1260px) {
-  .telecoms-tri {
-    border-width: 40px 83.5px 0 83.5px;
+    border-width: 30px 83.5px 0 83.5px;
   }
 }
 
 .webdesign:hover {
   background-color: #926FB1;
 }
+.webdesign:hover .webdesign-tri {
+  display: block;
+}
 
 .webdesign-tri {
-  top: 0;
+  display: none;
+  position: absolute;
   width: 0px;
   height: 0px;
   border-style: solid;
-  border-width: 40px 66.5px 0 66.5px;
+  border-width: 30px 66.5px 0 66.5px;
   border-color: #926FB1 transparent transparent transparent;
   transform: rotate(0deg);
-  margin-top: -40px;
-  margin-left: 544px;
+  bottom: -30px;
+  z-index: 2;
 }
 @media screen and (min-width: 1260px) {
   .webdesign-tri {
-    border-width: 40px 83.5px 0 83.5px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .webdesign-tri {
-    top: 0;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 40px 66.5px 0 66.5px;
-    border-color: #926FB1 transparent transparent transparent;
-    transform: rotate(0deg);
-    margin-top: -40px;
-    margin-left: 550px;
-  }
-}
-@media screen and (min-width: 1024px) and (min-width: 1260px) {
-  .webdesign-tri {
-    border-width: 40px 83.5px 0 83.5px;
-  }
-}
-@media screen and (min-width: 1260px) {
-  .webdesign-tri {
-    top: 0;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 40px 66.5px 0 66.5px;
-    border-color: #926FB1 transparent transparent transparent;
-    transform: rotate(0deg);
-    margin-top: -40px;
-    margin-left: 675px;
-  }
-}
-@media screen and (min-width: 1260px) and (min-width: 1260px) {
-  .webdesign-tri {
-    border-width: 40px 83.5px 0 83.5px;
+    border-width: 30px 83.5px 0 83.5px;
   }
 }
 
 .security:hover {
   background-color: #F62459;
 }
+.security:hover .security-tri {
+  display: block;
+}
 
 .security-tri {
-  top: 0;
+  display: none;
+  position: absolute;
   width: 0px;
   height: 0px;
   border-style: solid;
-  border-width: 40px 66.5px 0 66.5px;
+  border-width: 30px 66.5px 0 66.5px;
   border-color: #F62459 transparent transparent transparent;
   transform: rotate(0deg);
-  margin-top: -40px;
-  margin-left: 677px;
+  bottom: -30px;
+  z-index: 2;
 }
 @media screen and (min-width: 1260px) {
   .security-tri {
-    border-width: 40px 83.5px 0 83.5px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .security-tri {
-    top: 0;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 40px 66.5px 0 66.5px;
-    border-color: #F62459 transparent transparent transparent;
-    transform: rotate(0deg);
-    margin-top: -40px;
-    margin-left: 683px;
-  }
-}
-@media screen and (min-width: 1024px) and (min-width: 1260px) {
-  .security-tri {
-    border-width: 40px 83.5px 0 83.5px;
-  }
-}
-@media screen and (min-width: 1260px) {
-  .security-tri {
-    top: 0;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 40px 66.5px 0 66.5px;
-    border-color: #F62459 transparent transparent transparent;
-    transform: rotate(0deg);
-    margin-top: -40px;
-    margin-left: 842px;
-  }
-}
-@media screen and (min-width: 1260px) and (min-width: 1260px) {
-  .security-tri {
-    border-width: 40px 83.5px 0 83.5px;
+    border-width: 30px 83.5px 0 83.5px;
   }
 }
 
 .development:hover {
   background-color: #CE4125;
 }
+.development:hover .development-tri {
+  display: block;
+}
 
 .development-tri {
-  top: 0;
+  display: none;
+  position: absolute;
   width: 0px;
   height: 0px;
   border-style: solid;
-  border-width: 40px 66.5px 0 66.5px;
+  border-width: 30px 66.5px 0 66.5px;
   border-color: #CE4125 transparent transparent transparent;
   transform: rotate(0deg);
-  margin-top: -40px;
-  margin-left: 810px;
+  bottom: -30px;
+  z-index: 2;
 }
 @media screen and (min-width: 1260px) {
   .development-tri {
-    border-width: 40px 83.5px 0 83.5px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .development-tri {
-    top: 0;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 40px 66.5px 0 66.5px;
-    border-color: #CE4125 transparent transparent transparent;
-    transform: rotate(0deg);
-    margin-top: -40px;
-    margin-left: 816px;
-  }
-}
-@media screen and (min-width: 1024px) and (min-width: 1260px) {
-  .development-tri {
-    border-width: 40px 83.5px 0 83.5px;
-  }
-}
-@media screen and (min-width: 1260px) {
-  .development-tri {
-    top: 0;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 40px 66.5px 0 66.5px;
-    border-color: #CE4125 transparent transparent transparent;
-    transform: rotate(0deg);
-    margin-top: -40px;
-    margin-left: 1009px;
-  }
-}
-@media screen and (min-width: 1260px) and (min-width: 1260px) {
-  .development-tri {
-    border-width: 40px 83.5px 0 83.5px;
+    border-width: 30px 83.5px 0 83.5px;
   }
 }
 
@@ -1426,6 +1196,7 @@ button {
 }
 
 .partners-banner, .clients-banner {
+  position: relative;
   margin-top: 50px;
   margin-bottom: 50px;
 }
@@ -1442,11 +1213,47 @@ button {
 .client-box {
   display: flex;
   vertical-align: middle;
-  position: relative;
+  overflow: visible;
 }
 
-.description-hide {
+.client-hover-content {
   display: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  left: 0;
+  z-index: 1;
+}
+
+.ashcroft-box:hover .client-hover-content {
+  display: block;
+  position: absolute;
+  position: absolute;
+  text-align: left;
+  font-weight: bold;
+  cursor: default;
+  color: #fff;
+  background-color: #333645;
+  padding-top: 40px;
+  z-index: 1;
+  top: -100%;
+}
+
+.clientstri {
+  display: none;
+  position: absolute;
+  top: -50px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 40px 66.5px 0 66.5px;
+  border-color: #333645 transparent transparent transparent;
+  transform: rotate(0deg);
+  z-index: 2;
+}
+@media screen and (min-width: 1260px) {
+  .clientstri {
+    border-width: 40px 83.5px 0 83.5px;
+  }
 }
 
 .grayscale {

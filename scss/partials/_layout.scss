@@ -1,9 +1,4 @@
 
-body {
-    letter-spacing: 0.4px;
-    margin: 0;
-}
-
 header {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -343,51 +338,39 @@ button {
     &:hover {
         background-color: $color-software;
     }
+    &:hover .software-tri {
+        display: block;
+    }
 }
 
 .software-tri {
-    @include triangle($color-software, 12px);
-    position: relative;
-    top: 100%;
-    left: 0;
-    @media screen and (min-width: 1024px) {
-        @include triangle($color-software, 18px);
-    }
-    @media screen and (min-width: 1260px) {
-        @include triangle($color-software, 7px);
-    }
+    @include triangle($color-software);
 }
 
 .itsupport {
     &:hover {
         background-color: $color-itsupp;
     }
+    &:hover .itsupport-tri {
+        display: block;
+    }
 }
 
 .itsupport-tri {
-    @include triangle($color-itsupp, 145px);
-    @media screen and (min-width: 1024px) {
-        @include triangle($color-itsupp, 151px);
-    }
-    @media screen and (min-width: 1260px) {
-        @include triangle($color-itsupp, 174px);
-    }
+    @include triangle($color-itsupp);
 }
 
 .marketing {
     &:hover {
         background-color: $color-marketing;
     }
+    &:hover .marketing-tri {
+        display: block;
+    }
 }
 
 .marketing-tri {
-    @include triangle($color-marketing, 278px);
-    @media screen and (min-width: 1024px) {
-        @include triangle($color-marketing, 284px);
-    }
-    @media screen and (min-width: 1260px) {
-        @include triangle($color-marketing, 341px);
-    }
+    @include triangle($color-marketing);
 }
 
 
@@ -395,64 +378,52 @@ button {
     &:hover {
         background-color: $color-telecoms;
     }
+    &:hover .telecoms-tri {
+        display: block;
+    }
 }
 
 .telecoms-tri {
-    @include triangle($color-telecoms, 411px);
-    @media screen and (min-width: 1024px) {
-        @include triangle($color-telecoms, 418px);
-    }
-    @media screen and (min-width: 1260px) {
-        @include triangle($color-telecoms, 508px);
-    }
+    @include triangle($color-telecoms);
 }
 
 .webdesign {
     &:hover {
         background-color: $color-design;
     }
+    &:hover .webdesign-tri {
+        display: block;
+    }
 }
 
 .webdesign-tri {
-    @include triangle($color-design, 544px);
-    @media screen and (min-width: 1024px) {
-        @include triangle($color-design, 550px);
-    }
-    @media screen and (min-width: 1260px) {
-        @include triangle($color-design, 675px);
-    }
+    @include triangle($color-design);
 }
 
 .security {
     &:hover {
         background-color: $color-security;
     }
+    &:hover .security-tri {
+        display: block;
+    }
 }
 
 .security-tri {
-    @include triangle($color-security, 677px);
-    @media screen and (min-width: 1024px) {
-        @include triangle($color-security, 683px);
-    }
-    @media screen and (min-width: 1260px) {
-        @include triangle($color-security, 842px);
-    }
+    @include triangle($color-security);
 }
 
 .development {
     &:hover {
         background-color: $color-training;
     }
+    &:hover .development-tri {
+        display: block;
+    }
 }
 
 .development-tri {
-    @include triangle($color-training, 810px);
-    @media screen and (min-width: 1024px) {
-        @include triangle($color-training, 816px);
-    }
-    @media screen and (min-width: 1260px) {
-        @include triangle($color-training, 1009px);
-    }
+    @include triangle($color-training);
 }
 
 // *********** END OF NAV ICONS *********** //
@@ -763,8 +734,6 @@ button {
         font-weight: 400;
         color: $color-base;
     }
-
-    
 }
 
 .block-top {
@@ -878,6 +847,7 @@ button {
 }
 
 .partners-banner, .clients-banner {
+    position: relative;
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -894,11 +864,26 @@ button {
 .client-box {
     display: flex;
     vertical-align: middle;
-    position: relative;
+    overflow: visible;
 }
 
-.description-hide {
+.client-hover-content {
     display: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    left: 0;
+    z-index: 1;
+}
+
+.ashcroft-box:hover .client-hover-content {
+    display: block;
+    position: absolute;
+    @include hvr-cli();
+    top: -100%;
+}
+
+.clientstri {
+    @include clientstriangle();
 }
 
 .grayscale {
@@ -1435,3 +1420,6 @@ label[for="marketing"] {
 .train-clr {
     color: $color-training;
 }
+
+// ********* CLIENTS BANNERS ********* //
+

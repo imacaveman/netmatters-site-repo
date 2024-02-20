@@ -143,16 +143,34 @@
     @content;
 }
 
-@mixin triangle($tri-clr, $tri-ml) {
-    top: 0;
+@mixin triangle($tri-clr) {
+    display: none;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 30px 66.5px 0 66.5px;
+    border-color: $tri-clr transparent transparent transparent;
+    transform: rotate(0deg);
+    bottom: -30px;
+    z-index: 2;
+    @media screen and (min-width: 1260px) {
+        border-width: 30px 83.5px 0 83.5px;
+    }
+    @content;
+}
+
+@mixin clientstriangle() {
+    display: none;
+    position: absolute;
+    top: -50px;
     width: 0px;
     height: 0px;
     border-style: solid;
     border-width: 40px 66.5px 0 66.5px;
-    border-color: $tri-clr transparent transparent transparent;
+    border-color: $color-base transparent transparent transparent;
     transform: rotate(0deg);
-    margin-top: -40px;
-    margin-left: $tri-ml;
+    z-index: 2;
     @media screen and (min-width: 1260px) {
         border-width: 40px 83.5px 0 83.5px;
     }
@@ -171,6 +189,18 @@
     left: 0;
     color: $color-white;
     background-color: $bg-clr;
+    padding-top: 40px;
+    z-index: 1;
+    @content;
+}
+
+@mixin hvr-cli() {
+    position: absolute;
+    text-align: left;
+    font-weight: bold;
+    cursor: default;
+    color: $color-white;
+    background-color: $color-base;
     padding-top: 40px;
     z-index: 1;
     @content;
