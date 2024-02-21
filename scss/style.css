@@ -181,8 +181,7 @@ button {
 
 .main-body {
   position: relative;
-  transition: margin-right 0.3s ease;
-  margin-right: 0;
+  transition: right 0.3s ease;
 }
 
 .sidebar {
@@ -212,7 +211,7 @@ button {
 .allmove {
   right: 275px;
   cursor: pointer;
-  transition: right 0.5s ease;
+  transition: right 0.3s ease;
 }
 @media screen and (min-width: 992px) {
   .allmove {
@@ -222,7 +221,7 @@ button {
 
 .sidebar-show {
   right: 0;
-  transition: right 0.5s ease;
+  transition: right 0.3s ease;
 }
 
 .sidebar a:hover {
@@ -894,8 +893,8 @@ button {
 
 .hoverbox {
   display: flex;
-  margin-left: -40px;
   justify-content: space-between;
+  padding-bottom: 30px;
 }
 @media screen and (min-width: 1440px) {
   .hoverbox {

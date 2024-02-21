@@ -6,12 +6,13 @@ $hamburgerContainer.on("click", function(event){
     $(".clickableoverlay").show();
     $sideBar.toggleClass("sidebar-show");
     $("body").css("overflow", "hidden");
-  });
+});
   
-  $(".clickableoverlay").on("click", function(){
+$(".clickableoverlay").on("click", function(){
     $(this).hide();
     $burger.toggleClass("is-active");
     $bodyAll.toggleClass("allmove");
     $sideBar.toggleClass("sidebar-show");
     $("body").css("overflow", "auto");
-  });
+});
+  
