@@ -935,7 +935,6 @@ button {
 .hoverlist-item > a {
   font-size: 18px;
   font-weight: 400;
-  padding-right: 5px;
 }
 @media screen and (min-width: 1024px) {
   .hoverlist-item > a {
@@ -1715,7 +1714,7 @@ li.slick-active button:hover {
 @media screen and (min-width: 1260px) {
   .news3 {
     display: inline-block;
-    width: 33%;
+    width: 31%;
   }
 }
 
@@ -2283,6 +2282,7 @@ label[for=marketing] {
   padding: 12px 30px;
   margin-top: 20px;
   margin-right: 10px;
+  margin-right: 4px;
 }
 
 .btn-arrow {

@@ -718,7 +718,6 @@ button {
     & > a {
         font-size: 18px;
         font-weight: 400;
-        padding-right: 5px;
         @media screen and (min-width: 1024px) {
             font-size: 19px;
         }
@@ -1356,7 +1355,7 @@ li.slick-active button:hover {
     }
     @media screen and (min-width: 1260px) {
         display: inline-block;
-        width: 33%;
+        width: 31%;
     }
 }
 
@@ -1747,6 +1746,7 @@ label[for="marketing"] {
 
 .big-btn-about {
     @include bigger-btn(6px);
+    margin-right: 4px;
 }
 
 .btn-arrow {
