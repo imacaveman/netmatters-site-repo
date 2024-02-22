@@ -708,9 +708,7 @@ button {
   text-transform: none;
   padding-left: 10px;
   padding-right: 40px;
-}
-.nav-hover-content > h2 {
-  color: #fff;
+  padding-bottom: 10px;
 }
 @media screen and (min-width: 1024px) {
   .nav-hover-content {
@@ -728,8 +726,12 @@ button {
   }
 }
 
+.hover-title {
+  color: #fff;
+}
+
 .hoverlist-item {
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 .hoverlist-item > a {
   font-size: 18px;
@@ -847,7 +849,6 @@ button {
 }
 @media screen and (min-width: 1260px) {
   .service-block {
-    justify-content: center;
     width: 100%;
   }
 }
@@ -1023,12 +1024,14 @@ button {
 }
 
 .block-top {
-  margin-right: 10px;
   margin-left: 10px;
+  margin-right: 10px;
 }
 @media screen and (min-width: 992px) {
   .block-top {
-    width: 33.33%;
+    margin-left: 0;
+    margin-right: 0;
+    width: 32%;
   }
 }
 
@@ -1049,16 +1052,14 @@ button {
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .block-med {
     width: 48%;
-    margin-left: 5px;
-    margin-right: 5px;
   }
 }
 @media screen and (min-width: 1260px) {
   .block-med {
-    width: 24%;
+    width: 23%;
   }
 }
 
@@ -1069,6 +1070,12 @@ button {
   color: #333645;
   margin-bottom: 15px;
   margin-top: 10px;
+}
+
+@media screen and (min-width: 992px) {
+  .dmrkt {
+    padding-bottom: 21px;
+  }
 }
 
 .rm-soft {
@@ -1218,15 +1225,14 @@ button {
 
 .client-hover-content {
   display: none;
-  padding-left: 20px;
-  padding-right: 20px;
-  left: 0;
-  z-index: 1;
+  position: absolute;
+  bottom: 100%;
+  left: -200px;
+  right: -200px;
 }
 
 .ashcroft-box:hover .client-hover-content {
   display: block;
-  position: absolute;
   position: absolute;
   text-align: left;
   font-weight: bold;
@@ -1235,7 +1241,8 @@ button {
   background-color: #333645;
   padding-top: 40px;
   z-index: 1;
-  top: -100%;
+  padding: 20px;
+  margin: 0 auto 50px;
 }
 
 .clientstri {
@@ -1360,6 +1367,12 @@ button {
   }
 }
 
+@media screen and (min-width: 992px) {
+  .newsp {
+    padding-bottom: 24px;
+  }
+}
+
 .news-panel {
   margin: 0;
 }
@@ -1393,7 +1406,7 @@ button {
 @media screen and (min-width: 1260px) {
   .news3 {
     display: inline-block;
-    width: 33%;
+    width: 31%;
   }
 }
 
@@ -1516,12 +1529,7 @@ button {
 .newsletter-add {
   display: flex;
   text-wrap: wrap;
-  margin-bottom: 25px;
-}
-@media screen and (min-width: 992px) {
-  .newsletter-add {
-    margin: 0 10px 25px;
-  }
+  margin-bottom: 30px;
 }
 
 .name, .email {
@@ -1531,17 +1539,23 @@ button {
 .name label, .email label {
   font-weight: 600;
 }
+
 @media screen and (min-width: 992px) {
-  .name, .email {
-    padding-left: 15px;
+  .name {
     padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .email {
+    padding-left: 15px;
   }
 }
 
 .form-input {
   display: flex;
   flex-direction: column;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 @media screen and (min-width: 992px) {
   .form-input {
@@ -1567,8 +1581,6 @@ button {
 @media screen and (min-width: 1260px) {
   .newsletter-container {
     max-width: 1200px;
-    margin-left: 10px;
-    margin-right: 10px;
   }
 }
 
@@ -1633,22 +1645,12 @@ label[for=marketing] {
 .footer-container {
   display: flex;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
   align-content: space-between;
-}
-@media screen and (min-width: 992px) {
-  .footer-container {
-    max-width: 940px;
-  }
 }
 @media screen and (min-width: 1260px) {
   .footer-container {
     flex-direction: row;
-    margin-left: auto;
-    margin-right: auto;
     padding-top: 30px;
-    justify-content: center;
   }
 }
 
@@ -1662,7 +1664,7 @@ label[for=marketing] {
 }
 @media screen and (min-width: 1260px) {
   .footer-top {
-    margin-right: 60px;
+    margin-right: 90px;
     justify-content: flex-start;
   }
 }
@@ -1686,9 +1688,11 @@ label[for=marketing] {
     justify-content: space-around;
   }
   .footer-mid > div {
-    width: 210px;
+    width: 190px;
+    padding-right: 15px;
   }
 }
+
 .footer-bottom {
   margin-top: 30px;
   background-color: #212330;
@@ -1802,7 +1806,7 @@ label[for=marketing] {
   background-color: #333645;
   border: solid #333645 1px;
   border-radius: 3px;
-  padding: 10px 15px;
+  padding: 10px 14px;
   cursor: pointer;
   margin-right: auto;
 }

@@ -478,9 +478,7 @@ button {
     text-transform: none;
     padding-left: 10px;
     padding-right: 40px;
-    & > h2 {
-        color: $color-white;
-    }
+    padding-bottom: 10px;
     @media screen and (min-width: 1024px) {
         padding-left: 20px;
     }
@@ -492,8 +490,12 @@ button {
     }
 }
 
+.hover-title {
+    color: $color-white;
+}
+
 .hoverlist-item {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     & > a {
         font-size: 18px;
         font-weight: 400;
@@ -598,7 +600,6 @@ button {
         justify-content: space-between;
     }
     @media screen and (min-width: 1260px) {
-        justify-content: center;
         width: 100%;
     }
 }
@@ -737,10 +738,12 @@ button {
 }
 
 .block-top {
-    margin-right: 10px;
     margin-left: 10px;
+    margin-right: 10px;
     @media screen and (min-width: 992px) {
-        width: 33.33%
+        margin-left: 0;
+        margin-right: 0;
+        width: 32%
     }
 }
 
@@ -760,13 +763,11 @@ button {
 }
 
 .block-med {
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 768px) {
         width: 48%;
-        margin-left: 5px;
-        margin-right: 5px;
     }
     @media screen and (min-width: 1260px) {
-        width: 24%;
+        width: 23%;
     }
 }
 
@@ -777,6 +778,12 @@ button {
     color: $color-base;
     margin-bottom: 15px;
     margin-top: 10px;
+}
+
+.dmrkt {
+    @media screen and (min-width: 992px) {
+        padding-bottom: 21px;
+    }
 }
 
 .rm-soft {
@@ -869,17 +876,17 @@ button {
 
 .client-hover-content {
     display: none;
-    padding-left: 20px;
-    padding-right: 20px;
-    left: 0;
-    z-index: 1;
+    position: absolute;
+    bottom: 100%;
+    left: -200px;
+    right: -200px;
 }
 
 .ashcroft-box:hover .client-hover-content {
     display: block;
-    position: absolute;
     @include hvr-cli();
-    top: -100%;
+    padding: 20px;
+    margin: 0 auto 50px;
 }
 
 .clientstri {
@@ -991,6 +998,12 @@ button {
     }
 }
 
+.newsp {
+    @media screen and (min-width: 992px) {
+        padding-bottom: 24px;
+    }
+}
+
 .news-panel {
     margin: 0;
     @media screen and (min-width: 768px) {
@@ -1018,7 +1031,7 @@ button {
     }
     @media screen and (min-width: 1260px) {
         display: inline-block;
-        width: 33%;
+        width: 31%;
     }
 }
 
@@ -1087,10 +1100,7 @@ button {
 .newsletter-add {
     display: flex;
     text-wrap: wrap;
-    margin-bottom: 25px;
-    @media screen and (min-width: 992px) {
-        margin: 0 10px 25px;
-    }
+    margin-bottom: 30px;
 }
 
 .name, .email {
@@ -1099,16 +1109,25 @@ button {
     label {
         font-weight: 600;
     }
+    
+}
+
+.name {
+    @media screen and (min-width: 992px) {
+        padding-right: 15px;
+    }
+}
+
+.email {
     @media screen and (min-width: 992px) {
         padding-left: 15px;
-        padding-right: 15px;
     }
 }
 
 .form-input {
     display: flex;
     flex-direction: column;
-    margin-top: 15px;
+    margin-top: 5px;
     @media screen and (min-width: 992px) {
         flex-direction: row;
     }
@@ -1130,8 +1149,6 @@ button {
     max-width: 940px;
     @media screen and (min-width: 1260px) {
         max-width: 1200px;
-        margin-left: 10px;
-        margin-right: 10px;
     }
 }
 
@@ -1197,18 +1214,10 @@ label[for="marketing"] {
 .footer-container {
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
     align-content: space-between;
-    @media screen and (min-width: 992px) {
-        max-width: 940px;
-    }
     @media screen and (min-width: 1260px) {
         flex-direction: row;
-        margin-left: auto;
-        margin-right: auto;
         padding-top: 30px;
-        justify-content: center;
     }
 }
 
@@ -1220,7 +1229,7 @@ label[for="marketing"] {
         justify-content: center;
     }
     @media screen and (min-width: 1260px) {
-        margin-right: 60px;
+        margin-right: 90px;
         justify-content: flex-start;
     }
 }
@@ -1241,11 +1250,9 @@ label[for="marketing"] {
         flex-wrap: nowrap;
         justify-content: space-around;
         & > div {
-            width: 210px;
+            width: 190px;
+            padding-right: 15px;
         }
-    }
-    @media screen and (min-width: 1260px) {
-        
     }
 }
 
@@ -1340,7 +1347,7 @@ label[for="marketing"] {
     background-color: $color-base;
     border: solid $color-base 1px;
     border-radius: 3px;
-    padding: 10px 15px;
+    padding: 10px 14px;
     cursor: pointer;
     margin-right: auto;
     @include btn-hvr();
