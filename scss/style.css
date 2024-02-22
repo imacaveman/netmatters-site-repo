@@ -1073,8 +1073,13 @@ button {
 }
 
 @media screen and (min-width: 992px) {
-  .dmrkt {
-    padding-bottom: 21px;
+  .desc-top {
+    height: 80px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .desc-top {
+    height: 60px;
   }
 }
 
@@ -1226,9 +1231,6 @@ button {
 .client-hover-content {
   display: none;
   position: absolute;
-  bottom: 100%;
-  left: -200px;
-  right: -200px;
 }
 
 .ashcroft-box:hover .client-hover-content {
