@@ -161,19 +161,16 @@
 }
 
 @mixin clientstriangle() {
-    display: none;
+    display: block;
     position: absolute;
-    top: -50px;
-    width: 0px;
-    height: 0px;
+    bottom: -30px;
+    left: 50%;
+    margin-left: -36px;
     border-style: solid;
-    border-width: 40px 66.5px 0 66.5px;
+    border-width: 30px 30px 0 30px;
     border-color: $color-base transparent transparent transparent;
     transform: rotate(0deg);
     z-index: 2;
-    @media screen and (min-width: 1260px) {
-        border-width: 40px 83.5px 0 83.5px;
-    }
     @content;
 }
 
@@ -201,7 +198,6 @@
     cursor: default;
     color: $color-white;
     background-color: $color-base;
-    padding-top: 40px;
     z-index: 1;
     @content;
 }
