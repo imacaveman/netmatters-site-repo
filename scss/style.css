@@ -84,12 +84,6 @@ a:hover {
   text-decoration: underline;
 }
 
-ul {
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 footer {
   box-sizing: border-box;
   color: #fff;
@@ -894,7 +888,6 @@ button {
 .hoverbox {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 30px;
 }
 @media screen and (min-width: 1440px) {
   .hoverbox {
@@ -907,10 +900,7 @@ button {
   text-transform: none;
   padding-left: 10px;
   padding-right: 40px;
-}
-.nav-hover-content > h2 {
-  color: #fff;
-  margin-bottom: 20px;
+  padding-bottom: 10px;
 }
 @media screen and (min-width: 1024px) {
   .nav-hover-content {
@@ -928,8 +918,12 @@ button {
   }
 }
 
+.hover-title {
+  color: #fff;
+}
+
 .hoverlist-item {
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 .hoverlist-item > a {
   font-size: 18px;
@@ -1953,22 +1947,12 @@ label[for=marketing] {
 .footer-container {
   display: flex;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
   align-content: space-between;
-}
-@media screen and (min-width: 992px) {
-  .footer-container {
-    max-width: 940px;
-  }
 }
 @media screen and (min-width: 1260px) {
   .footer-container {
     flex-direction: row;
-    margin-left: auto;
-    margin-right: auto;
     padding-top: 30px;
-    justify-content: center;
   }
 }
 
@@ -1982,7 +1966,7 @@ label[for=marketing] {
 }
 @media screen and (min-width: 1260px) {
   .footer-top {
-    margin-right: 60px;
+    margin-right: 90px;
     justify-content: flex-start;
   }
 }
@@ -2006,7 +1990,8 @@ label[for=marketing] {
     justify-content: space-around;
   }
   .footer-mid > div {
-    width: 210px;
+    width: 190px;
+    padding-right: 15px;
   }
 }
 
@@ -2014,11 +1999,10 @@ label[for=marketing] {
   margin-top: 30px;
   background-color: #212330;
   font-size: 13px;
-  margin-left: -20px;
 }
 
 .copyright {
-  padding: 15px 15px;
+  padding: 15px 0px;
 }
 .copyright > * {
   margin: 0 5px;
