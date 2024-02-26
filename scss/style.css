@@ -1302,6 +1302,30 @@ button {
   height: 290px;
 }
 
+.client-box:hover .gdst {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -215px;
+  height: 275px;
+}
+
+.client-box:hover .howes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -215px;
+  height: 130px;
+}
+
+.client-box:hover .onetravel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -290px;
+  height: 265px;
+}
+
 .clientstri {
   display: block;
   position: absolute;
