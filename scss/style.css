@@ -1233,8 +1233,6 @@ button {
   position: absolute;
   bottom: 100%;
   width: 640px;
-  left: -100px;
-  right: -100px;
 }
 
 .description-box {
@@ -1257,13 +1255,51 @@ button {
 }
 
 .client-box:hover .ashcroft {
-  display: block;
-  height: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -200px;
+  height: 365px;
 }
 
 .client-box:hover .beat {
-  display: block;
-  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -270px;
+  height: 180px;
+}
+
+.client-box:hover .blackswan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -270px;
+  height: 310px;
+}
+
+.client-box:hover .busseys {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -225px;
+  height: 180px;
+}
+
+.client-box:hover .crane {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -180px;
+  height: 220px;
+}
+
+.client-box:hover .girlguide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -255px;
+  height: 290px;
 }
 
 .clientstri {
@@ -1882,6 +1918,15 @@ label[for=marketing] {
   border-color: #2A6EC6;
 }
 
+.software-color {
+  background-color: #67809F;
+  border: solid #67809F 1px;
+}
+.software-color:hover {
+  background-color: #526781;
+  border-color: #526781;
+}
+
 .green {
   background-color: #08b47c;
   border: solid #08b47c 1px;
@@ -1958,7 +2003,7 @@ label[for=marketing] {
   border-radius: 2px;
   font-size: 1.25rem;
   text-transform: uppercase;
-  padding: 10px 20px;
+  padding: 10px 17px;
   margin-top: 20px;
   margin-right: 10px;
   font-size: 1rem;
