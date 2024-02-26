@@ -1231,7 +1231,10 @@ button {
 .client-hover-content {
   display: none;
   position: absolute;
-  bottom: 0;
+  bottom: 100%;
+  width: 640px;
+  left: -100px;
+  right: -100px;
 }
 
 .description-box {
@@ -1242,9 +1245,10 @@ button {
   color: #fff;
   background-color: #333645;
   z-index: 1;
+  max-width: 280px;
   text-align: center;
   padding: 20px;
-  margin: 0 0 30px;
+  margin: 0 auto 30px;
 }
 .description-box > p {
   font-size: 0.8em;
@@ -1252,10 +1256,14 @@ button {
   font-weight: 400;
 }
 
-.client-box:hover .client-hover-content {
+.client-box:hover .ashcroft {
   display: block;
-  width: 300px;
-  height: 400px;
+  height: 370px;
+}
+
+.client-box:hover .beat {
+  display: block;
+  height: 250px;
 }
 
 .clientstri {
@@ -1276,7 +1284,8 @@ button {
   margin-right: 50px;
   filter: grayscale(100);
 }
-.grayscale:hover {
+
+.client-box:hover .grayscale {
   filter: none;
 }
 

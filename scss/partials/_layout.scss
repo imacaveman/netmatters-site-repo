@@ -879,14 +879,18 @@ button {
 .client-hover-content {
     display: none;
     position: absolute;
-    bottom: 0;
+    bottom: 100%;
+    width: 640px;
+    left: -100px;
+    right: -100px;
 }
 
 .description-box {
     @include hvr-cli();
+    max-width: 280px;
     text-align: center;
     padding: 20px;
-    margin: 0 0 30px;
+    margin: 0 auto 30px;
     & > p {
         font-size: 0.8em;
         line-height: 1.7em;
@@ -894,10 +898,16 @@ button {
     }
 }
 
-.client-box:hover .client-hover-content {
+.client-box:hover .ashcroft {
     display: block;
-    width: 300px;
-    height: 400px;
+    // max-width: 280px;
+    height: 370px;
+}
+
+.client-box:hover .beat {
+    display: block;
+    // width: 300px;
+    height: 250px;
 }
 
 .clientstri {
@@ -908,9 +918,10 @@ button {
     max-height: 70px;
     margin-right: 50px;
     filter: grayscale(100);
-    &:hover {
-        filter: none;
-    }
+}
+
+.client-box:hover .grayscale {
+    filter: none;
 }
 
 // END OF OUR SERVICES BLOCK -------------------------------------------------------
