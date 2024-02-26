@@ -1733,8 +1733,6 @@ label[for="marketing"] {
     @include bigger-btn(6px, 12px 25px);
     margin-right: 0;
     @media screen and (min-width: 768px) {
-        @include bigger-btn(6px, 12px);
-        margin-right: 4px;
         @include bigger-btn(6px, 12px 27px);
         margin-right: 20px;
     }
