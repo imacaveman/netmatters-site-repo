@@ -1262,7 +1262,7 @@ label[for="marketing"] {
     }
     @media screen and (min-width: 992px) {
         flex-wrap: nowrap;
-        justify-content: space-around;
+        justify-content: space-between;
         & > div {
             width: 190px;
             padding-right: 15px;
@@ -1274,11 +1274,10 @@ label[for="marketing"] {
     margin-top: 30px;
     background-color: #212330;
     font-size: 13px;
-    margin-left: -20px;
 }
 
 .copyright {
-    padding: 15px 15px;
+    padding: 15px 0;
     & > * {
         margin: 0 5px;
     }
