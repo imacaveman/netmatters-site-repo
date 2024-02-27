@@ -77,9 +77,6 @@ footer {
     margin-left: -20px;
     padding-left: 20px;
     font-size: 14px;
-    li {
-        margin: auto auto auto -40px;
-    }
 }
 
 input {
@@ -680,9 +677,6 @@ button {
 .hoverbox {
     display: flex;
     justify-content: space-between;
-    @media screen and (min-width: 1440px) {
-        justify-content: space-around;
-    }
 }
 
 .nav-hover-content {
@@ -1169,43 +1163,110 @@ li.slick-active button:hover {
     position: relative;
     margin-top: 50px;
     margin-bottom: 50px;
+    overflow-x: clip;
 }
 
 .partners-img-container, .clients-img-container {
     display: flex;
-    position: relative;
     max-height: 80px;
     margin-left: 15px;
     align-items: center;
-    overflow: hidden;
-    animation: slide 5s infinite;
-}
-
-.partners-img-container div {
-    flex: 0 0 auto;
-}
-
-.scroll {
-    animation: scroll 10s linear infinite;
 }
 
 .client-box {
     display: flex;
     vertical-align: middle;
-    overflow: visible;
+    position: relative;
 }
 
-.description-hide {
+.client-hover-content {
     display: none;
+    position: absolute;
+    bottom: 100%;
+    width: 640px;
+}
+
+.description-box {
+    @include hvr-cli();
+    width: 280px;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto 30px;
+    & > p {
+        font-size: 0.8em;
+        line-height: 1.7em;
+        font-weight: 400;
+    }
+}
+
+.client-box:hover .ashcroft {
+    @include clienthover(-200px, 365px);
+}
+
+.client-box:hover .beat {
+    @include clienthover(-270px, 180px);
+}
+
+.client-box:hover .blackswan {
+    @include clienthover(-270px, 310px);
+}
+
+.client-box:hover .busseys {
+    @include clienthover(-225px, 180px);
+}
+
+.client-box:hover .crane {
+    @include clienthover(-180px, 220px);
+}
+
+.client-box:hover .girlguide {
+    @include clienthover(-255px, 290px);
+}
+
+.client-box:hover .gdst {
+    @include clienthover(-215px, 275px);
+}
+
+.client-box:hover .howes {
+    @include clienthover(-215px, 130px);
+}
+
+.client-box:hover .onetravel {
+    @include clienthover(-290px, 265px);
+}
+
+.client-box:hover .searles {
+    @include clienthover(-215px, 285px);
+}
+
+.client-box:hover .survey {
+    @include clienthover(-215px, 130px);
+}
+
+.client-box:hover .sweetzy {
+    @include clienthover(-215px, 255px);
+}
+
+.client-box:hover .xupes {
+    @include clienthover(-215px, 130px);
+}
+
+.clientstri {
+    @include clientstriangle();
 }
 
 .grayscale {
     max-height: 70px;
     margin-right: 50px;
     filter: grayscale(100);
-    &:hover {
-        filter: none;
-    }
+}
+
+.client-box:hover .grayscale {
+    filter: none;
+}
+
+.partners-box:hover .grayscale {
+    filter: none;
 }
 
 // END OF OUR SERVICES BLOCK -------------------------------------------------------

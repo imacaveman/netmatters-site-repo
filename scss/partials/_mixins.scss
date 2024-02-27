@@ -184,3 +184,23 @@
     }
     @content;
 }
+
+@mixin hvr-cli() {
+    position: absolute;
+    text-align: left;
+    font-weight: bold;
+    cursor: default;
+    color: $color-white;
+    background-color: $color-base;
+    z-index: 1;
+    @content;
+}
+
+@mixin clienthover($left, $height) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: $left;
+    height: $height;
+    @content;
+}

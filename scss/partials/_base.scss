@@ -10,6 +10,8 @@ body {
 
 ul {
   list-style-type: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 @function px-to-em($value, $base-font-size: 16px) {

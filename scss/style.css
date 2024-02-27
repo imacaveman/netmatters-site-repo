@@ -11,6 +11,8 @@ body {
 
 ul {
   list-style-type: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 .overlay {
@@ -91,9 +93,6 @@ footer {
   margin-left: -20px;
   padding-left: 20px;
   font-size: 14px;
-}
-footer li {
-  margin: auto auto auto -40px;
 }
 
 input {
@@ -889,11 +888,6 @@ button {
   display: flex;
   justify-content: space-between;
 }
-@media screen and (min-width: 1440px) {
-  .hoverbox {
-    justify-content: space-around;
-  }
-}
 
 .nav-hover-content {
   display: none;
@@ -1540,34 +1534,46 @@ li.slick-active button:hover {
   position: relative;
   margin-top: 50px;
   margin-bottom: 50px;
+  overflow-x: clip;
 }
 
 .partners-img-container, .clients-img-container {
   display: flex;
-  position: relative;
   max-height: 80px;
   margin-left: 15px;
   align-items: center;
-  overflow: hidden;
-  animation: slide 5s infinite;
-}
-
-.partners-img-container div {
-  flex: 0 0 auto;
-}
-
-.scroll {
-  animation: scroll 10s linear infinite;
 }
 
 .client-box {
   display: flex;
   vertical-align: middle;
-  overflow: visible;
+  position: relative;
 }
 
-.description-hide {
+.client-hover-content {
   display: none;
+  position: absolute;
+  bottom: 100%;
+  width: 640px;
+}
+
+.description-box {
+  position: absolute;
+  text-align: left;
+  font-weight: bold;
+  cursor: default;
+  color: #fff;
+  background-color: #333645;
+  z-index: 1;
+  width: 280px;
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto 30px;
+}
+.description-box > p {
+  font-size: 0.8em;
+  line-height: 1.7em;
+  font-weight: 400;
 }
 
 .grayscale {
