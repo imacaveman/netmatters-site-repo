@@ -860,6 +860,7 @@ button {
     position: relative;
     margin-top: 50px;
     margin-bottom: 50px;
+    overflow-x: clip;
 }
 
 .partners-img-container, .clients-img-container {
@@ -867,6 +868,7 @@ button {
     max-height: 80px;
     margin-left: 15px;
     align-items: center;
+    
 }
 
 .client-box {
@@ -1010,6 +1012,10 @@ button {
 }
 
 .client-box:hover .grayscale {
+    filter: none;
+}
+
+.partners-box:hover .grayscale {
     filter: none;
 }
 

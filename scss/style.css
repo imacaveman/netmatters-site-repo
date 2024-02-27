@@ -1212,6 +1212,7 @@ button {
   position: relative;
   margin-top: 50px;
   margin-bottom: 50px;
+  overflow-x: clip;
 }
 
 .partners-img-container, .clients-img-container {
@@ -1224,7 +1225,6 @@ button {
 .client-box {
   display: flex;
   vertical-align: middle;
-  overflow: visible;
   position: relative;
 }
 
@@ -1378,6 +1378,10 @@ button {
 }
 
 .client-box:hover .grayscale {
+  filter: none;
+}
+
+.partners-box:hover .grayscale {
   filter: none;
 }
 
