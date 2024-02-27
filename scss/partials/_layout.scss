@@ -885,7 +885,7 @@ button {
 
 .description-box {
     @include hvr-cli();
-    max-width: 280px;
+    width: 280px;
     text-align: center;
     padding: 20px;
     margin: 0 auto 30px;
@@ -966,6 +966,38 @@ button {
     align-items: center;
     left: -290px;
     height: 265px;
+}
+
+.client-box:hover .searles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: -215px;
+    height: 285px;
+}
+
+.client-box:hover .survey {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: -215px;
+    height: 130px;
+}
+
+.client-box:hover .sweetzy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: -215px;
+    height: 255px;
+}
+
+.client-box:hover .xupes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: -215px;
+    height: 130px;
 }
 
 .clientstri {
