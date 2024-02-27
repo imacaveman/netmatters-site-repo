@@ -1774,6 +1774,14 @@ label[for="marketing"] {
     margin-right: 5px;
 }
 
+.blue {
+    @include btn-color($color-itsupp, $color-support-hover, $color-itsupp);
+}
+
+.software-color {
+    @include btn-color($color-software, $color-softwaredark ,$color-software);
+}
+
 .green {
     @include btn-color($color-marketing-accent, $color-marketing-dark, $color-marketing-accent);
     display: inline-block;
@@ -1800,6 +1808,11 @@ label[for="marketing"] {
     @media screen and (min-width: 1260px) {
         margin-right: 8px;
     }
+}
+
+.big-btn-cli {
+    @include bigger-btn(2px, 10px 17px);
+    font-size: 1rem;
 }
 
 .btn-arrow {

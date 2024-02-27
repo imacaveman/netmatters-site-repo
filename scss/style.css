@@ -1576,12 +1576,134 @@ li.slick-active button:hover {
   font-weight: 400;
 }
 
+.client-box:hover .ashcroft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -200px;
+  height: 365px;
+}
+
+.client-box:hover .beat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -270px;
+  height: 180px;
+}
+
+.client-box:hover .blackswan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -270px;
+  height: 310px;
+}
+
+.client-box:hover .busseys {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -225px;
+  height: 180px;
+}
+
+.client-box:hover .crane {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -180px;
+  height: 220px;
+}
+
+.client-box:hover .girlguide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -255px;
+  height: 290px;
+}
+
+.client-box:hover .gdst {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -215px;
+  height: 275px;
+}
+
+.client-box:hover .howes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -215px;
+  height: 130px;
+}
+
+.client-box:hover .onetravel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -290px;
+  height: 265px;
+}
+
+.client-box:hover .searles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -215px;
+  height: 285px;
+}
+
+.client-box:hover .survey {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -215px;
+  height: 130px;
+}
+
+.client-box:hover .sweetzy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -215px;
+  height: 255px;
+}
+
+.client-box:hover .xupes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -215px;
+  height: 130px;
+}
+
+.clientstri {
+  display: block;
+  position: absolute;
+  bottom: -29px;
+  left: 50%;
+  margin-left: -36px;
+  border-style: solid;
+  border-width: 30px 30px 0 30px;
+  border-color: #333645 transparent transparent transparent;
+  transform: rotate(0deg);
+  z-index: 2;
+}
+
 .grayscale {
   max-height: 70px;
   margin-right: 50px;
   filter: grayscale(100);
 }
-.grayscale:hover {
+
+.client-box:hover .grayscale {
+  filter: none;
+}
+
+.partners-box:hover .grayscale {
   filter: none;
 }
 
@@ -2224,6 +2346,24 @@ label[for=marketing] {
   border: solid #166AF4 1px;
 }
 
+.blue {
+  background-color: #4183D7;
+  border: solid #4183D7 1px;
+}
+.blue:hover {
+  background-color: #2A6EC6;
+  border: solid #2A6EC6 1px;
+}
+
+.software-color {
+  background-color: #67809F;
+  border: solid #67809F 1px;
+}
+.software-color:hover {
+  background-color: #526781;
+  border: solid #526781 1px;
+}
+
 .green {
   background-color: #08b47c;
   border: solid #08b47c 1px;
@@ -2291,6 +2431,19 @@ label[for=marketing] {
   .big-btn-about {
     margin-right: 8px;
   }
+}
+
+.big-btn-cli {
+  box-sizing: border-box;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 2px;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  padding: 10px 17px;
+  margin-top: 20px;
+  margin-right: 10px;
+  font-size: 1rem;
 }
 
 .btn-arrow {
