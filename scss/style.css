@@ -174,7 +174,6 @@ button {
 
 .main-body {
   position: relative;
-  transition: right 0.3s ease;
 }
 
 .sidebar {
@@ -186,7 +185,6 @@ button {
   background-color: #333645;
   overflow-y: auto;
   text-transform: uppercase;
-  transition: right 0.3s ease;
   z-index: 11;
 }
 @media screen and (min-width: 992px) {
@@ -204,7 +202,6 @@ button {
 .allmove {
   right: 275px;
   cursor: pointer;
-  transition: right 0.3s ease;
 }
 @media screen and (min-width: 992px) {
   .allmove {
@@ -214,7 +211,6 @@ button {
 
 .sidebar-show {
   right: 0;
-  transition: right 0.3s ease;
 }
 
 .sidebar a:hover {
@@ -1022,6 +1018,11 @@ button {
 @media screen and (min-width: 992px) {
   .title-lead {
     margin-top: 50px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .title-lead {
+    margin-top: 90px;
   }
 }
 
