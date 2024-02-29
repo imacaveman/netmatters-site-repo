@@ -5,6 +5,7 @@ $hamburgerContainer.on("click", function(event){
     $sideBar.toggleClass("sidebar-show");
     $bodyAll.toggleClass("allmove");
     $(".clickableoverlay").show();
+    $("body").css("overflow", "hidden");
 });
   
 $(".clickableoverlay").on("click", function(){
@@ -12,10 +13,6 @@ $(".clickableoverlay").on("click", function(){
     $burger.toggleClass("is-active");
     $sideBar.toggleClass("sidebar-show");
     $bodyAll.toggleClass("allmove");
-    $('body').off('scroll mousewheel touchmove', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        return false;
-  });
+    $("body").css("overflow", "auto");
 });
   
