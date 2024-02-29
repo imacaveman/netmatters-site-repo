@@ -1540,7 +1540,6 @@ li.slick-active button:hover {
 }
 
 .partners-img-container, .clients-img-container {
-  display: flex;
   max-height: 80px;
   margin-left: 15px;
   align-items: center;
