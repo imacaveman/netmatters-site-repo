@@ -1544,7 +1544,7 @@ li.slick-active button:hover {
   align-items: center;
 }
 
-.client {
+.client, .partner {
   margin-left: 20px;
 }
 
