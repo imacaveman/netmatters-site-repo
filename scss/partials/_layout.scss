@@ -146,6 +146,7 @@ button {
 
 .main-body {
     position: relative;
+    // overflow: hidden;
     // transition: right 0.3s ease;
 }
 
@@ -859,6 +860,10 @@ button {
 
 li.slick-active button:hover {
     opacity: 1;
+}
+
+.slick-list {
+    overflow-x: clip !important;
 }
 
 // "OUR SERVICES" BLOCK ------------------------------------------------------------

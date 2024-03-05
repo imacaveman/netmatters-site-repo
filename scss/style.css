@@ -1116,6 +1116,10 @@ li.slick-active button:hover {
   opacity: 1;
 }
 
+.slick-list {
+  overflow-x: clip !important;
+}
+
 .our-services {
   display: flex;
   flex-direction: column;
