@@ -164,8 +164,8 @@ button {
     // transition: right 0.3s ease;
     z-index: 11;
     @media screen and (min-width: 992px) {
-        right: -333px;
-        width: 333px;
+        right: -350px;
+        width: 350px;
     }
 }
 
@@ -231,7 +231,7 @@ button {
     margin-top: 20px;
     border-radius: 4px;
     font-size: 18px;
-    width: 216px;
+    width: 230px;
     &:hover {
         background-color: $color-sbhover;
     }
