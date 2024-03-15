@@ -146,7 +146,7 @@ button {
 
 .main-body {
     position: relative;
-    // overflow: hidden;
+    overflow: hidden;
     // transition: right 0.3s ease;
 }
 
@@ -256,12 +256,13 @@ button {
 .submenu-item {
     display: flex;
     flex-direction: column;
-    width: 216px;
+    width: 230px;
     border-top: 1px solid rgba(0,0,0,.45);
     & a {
-        padding: 10px 20px;
+        padding: 10px 7px;
         background-color: $color-nadark;
         border-top: 1px solid hsla(0,0%,100%,.05);
+        text-align: center;
     }
 }
 
@@ -863,7 +864,10 @@ li.slick-active button:hover {
 }
 
 .slick-list {
-    overflow-x: clip !important;
+    position: relative;
+    // overflow-x: clip !important;
+    overflow: visible !important;
+    display: block;
 }
 
 // "OUR SERVICES" BLOCK ------------------------------------------------------------
