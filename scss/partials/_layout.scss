@@ -233,14 +233,14 @@ button {
     margin-top: 20px;
     border-radius: 4px;
     font-size: 18px;
-    width: 216px;
+    width: 233px;
     &:hover {
         background-color: $color-sbhover;
     }
 }
 
 .submenu {
-    width: 216px;
+    width: 233px;
 }
 
 .sidebar-secondary {
@@ -264,7 +264,7 @@ button {
     flex-direction: column;
     border-top: 1px solid rgba(0,0,0,.45);
     & a {
-        padding: 10px 7px;
+        padding: 10px 8px;
         background-color: $color-nadark;
         border-top: 1px solid hsla(0,0%,100%,.05);
         text-align: center;
@@ -697,9 +697,7 @@ button {
     @media screen and (min-width: 1260px) {
         padding-left: 30px;
     }
-    @media screen and (min-width: 1440px) {
-        padding-left: 100px;
-    }
+    
 }
 
 .hover-title {
@@ -1085,10 +1083,8 @@ li.slick-active button:hover {
 }
 
 .block-med {
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 768px) {
         width: 48%;
-        margin-left: 5px;
-        margin-right: 5px;
     }
     @media screen and (min-width: 1260px) {
         width: 24%;
@@ -1513,9 +1509,11 @@ li.slick-active button:hover {
     label {
         font-weight: 600;
     }
+}
+
+.name {
     @media screen and (min-width: 992px) {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-right: 40px;
     }
 }
 
