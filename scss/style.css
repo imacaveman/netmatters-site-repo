@@ -366,9 +366,11 @@ button {
   align-items: center;
   margin-bottom: 15px;
 }
+
 @media screen and (min-width: 1260px) {
   .main-header {
     margin-left: 5px;
+
   }
 }
 
@@ -942,7 +944,7 @@ button {
 }
 
 .nav-small {
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   display: block;
   height: 11px;
 }
@@ -1187,7 +1189,6 @@ li.slick-active button:hover {
 }
 @media screen and (min-width: 1260px) {
   .service-block {
-    justify-content: center;
     width: 100%;
   }
 }
@@ -1363,22 +1364,14 @@ li.slick-active button:hover {
 }
 
 .block-top {
-  margin-right: 10px;
   margin-left: 10px;
+  margin-right: 10px;
 }
 @media screen and (min-width: 992px) {
   .block-top {
-    width: 280px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .block-top {
-    width: 300px;
-  }
-}
-@media screen and (min-width: 1260px) {
-  .block-top {
-    width: 380px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 32%;
   }
 }
 
@@ -1419,6 +1412,17 @@ li.slick-active button:hover {
   color: #333645;
   margin-bottom: 15px;
   margin-top: 10px;
+}
+
+@media screen and (min-width: 992px) {
+  .desc-top {
+    height: 80px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .desc-top {
+    height: 60px;
+  }
 }
 
 .rm-soft {
@@ -1777,7 +1781,12 @@ li.slick-active button:hover {
 
 .fa-star {
   color: orange;
-  font-size: 50px;
+  font-size: 45px;
+}
+@media screen and (min-width: 768px) {
+  .fa-star {
+    font-size: 50px;
+  }
 }
 
 .quote-container {
@@ -1975,18 +1984,14 @@ li.slick-active button:hover {
 .newsletter-add {
   display: flex;
   text-wrap: wrap;
-  margin-bottom: 25px;
-}
-@media screen and (min-width: 992px) {
-  .newsletter-add {
-    margin: 0 10px 25px;
-  }
+  margin-bottom: 30px;
 }
 
 .name, .email {
   padding-bottom: 15px;
   width: 100%;
 }
+
 .name label, .email label {
   font-weight: 600;
 }
@@ -2000,7 +2005,7 @@ li.slick-active button:hover {
 .form-input {
   display: flex;
   flex-direction: column;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 @media screen and (min-width: 992px) {
   .form-input {
@@ -2026,8 +2031,6 @@ li.slick-active button:hover {
 @media screen and (min-width: 1260px) {
   .newsletter-container {
     max-width: 1200px;
-    margin-left: 10px;
-    margin-right: 10px;
   }
 }
 
@@ -2132,7 +2135,7 @@ label[for=marketing] {
 @media screen and (min-width: 992px) {
   .footer-mid {
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .footer-mid > div {
     width: 190px;
@@ -2252,7 +2255,7 @@ label[for=marketing] {
   background-color: #333645;
   border: solid #333645 1px;
   border-radius: 3px;
-  padding: 10px 15px;
+  padding: 10px 14px;
   cursor: pointer;
   margin-right: auto;
 }
@@ -2270,8 +2273,8 @@ label[for=marketing] {
 }
 
 .gray {
-  background-color: #a3a8ac;
-  border: solid #a3a8ac 1px;
+  background-color: #999AA2;
+  border: solid #999AA2 1px;
 }
 .gray:hover {
   background-color: #7E808A;
@@ -2334,7 +2337,7 @@ label[for=marketing] {
 
 .light {
   background-color: #926FB1;
-  border: solid #7E57A0 1px;
+  border: solid #926FB1 1px;
 }
 .light:hover {
   background-color: #7E57A0;

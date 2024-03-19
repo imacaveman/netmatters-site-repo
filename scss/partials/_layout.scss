@@ -601,7 +601,6 @@ button {
 
 .telecoms-tri {
     @include triangle($color-telecoms);
-
 }
 
 .webdesign {
@@ -717,7 +716,7 @@ button {
             font-size: 19px;
         }
         & > i {
-            margin-right: 5px;
+            margin-right: 15px;
         }
     }
     
@@ -729,7 +728,7 @@ button {
 }
 
 .nav-small {
-    font-size: 0.65rem;
+    font-size: 0.62rem;
     display: block;
     height: 11px;
 }
@@ -923,7 +922,6 @@ li.slick-active button:hover {
         justify-content: space-between;
     }
     @media screen and (min-width: 1260px) {
-        justify-content: center;
         width: 100%;
     }
 }
@@ -1062,16 +1060,12 @@ li.slick-active button:hover {
 }
 
 .block-top {
-    margin-right: 10px;
     margin-left: 10px;
+    margin-right: 10px;
     @media screen and (min-width: 992px) {
-        width: 280px;
-    }
-    @media screen and (min-width: 1024px) {
-        width: 300px;
-    }
-    @media screen and (min-width: 1260px) {
-        width: 380px;
+        margin-left: 0;
+        margin-right: 0;
+        width: 32%
     }
 }
 
@@ -1108,6 +1102,15 @@ li.slick-active button:hover {
     color: $color-base;
     margin-bottom: 15px;
     margin-top: 10px;
+}
+
+.desc-top {
+    @media screen and (min-width: 992px) {
+        height: 80px;
+    }
+    @media screen and (min-width: 1260px) {
+        height: 60px;
+    }
 }
 
 .rm-soft {
@@ -1338,7 +1341,10 @@ li.slick-active button:hover {
 
 .fa-star {
     color: orange;
-    font-size: 50px;
+    font-size: 45px;
+    @media screen and (min-width: 768px) {
+        font-size: 50px;
+    }
 }
 
 .quote-container {
@@ -1498,10 +1504,7 @@ li.slick-active button:hover {
 .newsletter-add {
     display: flex;
     text-wrap: wrap;
-    margin-bottom: 25px;
-    @media screen and (min-width: 992px) {
-        margin: 0 10px 25px;
-    }
+    margin-bottom: 30px;
 }
 
 .name, .email {
@@ -1541,8 +1544,6 @@ li.slick-active button:hover {
     max-width: 940px;
     @media screen and (min-width: 1260px) {
         max-width: 1200px;
-        margin-left: 10px;
-        margin-right: 10px;
     }
 }
 
@@ -1642,7 +1643,7 @@ label[for="marketing"] {
     }
     @media screen and (min-width: 992px) {
         flex-wrap: nowrap;
-        justify-content: space-around;
+        justify-content: space-between;
         & > div {
             width: 190px;
             padding-right: 15px;
@@ -1740,7 +1741,7 @@ label[for="marketing"] {
     background-color: $color-base;
     border: solid $color-base 1px;
     border-radius: 3px;
-    padding: 10px 15px;
+    padding: 10px 14px;
     cursor: pointer;
     margin-right: auto;
     @include btn-hvr();
@@ -1751,7 +1752,7 @@ label[for="marketing"] {
 }
 
 .gray {
-    @include btn-color($color-gray, $color-gray-accent, $color-gray);
+    @include btn-color($color-contact, $color-contact-hover, $color-contact);
 }
 
 .lightgray {
@@ -1779,7 +1780,7 @@ label[for="marketing"] {
 }
 
 .light {
-    @include btn-color($color-design, $color-design-dark, $color-design-dark);
+    @include btn-color($color-design, $color-design-dark, $color-design);
 }
 
 .lightblue {
