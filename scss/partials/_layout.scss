@@ -1,10 +1,45 @@
 
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+}
+
+.clickableoverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    z-index: 10;
+}
+
 header {
     padding-top: 20px;
-    padding-bottom: 20px;
-    @media screen and (min-width: 992px) {
-        padding-bottom: 15px;
-    }
+}
+
+.sticky-header {
+    position: fixed;
+    top: -208.42px;
+    width: 100%;
+    padding-top: 20px;
+    transition: top 0.5s ease 0s;
+    background-color: $color-white;
+    box-shadow: 0 3px 35px rgba(0,0,0,.1);
+    z-index: 2;
+}
+
+.is-sticky {
+    top: 0;
+    transition: top 0.5s ease 0s;
 }
 
 h2 {
@@ -42,9 +77,6 @@ footer {
     margin-left: -20px;
     padding-left: 20px;
     font-size: 14px;
-    li {
-        margin: auto auto auto -40px;
-    }
 }
 
 input {
@@ -112,6 +144,168 @@ button {
     }
 }
 
+.main-body {
+    position: relative;
+    overflow: hidden;
+    // transition: right 0.3s ease;
+}
+
+// ********* SIDE BAR ********* //
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -275px;
+    width: 275px;
+    height: 100%;
+    background-color: $color-base;
+    overflow-y: auto;
+    text-transform: uppercase;
+    // transition: right 0.3s ease;
+    z-index: 11;
+    @media screen and (min-width: 992px) {
+        right: -350px;
+        width: 350px;
+    }
+}
+
+.darken-site {
+    background-color: $color-white;
+    filter: brightness(50%);
+}
+
+.allmove {
+    right: 275px;
+    cursor: pointer;
+    // transition: right 0.3s ease;
+    @media screen and (min-width: 992px) {
+        right: 333px;
+    }
+}
+
+.sidebar-show {
+    right: 0;
+    // transition: right 0.3s ease;
+}
+
+.sidebar a:hover {
+    text-decoration: none;
+}
+
+// .sidebar-inner { 
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
+
+.sidebar-container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-container2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-block-sidebar {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.submenu-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us-sidebar {
+    padding: 18px 0 18px 0;
+}
+
+.sidebar-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    outline: 1px solid rgba(0,0,0,.25);
+    border: 1px solid hsla(0,0%,100%,.1);
+    margin-top: 20px;
+    border-radius: 4px;
+    font-size: 18px;
+    width: 216px;
+    &:hover {
+        background-color: $color-sbhover;
+    }
+}
+
+.submenu {
+    width: 216px;
+}
+
+.sidebar-secondary {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid hsla(0,0%,100%,.1);
+    border-bottom: 1px solid rgba(0,0,0,.25);
+    font-size: 16px;
+    padding: 14px 20px;
+    &:hover {
+        background-color: $color-sbhover;
+    }
+}
+
+.submenu {
+    margin-top: 20px;
+}
+
+.submenu-item {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(0,0,0,.45);
+    & a {
+        padding: 10px 7px;
+        background-color: $color-nadark;
+        border-top: 1px solid hsla(0,0%,100%,.05);
+        text-align: center;
+    }
+}
+
+.submenu-item-secondary {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(0,0,0,.45);
+    font-size: 14px;
+    & a {
+        padding: 15px 20px;
+        background-color: $color-nadark;
+        border-top: 1px solid hsla(0,0%,100%,.05);
+    }
+}
+
+.submenu-item-secondary > a:before {
+    content: "\BB";
+    margin-right: 20px;
+}
+
+.last-sb-item {
+    margin-bottom: 20px;
+}
+
+.show-med {
+    @media screen and (max-width: 991px) {
+        display: none;
+    }
+}
+
+.hidden-med {
+    @media screen and (min-width: 992px) {
+        display: none;
+    }
+}
+
+// ********* END OF SIDE BAR ********* //
+
 .cookieconsent-btn {
     position: fixed;
     font-size: 0.8rem;
@@ -126,6 +320,9 @@ button {
     left: 0;
     z-index: 1;
     padding-top: 2px;
+    &:hover {
+        background: $color-gray-accent;
+    }
 }
 
 .chat-bubble {
@@ -134,7 +331,7 @@ button {
     color: $color-white;
     bottom: 20px;
     right: 10px;
-    z-index: 2;
+    z-index: 3;
     height: 60px;
     width: 60px;
     background-color: $color-base;
@@ -151,8 +348,8 @@ button {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
-    @media screen and (min-width: 560px) {
-        margin-bottom: 5px;
+    @media screen and (min-width: 1260px) {
+        margin-left: 5px;
     }
 }
 
@@ -203,14 +400,11 @@ button {
 .burger-container {
     display: flex;
     height: 55px;
-    min-width: 60px;
+    max-width: 60px;
     border-radius: 3px;
     background-color: $color-base;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     margin-left: 20px;
-    margin-right: auto;
     @include btn-hvr();
     @media screen and (min-width: 1260px) {
         right: 0;
@@ -218,17 +412,38 @@ button {
     }
 }
 
-.burger-box {
-    display: flex;
-    flex-direction: column;
+.hamburger-inner {
+    background-color: $color-white;
+    &::before {
+        background-color: $color-white;
+    }
+    &::after {
+        background-color: $color-white;
+    }
 }
 
-.burger-mid {
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 30px;
-    height: 4px;
-    background-color: $color-white;
-    margin: 3px 0;
+    border-radius: 0;
 }
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background-color: $color-white; 
+}
+
+// .burger-box {
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// .burger-mid {
+//     width: 30px;
+//     height: 4px;
+//     background-color: $color-white;
+//     margin: 3px 0;
+// }
 
 .netmatters-logo {
     width: 100%;
@@ -237,6 +452,7 @@ button {
 
 .header-search {
     position: relative;
+    margin-bottom: 20px;
     @media screen and (min-width: 768px) {
         display: none;
     }
@@ -466,11 +682,7 @@ button {
 
 .hoverbox {
     display: flex;
-    margin-left: -40px;
     justify-content: space-between;
-    @media screen and (min-width: 1440px) {
-        justify-content: space-around;
-    }
 }
 
 .nav-hover-content {
@@ -492,6 +704,7 @@ button {
 
 .hover-title {
     color: $color-white;
+    margin-bottom: 16px;
 }
 
 .hoverlist-item {
@@ -523,10 +736,49 @@ button {
 .home-img-container {
     display: flex;
     align-items: center;
-    height: 550px;
+    height: 650px;
     overflow-x: hidden;
-    background: url("../img/home.jpg") center / cover no-repeat #818181;
     background-blend-mode: multiply;
+    @media screen and (min-width: 500px) {
+        height: 550px;
+    }
+}
+
+.banner-img1 {
+    background: url("../img/banners/home.jpg") center / cover no-repeat #818181;
+}
+
+.banner-img2 {
+    background: url("../img/banners/home2.jpg") center / cover no-repeat #818181;
+}
+
+.banner-img3 {
+    background: url("../img/banners/home3.png") center / cover no-repeat #818181;
+}
+
+.banner-img4 {
+    background: url("../img/banners/home4.png") center / cover no-repeat #818181;
+}
+
+.banner-img5 {
+    background: url("../img/banners/home5.png") center / cover no-repeat #818181;
+}
+
+.banner-img6 {
+    background: url("../img/banners/home6.jpg") center / cover no-repeat #818181;
+}
+
+.banner-img7 {
+    background: url("../img/banners/home7.png") center / cover no-repeat #818181;
+}
+
+.banner-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: 1024px) {
+        align-items: flex-start;
+    }
 }
 
 .title {
@@ -542,6 +794,43 @@ button {
     }
 }
 
+.title-lead {
+    margin-top: 80px;
+    @media screen and (min-width: 768px) {
+        margin-top: 120px;
+    }
+    @media screen and (min-width: 992px) {
+        margin-top: 50px;
+    }
+    @media screen and (min-width: 1260px) {
+        margin-top: 90px;
+    }
+}
+
+.title-bespoke {
+    @include title-text();
+}
+
+.title-support {
+    @include title-text();
+}
+
+.title-marketing {
+    @include title-text();
+}
+
+.title-telecoms {
+    @include title-text();
+}
+
+.title-design {
+    @include title-text();
+}
+
+.title-security {
+    @include title-text();
+}
+
 .title > p {
     font-size: 1.3rem;
     margin-top: 20px;
@@ -550,6 +839,39 @@ button {
 
 .accent-text {
     font-weight: 600;
+}
+
+.slick-dots {
+    bottom: 40px;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+    color: $color-white;
+    line-height: 22px;
+}
+
+.slick-dots li.slick-active button:before {
+    color: $color-white;
+    opacity: 1;
+    border: solid $color-white 2px;
+    border-radius: 50%;
+}
+
+.slick-dots li button:hover {
+    opacity: 0.3;
+    color: $color-darkgray;
+}
+
+li.slick-active button:hover {
+    opacity: 1;
+}
+
+.slick-list {
+    position: relative;
+    // overflow-x: clip !important;
+    overflow: visible !important;
+    display: block;
 }
 
 // "OUR SERVICES" BLOCK ------------------------------------------------------------
@@ -763,11 +1085,13 @@ button {
 }
 
 .block-med {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 992px) {
         width: 48%;
+        margin-left: 5px;
+        margin-right: 5px;
     }
     @media screen and (min-width: 1260px) {
-        width: 23%;
+        width: 24%;
     }
 }
 
@@ -864,11 +1188,12 @@ button {
 }
 
 .partners-img-container, .clients-img-container {
-    display: flex;
     max-height: 80px;
-    margin-left: 15px;
     align-items: center;
-    
+}
+
+.client, .partner {
+    margin-left: 20px;
 }
 
 .client-box {
@@ -898,55 +1223,55 @@ button {
 }
 
 .client-box:hover .ashcroft {
-    @include clienthover(-200px, 365px);
+    @include clienthover(-180px, 365px);
 }
 
 .client-box:hover .beat {
-    @include clienthover(-270px, 180px);
+    @include clienthover(-250px, 180px);
 }
 
 .client-box:hover .blackswan {
-    @include clienthover(-270px, 310px);
+    @include clienthover(-250px, 310px);
 }
 
 .client-box:hover .busseys {
-    @include clienthover(-225px, 180px);
+    @include clienthover(-205px, 180px);
 }
 
 .client-box:hover .crane {
-    @include clienthover(-180px, 220px);
+    @include clienthover(-160px, 220px);
 }
 
 .client-box:hover .girlguide {
-    @include clienthover(-255px, 290px);
+    @include clienthover(-235px, 290px);
 }
 
 .client-box:hover .gdst {
-    @include clienthover(-215px, 275px);
+    @include clienthover(-195px, 275px);
 }
 
 .client-box:hover .howes {
-    @include clienthover(-215px, 130px);
+    @include clienthover(-195px, 130px);
 }
 
 .client-box:hover .onetravel {
-    @include clienthover(-290px, 265px);
+    @include clienthover(-270px, 265px);
 }
 
 .client-box:hover .searles {
-    @include clienthover(-215px, 285px);
+    @include clienthover(-195px, 285px);
 }
 
 .client-box:hover .survey {
-    @include clienthover(-215px, 130px);
+    @include clienthover(-195px, 130px);
 }
 
 .client-box:hover .sweetzy {
-    @include clienthover(-215px, 255px);
+    @include clienthover(-195px, 255px);
 }
 
 .client-box:hover .xupes {
-    @include clienthover(-215px, 130px);
+    @include clienthover(-195px, 130px);
 }
 
 .clientstri {
@@ -1056,21 +1381,32 @@ button {
         }
         float: right;
         color: $color-base;
-        // margin-left: auto;
-        // @media screen and (min-width: 992px) {
-        //     margin-left: 550px;
-        // }
-        // @media screen and (min-width: 1260px) {
-        //     margin-left: 780px;
-        // }
     }
 }
 
-.newsp {
-    @media screen and (min-width: 992px) {
-        padding-bottom: 24px;
-    }
-}
+// .news-container {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     padding: 30px 15px 20px;
+//     & > h2 {
+//         font-size: 2.4rem;
+//         font-weight: 600;
+//     }
+//     & > a {
+//         @media screen and (max-width: 767px) {
+//             display: none;
+//         }
+//         color: $color-base;
+//         margin-left: auto;
+//         @media screen and (min-width: 992px) {
+//             margin-left: 550px;
+//         }
+//         @media screen and (min-width: 1260px) {
+//             margin-left: 780px;
+//         }
+//     }
+// }
 
 .news-panel {
     margin: 0;
@@ -1177,25 +1513,16 @@ button {
     label {
         font-weight: 600;
     }
-    
-}
-
-.name {
-    @media screen and (min-width: 992px) {
-        padding-right: 15px;
-    }
-}
-
-.email {
     @media screen and (min-width: 992px) {
         padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
 .form-input {
     display: flex;
     flex-direction: column;
-    margin-top: 5px;
+    margin-top: 15px;
     @media screen and (min-width: 992px) {
         flex-direction: row;
     }
@@ -1331,7 +1658,7 @@ label[for="marketing"] {
 }
 
 .copyright {
-    padding: 15px 0;
+    padding: 15px 0px;
     & > * {
         margin: 0 5px;
     }
@@ -1370,7 +1697,7 @@ label[for="marketing"] {
 .socials a {
     padding: 16px 22px 16px;
     @media screen and (max-width: 480px) {
-    padding: 16px 45px 16px;
+        padding: 16px 45px 16px;
     }
 }
 
@@ -1428,8 +1755,38 @@ label[for="marketing"] {
     @include btn-color($color-contact, $color-contact-hover, $color-contact);
 }
 
+.lightgray {
+    @include btn-color($color-graybutton, $color-graybutton-hover, $color-graybutton);
+}
+
+.paleblue {
+    @include btn-color($color-software, $color-softwaredark, $color-software);
+}
+
+.paleit {
+    @include btn-color($color-itsupp, $color-itsupp-accent, $color-itsupp);
+}
+
+.palemarketing {
+    @include btn-color($color-marketing, $color-marketing-pale, $color-marketing);
+}
+
+.paletelecoms {
+    @include btn-color($color-telecoms, $color-telecomsdark, $color-telecoms);
+}
+
+.palesecurity {
+    @include btn-color($color-security, $color-securitydark, $color-security);
+}
+
 .light {
     @include btn-color($color-design, $color-design-dark, $color-design);
+}
+
+.lightblue {
+    @include btn-color($color-bluebutton, $color-bluebutton-hover, $color-bluebutton);
+    display: inline-block;
+    margin-right: 5px;
 }
 
 .blue {
@@ -1511,5 +1868,80 @@ label[for="marketing"] {
     color: $color-training;
 }
 
-// ********* CLIENTS BANNERS ********* //
+// ********* COOKIES POP UP ********* //
 
+.cookies-text {
+    margin-top: 0;
+    & a {
+        color: $color-darkgray;
+    }
+}
+
+#cookies-popup {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    padding: 20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 11;
+}
+
+.cookies-container {
+    background-color: $color-white;
+    margin: auto;
+    border-radius: 4px;
+}
+
+.cookies-dialogue {
+    min-width: 200px;
+    @media screen and (min-width: 768px) {
+        width: 600px;
+    }
+}
+
+.cookies-header {
+    padding: 15px 20px;
+    & > h3 {
+        color: $color-base;
+        text-align: left;
+        margin: 0;
+        font-weight: 400;
+    }
+}
+
+.cookies-description {
+    padding: 20px;
+    border-top: solid $color-lightergray 1px;
+    border-bottom: solid $color-lightergray 1px;
+    color: $color-darkgray;
+    line-height: 1.875rem;
+}
+
+.cookies-buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.ck-btn {
+    @include small-btn();
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 47px;
+    width: 100%;
+}
+
+.cookies-btn-spacer {
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+// ********* END OF COOKIES ********* //

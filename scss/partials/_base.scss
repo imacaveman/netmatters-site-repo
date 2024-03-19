@@ -6,13 +6,14 @@ body {
   font-family: 'Poppins', sans-serif;
   letter-spacing: 0.4px;
   margin: 0;
-  overflow-x: hidden;
 }
 
 ul {
   list-style-type: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 @function px-to-em($value, $base-font-size: 16px) {
     @return ($value / $base-font-size) * 1em;
-  }
+}
