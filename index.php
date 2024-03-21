@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="scss/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/42d3889deb.js" crossorigin="anonymous"></script>
     <title>Full Service Digital Agency | Cambridgeshire & Norfolk | Netmatters</title>
 </head>
@@ -550,33 +550,8 @@
                 </div>
             </div>
         </div>
-        <div class="newsletter">
-            <div class="global-container">
-                <div class="newsletter-container">
-                    <h2>Email Newsletter Sign-Up</h2>
-                    <div class="form-input">
-                        <div class="name">
-                            <label for="newsletter-name" class="newsltr-name">Your Name</label>
-                            <input id="newsletter-name" name="name" type="text">
-                        </div>
-                        <div class="email">
-                            <label for="newsletter-email" class="newsltr-email">Your Email</label>
-                            <input id="newsletter-email" name="email" type="text">
-                        </div>
-                    </div>
-                    <div class="newsletter-add">
-                        <span class="newsletter-checkbox">
-                            <input class ="market-check" id="marketing" type="checkbox">
-                            <label for="marketing"></label>
-                        </span>
-                        <label for="marketing" class="newsletter-text">Please tick this box if you wish to receive marketing information from us. Please see our <a href="index.html" target="_blank">Privacy Policy</a> for more information on how we keep your data safe.
-                        </label>
-                    </div>
-                    <button name="submit" class="sub-btn">Subscribe</button>
-                </div>
-            </div>
-        </div>
-        <?php include "includes/footer.php" ?>
+        <?php include "includes/newsletter.php";
+include "includes/footer.php" ?>
     </div>
     <div id="cookies-menu">
         <div class="cookies">

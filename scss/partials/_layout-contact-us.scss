@@ -1,16 +1,147 @@
+.color-link {
+    @include linkcolor($color-base);
+}
+
+.text-bold {
+    color: $color-base;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
 .page-title-container {
     background-color: $color-base;
+    margin-bottom: 40px;
 }
 
 .page-title {
     padding-top: 20px;
     padding-bottom: 20px;
     & > h2 {
+        font-size: 2.25rem;
         color: $color-white;
     }
 }
 
-.our-offices-container {
-    padding-top: 20px;
-    padding-bottom: 20px;
+.office-img {
+    width: 100%;
+    margin-top: 30px;
+    border: solid #ccc 1px;
+    border-radius: 15px 15px 0 0;
+}
+
+.contact-title {
+    position: relative;
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: $color-base;
+    padding-top: 15px;
+}
+
+.contact-desc-box {
+    border: solid #ccc 1px;
+    width: 100%;
+    padding: 25px 25px;
+    margin-top: -8px;
+}
+
+.contact-desc {
+    position: relative;
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+    color: $color-midgray;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.phone-no {
+    color: $color-design;
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+.contact-btn-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-btn {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    padding: 13px 30px;
+    border-radius: 4px;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.email-contact {
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.form-body {
+    width: 100%;
+    background-color: $color-form;
+    border: solid $color-form 1px;
+    border-radius: 10px;
+    padding: 30px 25px;
+}
+
+.contact-form {
+    padding-bottom: 15px;
+}
+
+.contact-us {
+    @include srch();
+    border: solid #e5e5e5 1px;
+    margin-top: 5px;
+    &:focus {
+        border-color: $color-lightblue;
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(91,192,222,.6);
+    }
+}
+
+.contact-us-msgbox {
+    @include srch(100px);
+    color: $color-darkgray;
+    resize: vertical;
+    border: solid #e5e5e5 1px;
+    margin-top: 5px;
+    padding-top: 5px;
+    &:focus {
+        border-color: $color-lightblue;
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(91,192,222,.6);
+    }
+}
+
+.small-txt {
+    color: $color-base;
+    font-weight: 600;
+    font-size: 11px;
+    & > a {
+        color: $color-base;
+        text-decoration: underline;
+        &:hover {
+            color: $color-black;
+        }
+    }
+}
+
+.endblock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.warning-red {
+    color: #d24d57;
+}
+
+.bar {
+    margin-top: 50px;
 }

@@ -11,11 +11,11 @@
     @content;
 }
 
-@mixin srch() {
+@mixin srch($height: 47px) {
     display: block;
     font-family: inherit;
     width: 100%;
-    height: 47px;
+    height: $height;
     font-size: 14px;
     padding: 0 15px;
     @content;
@@ -216,5 +216,10 @@
     align-items: center;
     left: $left;
     height: $height;
+    @content;
+}
+
+@mixin linkcolor($clr) {
+    color: $clr;
     @content;
 }

@@ -1506,9 +1506,6 @@ li.slick-active button:hover {
 .name, .email {
     padding-bottom: 15px;
     width: 100%;
-    label {
-        font-weight: 600;
-    }
 }
 
 .name {
@@ -1546,6 +1543,7 @@ li.slick-active button:hover {
 }
 
 .newsletter-text {
+    color: $color-base;
     font-weight: 600;
     line-height: 32px;
     cursor: pointer;
@@ -1564,7 +1562,12 @@ li.slick-active button:hover {
     cursor: pointer;
 }
 
-.newsltr-name::after, .newsltr-email::after {
+.newsltr-label, .newsltr-label {
+    color: $color-base;
+    font-weight: 600;
+}
+
+.required::after {
     color: #d24d57;
     content: " * "
 }
