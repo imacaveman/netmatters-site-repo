@@ -9,9 +9,23 @@
     font-weight: 600;
 }
 
+.breadcrumb-container {
+    border-top: solid $color-base 1px;
+}
+
+.breadcrumb-txt {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
 .page-title-container {
     background-color: $color-base;
     margin-bottom: 40px;
+    @media screen and (min-width: 992px) {
+        background-color: $color-white;
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
 }
 
 .page-title {
@@ -20,6 +34,33 @@
     & > h2 {
         font-size: 2.25rem;
         color: $color-white;
+        @media screen and (min-width: 992px) {
+            color: $color-base;
+        }
+    }
+}
+
+
+.offices-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    @media screen and (min-width: 992px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+    @media screen and (min-width: 1260px) {
+        width: 100%;
+    }
+}
+
+.office-box {
+    width: 100%;
+    @media screen and (min-width: 992px) {
+        width: 48%;
     }
 }
 
@@ -62,6 +103,12 @@
     font-size: 1.7rem;
 }
 
+.emailuson {
+    color: $color-design;
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+
 .contact-btn-container {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -80,6 +127,9 @@
 .email-contact {
     margin-top: 25px;
     margin-bottom: 20px;
+    @media screen and (min-width: 1260px) {
+        width: 380px;
+    }
 }
 
 .form-body {
@@ -88,6 +138,25 @@
     border: solid $color-form 1px;
     border-radius: 10px;
     padding: 30px 25px;
+    @media screen and (min-width: 1260px) {
+        margin-top: 50px;
+        width: 770px;
+    }
+}
+
+.form-group-row {
+    @media screen and (min-width: 1260px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.form-name, .form-company, .form-email, .form-phone {
+    @media screen and (min-width: 1260px) {
+        width: 340px;
+    }
 }
 
 .contact-form {
@@ -144,4 +213,30 @@
 
 .bar {
     margin-top: 50px;
+}
+
+.graytext {
+    color: $color-darkgray;
+}
+
+.accordion {
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.acco-box {
+    display: none;
+    overflow: hidden;
+    color: $color-base;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.bottom-content {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 1260px) {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
 }

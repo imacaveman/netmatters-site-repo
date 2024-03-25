@@ -15,6 +15,15 @@ ul {
   margin: 0;
 }
 
+.hidden-xs {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .hidden-xs {
+    display: block;
+  }
+}
+
 .overlay {
   display: none;
   position: fixed;
@@ -2588,9 +2597,25 @@ label[for=marketing] {
   font-weight: 600;
 }
 
+.breadcrumb-container {
+  border-top: solid #333645 1px;
+}
+
+.breadcrumb-txt {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
 .page-title-container {
   background-color: #333645;
   margin-bottom: 40px;
+}
+@media screen and (min-width: 992px) {
+  .page-title-container {
+    background-color: #fff;
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
 }
 
 .page-title {
@@ -2600,6 +2625,40 @@ label[for=marketing] {
 .page-title > h2 {
   font-size: 2.25rem;
   color: #fff;
+}
+@media screen and (min-width: 992px) {
+  .page-title > h2 {
+    color: #333645;
+  }
+}
+
+.offices-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .offices-block {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .offices-block {
+    width: 100%;
+  }
+}
+
+.office-box {
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .office-box {
+    width: 48%;
+  }
 }
 
 .office-img {
@@ -2641,6 +2700,12 @@ label[for=marketing] {
   font-size: 1.7rem;
 }
 
+.emailuson {
+  color: #926FB1;
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+
 .contact-btn-container {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -2660,6 +2725,11 @@ label[for=marketing] {
   margin-top: 25px;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 1260px) {
+  .email-contact {
+    width: 380px;
+  }
+}
 
 .form-body {
   width: 100%;
@@ -2667,6 +2737,27 @@ label[for=marketing] {
   border: solid #E6E7E9 1px;
   border-radius: 10px;
   padding: 30px 25px;
+}
+@media screen and (min-width: 1260px) {
+  .form-body {
+    margin-top: 50px;
+    width: 770px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .form-group-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .form-name, .form-company, .form-email, .form-phone {
+    width: 340px;
+  }
 }
 
 .contact-form {
@@ -2733,4 +2824,32 @@ label[for=marketing] {
 
 .bar {
   margin-top: 50px;
+}
+
+.graytext {
+  color: #666;
+}
+
+.accordion {
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.acco-box {
+  display: none;
+  overflow: hidden;
+  color: #333645;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.bottom-content {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1260px) {
+  .bottom-content {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
 }/*# sourceMappingURL=style.css.map */
