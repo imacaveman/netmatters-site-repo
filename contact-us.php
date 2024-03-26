@@ -127,7 +127,7 @@
                         </div>
                     </div>
                     <div class="form-body">
-                        <form method="POST" accept-charset="UTF-8" id="contact-form">
+                        <form action="includes/formhandler.php" method="POST" accept-charset="UTF-8" id="contact-form">
                             <div class="form-group">
                                 <div class="form-group-row">
                                     <div class="form-name contact-form">
@@ -149,7 +149,7 @@
                                 </div>
                                 <div class="form-msg contact-form">
                                     <label for="contact-us-msg" class="newsltr-label required">Message</label>
-                                    <textarea id="contact-us-msg" class="contact-us-msgbox" name="phone" type="text">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
+                                    <textarea id="contact-us-msg" class="contact-us-msgbox" name="message" type="text">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
                                 </div>
                             </div>
                             <div class="newsletter-add">
