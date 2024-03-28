@@ -1,7 +1,6 @@
 
 $(window).on("scroll", function(){
     let scrollTop = $(this).scrollTop();
-    // if(scrollTop > lastScrollTop) {
     if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
       $headerAll.removeClass("sticky-header");
       $headerAll.removeClass("is-sticky");

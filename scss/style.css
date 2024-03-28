@@ -2586,6 +2586,18 @@ label[for=marketing] {
   margin-left: 30px;
 }
 
+.contact-error-message {
+  position: fixed;
+  left: 10px;
+  border: solid #d66751 1px;
+  border-radius: 10px;
+  background-color: #d66751;
+  color: #fff;
+  padding: 10px;
+  font-size: 0.8rem;
+  z-index: 9;
+}
+
 .color-link {
   color: #333645;
 }
@@ -2764,7 +2776,7 @@ label[for=marketing] {
   padding-bottom: 15px;
 }
 
-.contact-us {
+.contact-us-name, .contact-us-company, .contact-us-email, .contact-us-phone, .contact-us-msgbox {
   display: block;
   font-family: inherit;
   width: 100%;
@@ -2774,10 +2786,14 @@ label[for=marketing] {
   border: solid #e5e5e5 1px;
   margin-top: 5px;
 }
-.contact-us:focus {
+.contact-us-name:focus, .contact-us-company:focus, .contact-us-email:focus, .contact-us-phone:focus, .contact-us-msgbox:focus {
   border-color: #5bc0de;
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
+}
+
+.error-msg {
+  border: solid #D64541 1px;
 }
 
 .contact-us-msgbox {

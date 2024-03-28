@@ -1,3 +1,15 @@
+.contact-error-message {
+    position: fixed;
+    left: 10px;
+    border: solid $color-error 1px;
+    border-radius: 10px;
+    background-color: $color-error;
+    color: $color-white;
+    padding: 10px;
+    font-size: 0.8rem;
+    z-index: 9;
+}
+
 .color-link {
     @include linkcolor($color-base);
 }
@@ -163,7 +175,7 @@
     padding-bottom: 15px;
 }
 
-.contact-us {
+.contact-us-name, .contact-us-company, .contact-us-email, .contact-us-phone, .contact-us-msgbox {
     @include srch();
     border: solid #e5e5e5 1px;
     margin-top: 5px;
@@ -172,6 +184,10 @@
         outline: 0;
         box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(91,192,222,.6);
     }
+}
+
+.error-msg {
+    border: solid $color-telecoms 1px;
 }
 
 .contact-us-msgbox {

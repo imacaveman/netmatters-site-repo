@@ -15,6 +15,23 @@
 </head>
 <body>
     <?php include "includes/header.php" ?>
+    <?php
+    if (isset($_GET['error'])) {
+        $errorMessage = "";
+    
+        switch ($_GET['error']) {
+            case 'db_error':
+                $errorMessage = "There was an error processing your request. Please try again later.";
+                break;
+            default:
+                $errorMessage = "An unknown error has occurred.";
+                break;
+        }
+    
+        echo '<div class="contact-error-message">' . $errorMessage . '</div>';
+    }
+
+    ?>
     <div class="breadcrumb-container hidden-xs">
         <div class="global-container">
             <p class="breadcrumb-txt"><a href="#" class="color-link"><strong>Home</strong></a> / Our Offices</p>
@@ -132,19 +149,19 @@
                                 <div class="form-group-row">
                                     <div class="form-name contact-form">
                                         <label for="contact-us-name" class="newsltr-label required">Your Name</label>
-                                        <input id="contact-us-name" class="contact-us" name="name" type="text">
+                                        <input id="contact-us-name" class="contact-us-name" name="name" type="text">
                                     </div>
                                     <div class="form-company contact-form">
                                         <label for="contact-us-company" class="newsltr-label">Company Name</label>
-                                        <input id="contact-us-company" class="contact-us" name="company" type="text">
+                                        <input id="contact-us-company" class="contact-us-company" name="company" type="text">
                                     </div>
                                     <div class="form-email contact-form">
                                         <label for="contact-us-email" class="newsltr-label required">Your Email</label>
-                                        <input id="contact-us-email" class="contact-us" name="email" type="text">
+                                        <input id="contact-us-email" class="contact-us-email" name="email" type="text">
                                     </div>
                                     <div class="form-phone contact-form">
                                         <label for="contact-us-phone" class="newsltr-label required">Your Telephone Number</label>
-                                        <input id="contact-us-phone" class="contact-us" name="phone" type="text">
+                                        <input id="contact-us-phone" class="contact-us-phone" name="phone" type="text">
                                     </div>
                                 </div>
                                 <div class="form-msg contact-form">
@@ -164,7 +181,7 @@
                                 <small class="small-txt">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.</br></small>
                             </div>
                             <div class="endblock">
-                                <button name="submit" class="sub-btn">Send Enquiry</button>
+                                <button name="submit" class="sub-btn enq-btn">Send Enquiry</button>
                                 <small> <span class="warning-red">*</span> Fields Required</small>
                             </div>
                         </form>
